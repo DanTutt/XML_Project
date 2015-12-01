@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="ImportStyle.css"></head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<body>
+<p align="right" id="xmlRight">
+    <xmp id="xmlRight">
+        <?xml version="1.0" encoding="UTF-8"?>
+        <XACTDOC>
+            <XACTNET_INFO carrierId="2210000"  recipientsXNAddress="SAFEHAVEN.HOME.WEB">
+            </XACTNET_INFO>
+            <CONTACTS>
+                <CONTACT type="Client" name="Vanessa Cross">
+                    <MORTGAGES>
+                        <MORTGAGE mortgagee="DA BANK" loanNum="123456"/>
+                    </MORTGAGES>
+                    <ADDRESSES>
+                        <ADDRESS type="Property" country="US" city="Provo" street="665 S 300 E" state="UT" postal="84601"/>
+                        <ADDRESS type="Home" country="US" city="Provo" street="189 S 300 E" state="UT" postal="84604"/>
+                    </ADDRESSES>
+                    <CONTACTMETHODS>
+                        <PHONE type="Home" number="801-226-2252" extension="123" primary="1"/>
+                        <PHONE type="Business" number="801-226-2253" extension="145"/>
+                        <PHONE type="Cell" number="801-226-2254" />
+                        <PHONE type="Other" number="801-226-2255" extension="154"/>
+                        <EMAIL address="Jason@yahoo.com"/>
+                    </CONTACTMETHODS>
+                </CONTACT>
+            </CONTACTS>
+            <PROJECT_INFO>
+                <NOTES><![CDATA[This is the Description Of Loss, you would want to add any additonal notes for the adjuster]]></NOTES>
+            </PROJECT_INFO>
+            <ADM dateReceived="2013-03-25" dateOfLoss="2012-03-01">
+                <COVERAGE_LOSS policyNumber="PN1234567890" claimNumber="1234567890" catastrophe="805" policyStart="2012-01-01" policyEnd="2015-01-01" dateInitCov="2012-01-01" isCommercial="0" >
+                    <COVERAGES>
+                        <COVERAGE id="COV1" covType="0" covName="Dwelling" deductible="500" policyLimit="1000000" reserveAmt="1000.00" applyTo="1">
+                        </COVERAGE>
+                        <COVERAGE id="COV2" covType="1" covName="Structural" deductible="500" policyLimit="1000000" reserveAmt="1000.00" applyTo="2">
+                        </COVERAGE>
+                        <COVERAGE id="COV3" covType="2" covName="Contents" deductible="500" policyLimit="100000" reserveAmt="1000.00" applyTo="1">
+                        </COVERAGE>
+                    </COVERAGES>
+                    <TOL desc="Water" code="WATER">
+                        <COL desc="Broken Pipe" otherCause="High Water Pressure"/>
+                    </TOL>
+                    <FORMS>
+                        <FORM name="BP0009" editionDate="01-1997"/>
+                        <FORM name="BP0008" editionDate="01-1998"/>
+                    </FORMS>
+                </COVERAGE_LOSS>
+            </ADM>
+        </XACTDOC>
+
+    </xmp>
+</p>
+<img src="XA.png"/>
+<div id="fullGuide">
+    <div>
+        <div id="headerText">Electronic Data Interchange (EDI) Export Guide</div>
+        <br>
+        <div id="blueText">Table of Contents</div>
+        <div>Table of Contents........................................................................................................................................................... 1</div>
+        <div>Introduction to XactAnalysis......................................................................................................................................... 2</div>
+        <div>Electronic Data Interchange (EDI) ............................................................................................................................... 2</div>
+        <div>Setting up EDI with XactAnalysis................................................................................................................................ 3</div>
+        <div>Configuration Questionnaire ........................................................................................................................................ 4</div>
+        <div>Assignment Import – XML........................................................................................................................................... 5</div>
+        <div>Assignment Import – Advanced Options...................................................................................................................... 26</div>
+        <div>Assignment Import – Web Service............................................................................................................................... 31</div>
+        <div>Data Security................................................................................................................................................................. 34</div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+<p><!-- pagebreak --></p>
+    <div class="mainText">
+        <div id="blueText">Introduction to XactAnalysis</div>
+        <p>
+            XactAnalysis is the insurance industry’s first real-time assignment processing network. Using XactAnalysis’ powerful and secure extranet site, you can send and track assignments, receive notification of assignment events, view completed estimate information, and create real-time management reports..
+        </p>
+        <div id="blueText">Electronic Data Interchange (EDI)</div>
+        <p>Electronic Data Interchange (EDI) is a connection that can be set up between your company and XactAnalysis through which you send your assignment information (in XML format) directly to an adjuster/contractor, or to an assignment queue, from which it can later be assigned to an adjuster/contractor. Completed estimate information can be sent back into your system over this connection.
+        <br>
+        <br>
+            Without an EDI connection, you are required to enter assignment information in your system and in the XactAnalysis website before it’s sent to an adjuster/contractor. EDI saves you time and labor by removing the redundant data entry; you simply enter assignment information into your system, which generates an XML file and transmits it to the XactAnalysis network (see flow chart below).
+        </p>
+        <img src="workflow.png"/>
+        <div id="blueText">Setting up EDI with XactAnalysis/div</div>
+        <br>
+        <div>Before an EDI connection can be set up, please complete the following tasks:</div>
+        <ul>
+            <li>View the XactAnalysis assignment XML and other import information in the Assignment Import – XML section of this document. <strong>Then provide XactAnalysis a list of XML fields that should be included in assignments sent by EDI.</strong></li>
+            <li>View advanced import options in the Assignment Import – Advanced Options section of this document. <strong>Then provide XactAnalysis a list of preferences regarding the import options.</strong></li>
+            <li>Complete and return the configuration questionnaire (below).</li>
+        </ul>
+        <p>TWhen the XML specifications, import preferences, and configuration questionnaire have been returned, we will map an XML file to your specifications and send it back for your confirmation. We will also begin setting up the EDI connection on our end and provide you further instruction for setting up the EDI connection on your end.</p>
+    </div>
+    <p><!-- pagebreak --></p>
+    <div class="mainText">
+        <div id="blueText">Configuration Questionnaire</div>
+        <br>
+        <div>Answer the questions in <strong>bold text</strong> below:</div>
+        <ol>
+            <li><strong>Will you use web service or sFTP?</strong> XactAnalysis accepts assignment XML files through our web service or using sFTP. If you choose web service, please see information about web service import in the Assignment Import – Web Service section. Contact your Integrations Specialist if you have not received the WSDL or XSD file. These documents will help you set up the EDI</li>
+            <br>
+            <li><strong>Should XactAnalysis create a log file for confirmation upon file import success?</strong></li>
+            <br>
+            <li><strong>Choose a file extension, such as .XML, for your assignment files.</strong> (Only applicable wheliusing FTP) XactAnalysis accepts any file extension as long as file names are unique.</li>
+        </ol>
+    </div>
+    <div class="mainText">
+        <div id="blueText">Assignment Import – XML</div>
+        <br>
+        <div><strong>XML Tag description</strong></div>
+        <p>The following table contains the XML tags used for the assignment XML. It contains the XML tags and values for versions of Xactimate 25 and higher.</p>
+    </div>
+    <xmp>
+        <?xml version='1.0' encoding= 'UTF-8' ?>
+
+        <XACTDOC>
+    </xmp>
+
+    <table>
+        <tr id="mainBox">
+            <td id="addfield"><strong>Add Field to XML</strong></td>
+            <td id="field"><strong>Field</strong></td>
+            <td id="description"><strong>Description</strong></td>
+            <td id="xmlSample"><strong>XML example</strong></td>
+            <td id="format"><strong>Format</strong>
+                <br>
+                AN = Alphanumeric
+                <br><br>
+                Restricted values = Check under the description column for valid values, or .</td>
+        </tr>
+    </table>
+    <table>
+        <tr id="tagBox">
+            <td id="elementDesc">XactAnalysis Information Section. One per assignment.</td>
+            <td id="elementName"><xmp><XACTNET_INFO </xmp></td>
+        </tr>
+    </table>
+    <table>
+        <tr id="mainBox">
+            <td id="addfield">Required</td>
+            <td id="field">Carrier Identifier</td>
+            <td id="description">The identifier that uniquely identifies the carrier that created the assignment. XactAnalysis provides this value. This defines the dataset the assignment is placed in.</td>
+            <td id="xmlSample">carrierId = "909090"</td>
+            <td id="format">Integer</td>
+        </tr>
+        <tr id="mainBox">
+            <td id="addfield"><button id="buttonClick">Add</button></td>
+            <td id="field">Flooring Analysis Expected flag</td>
+            <td id="description">Tells XactAnalysis that a Flooring Analysis report is expected. Causes XactAnalysis to export the assignment to the Analysis company (such as ITEL) is such export has been setup.</td>
+            <td id="xmlSample">ooringAnalysisExpected = “1”</td>
+            <td id="format">0 = false <br><br> 1 = true</td>
+        </tr>
+        <tr id="mainBox">
+            <td id="addfield"><button id="buttonClick">Add</button></td>
+            <td id="field">Assignor id</td>
+            <td id="description">The id of the person making the assignment. This is a customer-supplied value that XactAnalysis can store, but not used by XactAnalysis.</td>
+            <td id="xmlSample">assignorId = "A902B3"</td>
+            <td id="format">AN up to 20</td>
+        </tr>
+        <tr id="mainBox">
+            <td id="addfield"><button id="buttonClick">Add</button></td>
+            <td id="field">Contractor TIN</td>
+            <td id="description">Federal Tax ID number.</td>
+            <td id="xmlSample">federalTIN = "93-9999999"</td>
+            <td id="format">AN up to 30</td>
+        </tr>
+        <tr id="mainBox">
+            <td id="addfield"><button id="buttonClick">Add</button></td>
+            <td id="field">Sender’s XactAnalysis Address</td>
+            <td id="description">The XactAnalysis address of the entity that manages the assignment. XactAnalysis provides this value to the customer.</td>
+            <td id="xmlSample">sendersXNAddress = "BEST.XACTANALYSIS"</td>
+            <td id="format">AN up to 31</td>
+        </tr>
+        <tr id="mainBox">
+            <td id="addfield"><button id="buttonClick">Add</button></td>
+            <td id="field">Sender ID</td>
+            <td id="description">The identifier that uniquely identifies the sender. XactAnalysis adds this to the assignment XML.</td>
+            <td id="xmlSample">senderId = "898989"</td>
+            <td id="format">Integer</td>
+        </tr>
+        <tr id="mainBox">
+            <td id="addfield"><button id="buttonClick">Add</button></td>
+            <td id="field">Profile Code</td>
+            <td id="description">The profile that the carrier has been assigned. XactAnalysis provides this value.</td>
+            <td id="xmlSample">profileCode = "AB"</td>
+            <td id="format">AN up to 2</td>
+        </tr>
+        <tr id="mainBox">
+            <td id="addfield"><button id="buttonClick">Add</button></td>
+            <td id="field">Recipient’s XactAnalysis Address</td>
+            <td id="description">The XactAnalysis address of the person (adjustor/contractor) receiving the assignment in the field. Xactimate users receive a XactAnalysis address when they successfully register. Either the recipient’s XactAnalysis Address or the recipient’s ID is required.</td>
+            <td id="xmlSample">recipientsXNAddress = "JSM.OREM.UT.Z"</td>
+            <td id="format">AN up to 31</td>
+        </tr>
+        <tr id="mainBox">
+            <td id="addfield"><button id="buttonClick">Add</button></td>
+            <td id="field">Recipient’s Identifier</td>
+            <td id="description">If a customer does not use the recipientXNAddress, the carrier can use recipientsId – which is unique identifier generated externally (not by XactAnalysis). When using recipientId,
+                <br>
+                <ol>
+                    <li>Each recipient must still register to obtain an XactAnalysis address.</li>
+                    <li>The carrier enters the ID in XactAnalysis for each recipient.</li>
+                </ol>
+                <br>
+                XactAnalysis uses the recipientsId to look up the XactAnalysis address.
+            </td>
+            <td id="xmlSample">recipientsId = "2398-U8H900"</td>
+            <td id="format">AN up to 30</td>
+        </tr>
+        <tr id="mainBox">
+            <td id="addfield"><button id="buttonClick">Add</button></td>
+            <td id="field">Recipient’s Xactimate User ID</td>
+            <td id="description">Can be used in conjunction with recipientsXNAddress where the carrier can use recipientsXM8UserId to determine which User@ to send the assignment to. If recipientsXM8UserId is used then recipientsXNAddress must also be used but recipientsId cannot be used.</td>
+            <td id="xmlSample">recipientsXM8UserId = “JSM8”</td>
+            <td id="format">AN up to 8</td>
+        </tr>
+        <tr id="mainBox">
+            <td id="addfield"><button id="buttonClick">Add</button></td>
+            <td id="field">Third Party Identifier</td>
+            <td id="description">Contains a number the carrier wants associated with assignment for tracking purposes.</td>
+            <td id="xmlSample">thirdPartyId = "9239"</td>
+            <td id="format">AN up to 20</td>
+        </tr>
+        <tr id="mainBox">
+            <td id="addfield"><button id="buttonClick">Add</button></td>
+            <td id="field">Third Party Geographic ID</td>
+            <td id="description">Contain a geographic code provided by the carrier, which can then be used in Advanced Search for sorting and filtering.</td>
+            <td id="xmlSample">thirdPartyGeoId</td>
+            <td id="format">AN up to 20</td>
+        </tr>
+        <tr id="mainBox">
+            <td id="addfield"><button id="buttonClick">Add</button></td>
+            <td id="field">Rotation</td>
+            <td id="description">XactAnalysis automatically assigns a contractor based on the zip code if set to “1”. The default is 0. This is available for new assignments only.</td>
+            <td id="xmlSample">rotation = "0"</td>
+            <td id="format">0 = false <br><br> 1 = true</td>
+        </tr>
+        <tr id="mainBox">
+            <td id="addfield"><button id="buttonClick">Add</button></td>
+            <td id="field"></td>
+            <td id="description"></td>
+            <td id="xmlSample"></td>
+            <td id="format"></td>
+        </tr>
+        <tr id="mainBox">
+            <td id="addfield"><button id="buttonClick">Add</button></td>
+            <td id="field"></td>
+            <td id="description"></td>
+            <td id="xmlSample"></td>
+            <td id="format"></td>
+        </tr>
+        <tr id="mainBox">
+            <td id="addfield"><button id="buttonClick">Add</button></td>
+            <td id="field"></td>
+            <td id="description"></td>
+            <td id="xmlSample"></td>
+            <td id="format"></td>
+        </tr>
+        <tr id="mainBox">
+            <td id="addfield"><button id="buttonClick">Add</button></td>
+            <td id="field"></td>
+            <td id="description"></td>
+            <td id="xmlSample"></td>
+            <td id="format"></td>
+        </tr>
+
+
+
+
+    </table>
+</div>
+</body>
+</html>
