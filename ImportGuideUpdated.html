@@ -8,15 +8,112 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="Import.js"></script>
 
-<body>
+<body onload="onLoad()">
 <form class="xmlRight">
-    <div id="xactNetElement"></div><div id="endTag1"></div><div id="controlPoints1"></div><div id="contacts1"></div>
+    <div class="tab1" id="xactdoc"></div>
+    <div class="tab1" id="xactNetInfo" ></div>
+        <div class="tab2" id="controlPointsMain1"></div>
+            <div class="tab3" id="cancellationComments"></div>
+            <div class="tab3" id="controlPoint1"></div>
+                <div class="tab4" tabindex="4" id="cpNotes"></div>
+            <div class="tab3" id="controlPoint1End"></div>
+        <div class="tab2" id="controlPoints1MainEnd"></div>
+        <div class="tab2" id="thirdPartyURL"></div>
+    <div class="tab1" id="xactNetInfoEnd"></div>
+
+    <div class="tab1" id="contactsMain"></div>
+        <div class="tab2" id="contact"></div>
+            <div class="tab3" id="mortgagesMain"></div>
+                <div class="tab4" id="mortgage"></div>
+                <div class="tab4" id="mortgageEnd"></div>
+            <div class="tab3" id="mortgagesMainEnd"></div>
+            <div class="tab3" id="addressesMain"></div>
+                <div class="tab4" id="address"></div>
+                <div class="tab4" id="addressEnd"></div>
+            <div class="tab3" id="addressesMainEnd"></div>
+            <div class="tab3" id="contactMethods"></div>
+                <div class="tab4" id="phone"></div>
+                <div class="tab4" id="phoneEnd"></div>
+                <div class="tab4" id="email"></div>
+                <div class="tab4" id="emailEnd"></div>
+            <div class="tab3" id="contactMethodsEnd"></div>
+            <div class="tab3" id="company"></div>
+                <div class="tab4" id="companyAddresses"></div>
+                    <div class="tab5" id="companyAddress"></div>
+                    <div class="tab5" id="companyAddressEnd"></div>
+                    <div class="tab5" id="compContactMethods"></div>
+                        <div class="tab6" id="compPhone"></div>
+                        <div class="tab6" id="compEmail"></div>
+                    <div class="tab5" id="compContactMethodsEnd"></div>
+                <div class="tab4" id="companyAddressesEnd"></div>
+            <div class="tab3" id="companyEnd"></div>
+        <div class="tab2" id="contactEnd"></div>
+        <div class="tab2" id="companyMain"></div>
+            <div class="tab3" id="companyMainAddresses"></div>
+                <div class="tab4" id="companyMainAddress"></div>
+                <div class="tab4" id="companyMainAddressEnd"></div>
+            <div class="tab3" id="companyMainAddressesEnd"></div>
+            <div class="tab3" id="compMainContactMethods"></div>
+                <div class="tab4" id="compMainPhone"></div>
+                <div class="tab4" id="compMainEmail"></div>
+            <div class="tab3" id="compMainContactMethodsEnd"></div>
+        <div class="tab2" id="companyMainEnd"></div>
+    <div class="tab1" id="contactsMainEnd"></div>
+    <div class="tab1" id="projectInfo"></div>
+        <div class="tab2" id="projectNotes"></div>
+        <div class="tab2" id="projectNotesEnd"></div>
+    <div class="tab1" id="projectInfoEnd"></div>
+    <div class="tab1" id="claimInfo"></div>
+        <div class="tab2" id="lossInfo"></div>
+        <div class="tab2" id="adminInfo"></div>
+            <div class="tab3" id="insuranceClient"></div>
+                <div class="tab4" id="ICAddressesMain"></div>
+                    <div class="tab5" id="ICAddress"></div>
+                <div class="tab4" id="ICAddressesMainEnd"></div>
+                <div class="tab4" id="ICcontactMethods"></div>
+                    <div class="tab5" id="ICphone"></div>
+                    <div class="tab5" id="ICemail"></div>
+                <div class="tab4" id="ICcontactMethodsEnd"></div>
+            <div class="tab3" id="insuranceClientEnd"></div>
+        <div class="tab2" id="adminInfoEnd"></div>
+        <div class="tab2" id="assignmentReferral"></div>
+            <div class="tab3" id="retProdPref"></div>
+            <div class="tab3" id="billingArrang"></div>
+        <div class="tab2" id="assignmentReferralEnd"></div>
+    <div class="tab1" id="claimInfoEnd"></div>
+
+    <div class="tab1" id="adm"></div>
+        <div class="tab2" id="subrogationNote"></div>
+        <div class="tab2" id="subrogationNoteEnd"></div>
+        <div class="tab2" id="covLoss"></div>
+            <div class="tab3" id="covNotes"></div>
+            <div class="tab3" id="covNotesEnd"></div>
+            <div class="tab3" id="coveragesMain"></div>
+                <div class="tab4" id="coverage"></div>
+                    <div class="tab5" id="addSublimitsMain"></div>
+                        <div class="tab6" id="addSublimit"></div>
+                        <div class="tab6" id="addSublimitEnd"></div>
+                    <div class="tab5" id="addSublimitsMainEnd"></div>
+                <div class="tab4" id="coverageEnd"></div>
+            <div class="tab3" id="coveragesMainEnd"></div>
+            <div class="tab3" id="tol"></div>
+                <div class="tab4" id="col"></div>
+            <div class="tab3" id="tolEnd"></div>
+            <div class="tab3" id="formsMain"></div>
+                <div class="tab3" id="form"></div>
+            <div class="tab3" id="formsMainEnd"></div>
+        <div class="tab2" id="covLossEnd"></div>
+    <div class="tab1" id="admEnd"></div>
+
+    <div class="tab1" id="params"></div>
+
+    <div class="tab1" id="xactdocEnd"></div>
 </form>
 
 <div id="main">
     <table>
         <tr id="mainBox">
-            <td id="addfield"><strong onclick="intro('=\'\''); this.disabled=true">Add Field to XML</strong></td>
+            <td id="addfield"><strong>Add Field to XML</strong></td>
             <td id="field"><strong>Field</strong></td>
             <td id="description"><strong>Description</strong></td>
             <td id="xmlSample"><strong>XML example</strong></td>
@@ -35,7 +132,7 @@
     </table>
     <table>
         <tr id="mainBox">
-            <td id="addfield">Required</td>
+            <td id="addfield"><button class="buttonClick1" onclick="intro('carrierId=\'\''); this.disabled=true; this.disabled=true">Add</div></td>
             <td id="field">Carrier Identifier</td>
             <td id="description">The identifier that uniquely identifies the carrier that created the assignment. XactAnalysis provides this value. This defines the dataset the assignment is placed in.</td>
             <td id="xmlSample">carrierId = "909090"</td>
@@ -242,7 +339,7 @@
             <td id="format">AN up to 7</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="intro(' transactionType=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Transaction type</td>
             <td id="description">There are only two types of transactions you can create:
                 <br><br>
@@ -346,17 +443,17 @@
     </table>
     <table class="element2">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="ControlPoints('cancellationReason =\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="ControlPoints(' cancellationReason=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Cancellation Reason Category</td>
             <td id="description">The specific reason category for the cancellation. If the cancellation reason category does not match a value from the list of values found in XactAnalysis, XactAnalysis adds a new cancellation reason category.</td>
             <td id="xmlSample">cancellationReason="Contractor has too much work"</td>
             <td id="format">AN up to 50</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="ControlPoints('estAssignment =\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="ControlPoints(' testAssignment =\'\''); this.disabled=true">Add</button></td>
             <td id="field">Test Assignment</td>
             <td id="description">if the assignment is used for testing – useful in a production environment. Default is 0.</td>
-            <td id="xmlSample">estAssignment = "1"</td>
+            <td id="xmlSample">testAssignment = "1"</td>
             <td id="format">0 = false <br><br> 1 = true</td>
         </tr>
     </table>
@@ -374,7 +471,7 @@
     </table>
     <table class="element3">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="CancellationComment(' ![CDATA[ Add Comment here.]]>'); this.disabled=true">Add</button></td>
             <td id="field">Cancellation Comments</td>
             <td id="description">Comments describing the cancellation.</td>
             <td id="xmlSample"><xmp><![CDATA[ ABC Contractor is booked</xmp><xmp> and requested that we cancel this</xmp><xmp> claim. ]]></xmp></td>
@@ -396,7 +493,7 @@
     </table>
     <table class="element3">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="ControlPoint1(' type=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Type</td>
             <td id="description">Identifies the type of the control point<br><br>
                 These types are available on new assignments and assignment updates:<br><br>
@@ -408,14 +505,14 @@
             <td id="format">AN up to 28 restricted values</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="ControlPoint1(' stamp=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Stamp</td>
             <td id="description">The date and time of the control point. Indicates if the control point has been met.</td>
             <td id="xmlSample">stamp="2003-07-09T06:05:42"</td>
             <td id="format">See Date And Times</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="ControlPoint1(' userId=\'\' userNumber=\'\' user=\'\''); this.disabled=true">Add</button></td>
             <td id="field">User</td>
             <td id="description">We have two methods of identifying the XactAnalysis user associated with the control point, choose one of:<br>
                 <ul>
@@ -429,7 +526,7 @@
             <td id="format">AN up to 60<br><br><br><br>AN up to 25<br><br><br><br>AN up to 30</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="ControlPoint1(' reservation=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Reviewed with exceptions flag</td>
             <td id="description">If the control point is the reviewed control point, this attribute indicates whether the record has been reviewed with reservations/exceptions.</td>
             <td id="xmlSample">reservation="0"</td>
@@ -450,7 +547,7 @@
     </table>
     <table class="element4">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="cpNotes(' ![CDATA[Control points notes go here ]]'); this.disabled=true">Add</button></td>
             <td id="field"></td>
             <td id="description"></td>
             <td id="xmlSample"><xmp><![CDATA[Control points notes go here ]]></xmp></td>
@@ -490,7 +587,7 @@
     </table>
     <table class="element2">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="ThirdPartyURL('![CDATA[URL goes here ]]'); this.disabled=true">Add</button></td>
             <td id="field">3rd Party URL</td>
             <td id="description"></td>
             <td id="xmlSample"><xmp><![CDATA[URL goes here ]]></xmp></td>
@@ -523,7 +620,7 @@
     </table>
     <table class="element2">
         <tr id="mainBox">
-            <td id="addfield"><button id="contacts1" onclick="Contacts('type=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="contacts1" onclick="Contacts(' type=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Identify the type of contact (client, adjuster, etc.)</td>
             <td id="description">Valid values:
                 <br><br>
@@ -550,14 +647,14 @@
             <td id="format">AN up to 20 restricted values</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="Contacts('name=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="Contacts(' name=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Contact’s name</td>
             <td id="description">The contact’s name.</td>
             <td id="xmlSample">name = "Smith, Jason"</td>
             <td id="format">AN up to 160</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="Contacts('qcode=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="Contacts(' qcode=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Quick code</td>
             <td id="description">Ignored when type = “Client”<br><br>
                 The carrier should populate qcode in order to edit and/or view the company information. Duplicate qcode values are permitted.</td>
@@ -565,7 +662,7 @@
             <td id="format">AN up to 8</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="Contacts('adjNo=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="Contacts(' adjNo=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Adjuster number</td>
             <td id="description">Adjuster number (valid only when type = “ClaimRep”)</td>
             <td id="xmlSample">adjNo = "530960333</td>
@@ -592,14 +689,14 @@
     </table>
     <table class="element4">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="mortgageMain(' mortgagee=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Mortgage Holder</td>
             <td id="description">The entity that holds the mortgage on the property (valid only when type = “Client”)</td>
             <td id="xmlSample">mortgagee = "Acme Mortgage"</td>
             <td id="format">AN up to 80</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="mortgageMain(' loanNum=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Loan Number</td>
             <td id="description">Loan number (valid only when type = “Client”)</td>
             <td id="xmlSample">loanNum = "123456789"</td>
@@ -632,8 +729,8 @@
     </table>
     <table class="element4">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
-            <td id="field" onclick="intro('=\'\''); this.disabled=true">Address Type</td>
+            <td id="addfield"><button id="buttonClick" onclick="addressesMain(' type=\'\''); this.disabled=true">Add</button></td>
+            <td id="field"</td>
             <td id="description">Valid values:
                 <br><br>
                 <table>
@@ -658,21 +755,21 @@
             <td id="format">AN up to 20 restricted values (Required)</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="addressesMain(' country=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Country</td>
             <td id="description">Valid values are: US, CA (for Canada) (Required)</td>
             <td id="xmlSample">country = "US"</td>
             <td id="format">AN up to 2 restricted values (Required)</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="addressesMain(' city=\'\''); this.disabled=true">Add</button></td>
             <td id="field">City</td>
             <td id="description"></td>
             <td id="xmlSample">city = "Any City"</td>
             <td id="format">AN up to 60</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="addressesMain(' street=\'\' street2=\'\' street3=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Street</td>
             <td id="description"></td>
             <td id="xmlSample">street = "Any Street"<br><br>
@@ -681,35 +778,35 @@
             <td id="format">AN up to 60</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="addressesMain(' state=\'\''); this.disabled=true">Add</button></td>
             <td id="field">State</td>
             <td id="description">State code abbreviation</td>
             <td id="xmlSample">state = "UT"</td>
             <td id="format">AN up to 60 (Required)</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="addressesMain(' postal=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Postal</td>
             <td id="description">Postal code/zip code</td>
             <td id="xmlSample">postal = "84003-9882"</td>
             <td id="format">AN up to 10 (Required)</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="addressesMain(' lat=\'\''); this.disabled=true">Add</button></td>
             <td id="field">GPS latitude coordinate</td>
             <td id="description">The latitude of the address. Decimal degrees.</td>
             <td id="xmlSample">lat = "-31.928267"</td>
             <td id="format">Decimal between -90.0 and 90.0</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="addressesMain(' lon=\'\''); this.disabled=true">Add</button></td>
             <td id="field">GPS longitude coordinate</td>
             <td id="description">The longitude of the address. Decimal degrees.</td>
             <td id="xmlSample">lon = "115.800667"</td>
             <td id="format">Decimal between -180.0 and 180.0</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="addressesMain(' accuracy=\'\''); this.disabled=true">Add</button></td>
             <td id="field">GPS coordinate accuracy</td>
             <td id="description">Accuracy of the GPS coordinates. Must be one of:<br><br>
                 ADDRESS<br>
@@ -755,7 +852,7 @@
     </table>
     <table class="element4">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="contactMethodsPhone(' type=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Phone type</td>
             <td id="description">Valid values:
                 <br><br>
@@ -787,21 +884,21 @@
             <td id="format">AN up to 12 restricted values</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="contactMethodsPhone(' number=\'\''); this.disabled=true">Add</button></td>
             <td id="field"></td>
             <td id="description">Include the "-" separators</td>
             <td id="xmlSample">number = "801-226-2252"</td>
             <td id="format">AN 12 restricted values</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="contactMethodsPhone(' extension=\'\''); this.disabled=true">Add</button></td>
             <td id="field"></td>
             <td id="description"></td>
             <td id="xmlSample">extension = "00101"</td>
             <td id="format">Integer up to 20</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="contactMethodsPhone(' primary=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Primary phone type</td>
             <td id="description">When populated with a 1, this value designates the phone type as the primary phone number. If the value is zero or the primary attribute is missing, then the phone type is not considered as the primary phone number.<br><br>
                 If more than one phone type is used, primary needs to be specified for one of the numbers.</td>
@@ -829,10 +926,10 @@
     </table>
     <table class="element4">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="contactMethodsEmail(' Address=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Email address</td>
             <td id="description">Email address</td>
-            <td id="xmlSample" onclick="intro('=\'\''); this.disabled=true">Address = "Jason@yahoo.com"</td>
+            <td id="xmlSample">Address = "Jason@yahoo.com"</td>
             <td id="format">AN up to 512</td>
         </tr>
     </table>
@@ -856,14 +953,14 @@
     </table>
     <table class="element3">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="CompanyAddresses(' name=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Company name</td>
             <td id="description"></td>
             <td id="xmlSample">name = "Best Contracting"</td>
             <td id="format">AN up to 85</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="CompanyAddresses(' qcode=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Quick Code</td>
             <td id="description">The carrier should populate qcode in order to edit and/or view the company information. Duplicate qcode values are permitted.</td>
             <td id="xmlSample">qcode = "BEST"</td>
@@ -914,7 +1011,7 @@
     </table>
     <table class="element2">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="companyMain(' type=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Type of company</td>
             <td id="description">Valid values:
                 <br><br>
@@ -937,21 +1034,21 @@
             <td id="format">AN up to 20 restricted values</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="companyMain(' name=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Company Name</td>
             <td id="description">The companies name.</td>
             <td id="xmlSample">name = "ACME Building"</td>
             <td id="format">AN up to 85</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="companyMain(' primaryContact=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Primary Contact</td>
             <td id="description">The company’s primary contact.</td>
             <td id="xmlSample">primaryContact = "John Doe"</td>
             <td id="format">AN up to 30</td>
         </tr>
            <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="companyMain(' qcode=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Quick Code</td>
             <td id="description">The carrier should populate qcode in order to edit and/or view the company information. Duplicate qcode values are permitted.</td>
             <td id="xmlSample">qcode = "ACME"</td>
@@ -978,35 +1075,35 @@
     </table>
     <table class="element4">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
-            <td id="field" onclick="intro('=\'\''); this.disabled=true">Address Type</td>
+            <td id="addfield"><button id="buttonClick" onclick="companyMainAddress(' type=\'\''); this.disabled=true">Add</button></td>
+            <td id="field" onclick="intro(' =\'\''); this.disabled=true">Address Type</td>
             <td id="description"></td>
             <td id="xmlSample">type = "Business"</td>
             <td id="format">AN up to 20</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="companyMainAddress(' city=\'\''); this.disabled=true">Add</button></td>
             <td id="field">City</td>
             <td id="description"></td>
             <td id="xmlSample">city = "Fremont City"</td>
             <td id="format">AN up to 60</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="companyMainAddress(' street=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Street</td>
             <td id="description"></td>
             <td id="xmlSample">street = "100 Main street "</td>
             <td id="format">AN up to 60</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="companyMainAddress(' state=\'\''); this.disabled=true">Add</button></td>
             <td id="field">State</td>
             <td id="description"></td>
             <td id="xmlSample">state = "UT"</td>
             <td id="format">AN up to 2</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="companyMainAddress(' postal=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Postal</td>
             <td id="description"></td>
             <td id="xmlSample">postal = "99999-9882"</td>
@@ -1063,7 +1160,7 @@
     </table>
     <table>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="projectInfo('![CDATA[Put free-form text data here]]'); this.disabled=true">Add</button></td>
             <td id="field">Notes</td>
             <td id="description">Free-form text data. You can format the text with carriage returns and asterisks – or any other way according to how you want to view the information within Xactimate.<br><br>
                 Listed under the Description of Loss and/or Instructions within XactAnalysis</td>
@@ -1097,7 +1194,7 @@
     </table>
     <table>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="lossInfo(' receivedBy=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Received by</td>
             <td id="description">This data may not show up in Xactimate (profile dependent)<br><br><br>
                 Value values are:<br><br>
@@ -1106,7 +1203,7 @@
             <td id="format">AN up to 12 restricted values</td>
         </tr>
            <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="lossInfo(' referredBy=\'\' referredByPhone=\'\' referredByPhoneExt=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Referred by name</td>
             <td id="description">This data may not show up in Xactimate (profile dependent)<br><br>
                 Include the "-" separators</td>
@@ -1132,14 +1229,14 @@
     </table>
     <table>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' branch=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Branch</td>
             <td id="description">This data may not show up in Xactimate (profile dependent)</td>
             <td id="xmlSample">branch = "PROVO-UT"</td>
             <td id="format">AN up to 20</td>
         </tr>
            <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' accessName=\'\' accessPhone=\'\' accessPhoneExt=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Person to contact to access property</td>
             <td id="description">This data may not show up in Xactimate (profile dependent)<br><br><br>
                 Include the "-" separators</td>
@@ -1151,70 +1248,70 @@
                 Integer up to 6</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' origin=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Assignment origin</td>
             <td id="description">This data may not show up in Xactimate (profile dependent)</td>
             <td id="xmlSample">origin = "2"</td>
             <td id="format">AN up to 1</td>
         </tr>
            <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' type=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Assignment type</td>
             <td id="description">This data may not show up in Xactimate (profile dependent)</td>
             <td id="xmlSample">type = "3"</td>
             <td id="format">AN up to 1</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' origBranch=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Originating branch number</td>
             <td id="description">This data may not show up in Xactimate (profile dependent)</td>
             <td id="xmlSample">origBranch = "200"</td>
             <td id="format">Integer</td>
         </tr>
            <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' origFileNumber=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Originating file number</td>
             <td id="description">This data may not show up in Xactimate (profile dependent)</td>
             <td id="xmlSample">origFileNumber = "300"</td>
             <td id="format">Integer</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' coverage=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Coverage code</td>
             <td id="description">This data may not show up in Xactimate (profile dependent)</td>
             <td id="xmlSample">coverage = "284"</td>
             <td id="format">AN up to 3</td>
         </tr>
            <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' hourlyRate=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Hourly rate</td>
             <td id="description">This data may not show up in Xactimate (profile dependent)</td>
             <td id="xmlSample">hourlyRate = "100.00"</td>
             <td id="format">Decimal</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' telephoneCharge=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Telephone charge?</td>
             <td id="description">This data may not show up in Xactimate (profile dependent)</td>
             <td id="xmlSample">telephoneCharge = "1"</td>
             <td id="format">0 = False<br><br>1 = True</td>
         </tr>
            <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' caseCreationHour=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Case creation hour?</td>
             <td id="description">This data may not show up in Xactimate (profile dependent)</td>
             <td id="xmlSample">caseCreationHour = "1"</td>
             <td id="format">0 = False<br><br>1 = True</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' reason=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Reason for referral</td>
             <td id="description">This data may not show up in Xactimate (profile dependent)</td>
             <td id="xmlSample">reason = "1"</td>
             <td id="format">AN up to 1</td>
         </tr>
            <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' referralDate=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Referral date</td>
             <td id="description">This data may not show up in Xactimate (profile dependent)</td>
             <td id="xmlSample">referralDate = "2002-08-01"</td>
@@ -1235,14 +1332,14 @@
     </table>
     <table class="element2">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="insuranceClient(' clientdesc=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Insurance client</td>
             <td id="description"></td>
             <td id="xmlSample">clientdesc = "A R Transportation Inc"</td>
             <td id="format">AN up to 60</td>
         </tr>
            <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="insuranceClient(' primaryContact=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Insurance client contact</td>
             <td id="description"></td>
             <td id="xmlSample">primaryContact = "William Sanders"</td>
@@ -1269,7 +1366,7 @@
     </table>
     <table class="element4">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="ICAddresses(' type=\'\' primary=\'\' street=\'\' city=\'\' state=\'\' postal=\'\' country=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Insurance client contact address</td>
             <td id="description">Primary tag is required</td>
             <td id="xmlSample">type="Business"...................<br><br>
@@ -1313,7 +1410,7 @@
     </table>
     <table class="element4">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="ICPhone(' type=\'\' primary=\'\' number=\'\' extension=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Insurance client business phone</td>
             <td id="description">Include the "-" separators</td>
             <td id="xmlSample">type="Business"<br><br>
@@ -1339,10 +1436,10 @@
     </table>
     <table class="element4">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="ICEmail(' Address=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Insurance client email address</td>
             <td id="description"></td>
-            <td id="xmlSample" onclick="intro('=\'\''); this.disabled=true">Address="john@yahoo.com"</td>
+            <td id="xmlSample">Address="john@yahoo.com"</td>
             <td id="format">AN up to 40</td>
         </tr>
     </table>
@@ -1384,7 +1481,7 @@
     </table>
     <table class="element2">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="assignmentReferral(' xactanalysis=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Return options</td>
             <td id="description"></td>
             <td id="xmlSample">xactanalysis="1"<br><br>
@@ -1394,14 +1491,14 @@
             <td id="format">0 = false<br><br>1 = true</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="assignmentReferral(' emailAddress=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Email address</td>
             <td id="description"></td>
             <td id="xmlSample">emailAddress="return@email.com"</td>
             <td id="format">AN up to 60</td>
         </tr>
            <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="assignmentReferral(' faxPhone=\'\' faxPhoneExt=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Fax phone number</td>
             <td id="description"></td>
             <td id="xmlSample">faxPhone="222-333-4444"<br><br>
@@ -1424,28 +1521,28 @@
     </table>
     <table class="element2">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="billingArrangement(' clientSpecific=\'\''); this.disabled=true">Add</button></td>
             <td id="field"></td>
             <td id="description">Client Specific Billing Arrangement</td>
             <td id="xmlSample">clientSpecific="1"</td>
             <td id="format">0 = false<br><br>1 = true</td>
         </tr>
            <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="billingArrangement(' teBillingMethod=\'\''); this.disabled=true">Add</button></td>
             <td id="field"></td>
             <td id="description">T&E Billing Method with Fixed Standard Administration Fees</td>
             <td id="xmlSample">teBillingMethod="0"</td>
             <td id="format">0 = false<br><br>1 = true</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="billingArrangement(' feeScheduledAssignment=\'\''); this.disabled=true">Add</button></td>
             <td id="field"></td>
             <td id="description">Fee Scheduled Assignment</td>
             <td id="xmlSample">feeScheduledAssignment="0"</td>
             <td id="format">0 = false<br><br>1 = true</td>
         </tr>
            <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="billingArrangement(' limitedAssignment=\'\''); this.disabled=true">Add</button></td>
             <td id="field"></td>
             <td id="description">Limited Assignment Menu of Services</td>
             <td id="xmlSample">limitedAssignment="0"</td>
@@ -1478,77 +1575,77 @@
     </table>
     <table class="element0">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adm(' branchNumber=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Branch number</td>
             <td id="description">This data may not show up in Xactimate (profile dependent)</td>
             <td id="xmlSample">branchNumber = "117"</td>
             <td id="format">Integer</td>
         </tr>
            <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adm(' clientNumber=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Client number</td>
             <td id="description">This data may not show up in Xactimate (profile dependent)</td>
             <td id="xmlSample">clientNumber = "9679"</td>
             <td id="format">Integer</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adm(' fileNumber=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Adjuster file number</td>
             <td id="description"></td>
             <td id="xmlSample">fileNumber = "123KDJF"</td>
             <td id="format">AN up to 36</td>
         </tr>
            <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adm(' dateReceived=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Date Received</td>
             <td id="description">Date the insured reported the claim to the carrier.</td>
             <td id="xmlSample">dateReceived = "2001-10-22"</td>
             <td id="format">See Date And Times</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adm(' dateOfLoss=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Date of Loss</td>
             <td id="description">Date the loss occurred</td>
             <td id="xmlSample">dateOfLoss = "2001-10-21"</td>
             <td id="format">See Date And Times</td>
         </tr>
            <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adm(' dateAssigned=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Date Assigned</td>
             <td id="description"></td>
             <td id="xmlSample">dateAssigned = "2001-10-23"</td>
             <td id="format">See Date And Times</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adm(' dateInspected=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Date Contacted</td>
             <td id="description"></td>
             <td id="xmlSample">dateInspected = "2001-10-24"</td>
             <td id="format">See Date And Times</td>
         </tr>
            <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adm(' dateInspected=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Date Inspected</td>
             <td id="description"></td>
             <td id="xmlSample">dateInspected = "2001-10-24"</td>
             <td id="format">See Date And Times</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adm(' agentCode=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Agent Code</td>
             <td id="description"></td>
             <td id="xmlSample">agentCode = "B89SS"</td>
             <td id="format">AN up to 8</td>
         </tr>
            <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adm(' agentName=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Agent Name</td>
             <td id="description">Agent full name – first and last name together.</td>
             <td id="xmlSample">agentName = "Mark Jackson"</td>
             <td id="format">AN up to 85</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="adm(' subrogationFlag=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Subrogation</td>
             <td id="description">Indicates that subrogation exists</td>
             <td id="xmlSample">subrogationFlag = "1"</td>
@@ -1569,7 +1666,7 @@
     </table>
     <table>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="subrogationNote('![CDATA[Subrogation notes go here]]'); this.disabled=true">Add</button></td>
             <td id="field">Subrogation Notes</td>
             <td id="description">Explanation of the subrogation</td>
             <td id="xmlSample"><xmp><![CDATA[Subrogation notes go here]]></xmp></td>
@@ -1590,42 +1687,42 @@
     </table>
     <table>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="coverageLoss(' policyNumber=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Policy Number</td>
             <td id="description"></td>
             <td id="xmlSample">policyNumber = "A123123"</td>
             <td id="format">AN up to 20</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="coverageLoss(' claimNumber=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Claim Number</td>
             <td id="description"></td>
             <td id="xmlSample">claimNumber = "1234567891234"</td>
             <td id="format">AN up to 30</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="coverageLoss(' catastrophe=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Cat/Storm Code</td>
             <td id="description">Catastrophe code</td>
             <td id="xmlSample">catastrophe = "Y12U"</td>
             <td id="format">AN up to 15</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="coverageLoss(' policyStart=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Policy Effective Date</td>
             <td id="description">Date policy is effective for the year.</td>
             <td id="xmlSample">policyStart = "2002-01-01"</td>
             <td id="format">YYYY-MM-DD</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="coverageLoss(' policyEnd=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Policy Expiration Date</td>
             <td id="description">Date policy expires for the year.</td>
             <td id="xmlSample">policyEnd = "2002-12-31"</td>
             <td id="format">YYYY-MM-DD</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="coverageLoss(' dateInitCov=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Initial Coverage Date</td>
             <td id="description">The date the coverage began – if the carrier wants to provide only the year, the carrier places zeros in the month and day fields.<br><br>
                 Displayed in XactAnalysis as Inception Date</td>
@@ -1633,14 +1730,14 @@
             <td id="format">YYYY-MM-DD</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="coverageLoss(' isCommercial=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Policy Type</td>
             <td id="description">Indicates if the policy is commercial.</td>
             <td id="xmlSample">isCommercial = "1"</td>
             <td id="format">0 = false<br><br>1 = true</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="coverageLoss(' policyType=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Policy Type (Flood)</td>
             <td id="description">Indicates different Policy Types<br><br>
                 The policyType attribute is replacing the isCommercial attribute.<br><br>
@@ -1653,7 +1750,7 @@
                 4 = RCBAP (Flood)</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="coverageLoss(' overallDeductible=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Apply Deductible</td>
             <td id="description">If the overallDeductible attribute is included, then the deductible applies across all coverages, even if the atrribute is blank or empty.</td>
             <td id="xmlSample">overallDeductible = "300"</td>
@@ -1674,7 +1771,7 @@
     </table>
     <table class="element2">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="coverageNote('![CDATA[Put free-form text data here]]'); this.disabled=true">Add</button></td>
             <td id="field">Coverage Description</td>
             <td id="description">Description of coverage (profile dependent)<br><br>
                 Not displayed in XactAnalysis</td>
@@ -1696,14 +1793,14 @@
     </table>
     <table class="element2">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="coveragesMain(' lossOfUse=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Loss of use amount</td>
             <td id="description"></td>
             <td id="xmlSample">lossOfUse = "60.00"</td>
             <td id="format">Decimal</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="coveragesMain(' doNotApplyLimits=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Apply Limit</td>
             <td id="description"></td>
             <td id="xmlSample">doNotApplyLimits = “1”</td>
@@ -1724,7 +1821,7 @@
     </table>
     <table class="element3">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="coverage(' id=\'\''); this.disabled=true">Add</button></td>
             <td id="field">ID</td>
             <td id="description">Unique ID starting with "COV" followed by a number such as "COV1" or "COV2" or "COV3"...</td>
             <td id="xmlSample">id = "COV1"</td>
@@ -1733,7 +1830,7 @@
                 COV3…</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="coverage(' covType=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Type</td>
             <td id="description">Base coverage type</td>
             <td id="xmlSample">covType = "0"</td>
@@ -1742,42 +1839,42 @@
                 2 = Contents</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="coverage(' covName=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Name</td>
             <td id="description">Coverage name</td>
             <td id="xmlSample">covName = "Dwelling"</td>
             <td id="format">AN up to 100</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="coverage(' deductible=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Deductible</td>
             <td id="description"></td>
             <td id="xmlSample">deductible = "500"</td>
             <td id="format">Decimal</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="coverage(' policyLimit=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Policy Limit</td>
             <td id="description"></td>
             <td id="xmlSample">policyLimit = "100"</td>
             <td id="format">Decimal</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="coverage(' reserveAmt=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Reserve</td>
             <td id="description"></td>
             <td id="xmlSample">reserveAmt = "1000.00"</td>
             <td id="format">Decimal</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="coverage(' coIns=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Coinsurance</td>
             <td id="description">Percent</td>
             <td id="xmlSample">coIns = "12"</td>
             <td id="format">Integer (0 – 100)</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="coverage(' applyTo=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Apply RCV/ACV</td>
             <td id="description">How to apply RCV/ACV</td>
             <td id="xmlSample">applyTo = "1"</td>
@@ -1806,7 +1903,7 @@
     </table>
     <table class="element5">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="subLimits(' sublimitid=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Sublimit ID</td>
             <td id="description">Unique ID for each sublimit within each coverage. Does not need to be unique across all coverages.<br><br>
                 Displayed only in Xactimate.</td>
@@ -1814,21 +1911,21 @@
             <td id="format">Integer (Required)</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="subLimits(' feature=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Feature</td>
             <td id="description">Sublimit feature or name</td>
             <td id="xmlSample">feature = "Class1"</td>
             <td id="format">AN up to 40 (Required)</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="subLimits(' single=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Single</td>
             <td id="description">Single item limit amount</td>
             <td id="xmlSample">single ="100.00"</td>
             <td id="format">Decimal</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="subLimits(' aggregate=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Aggregate</td>
             <td id="description">Aggregate item amount</td>
             <td id="xmlSample">aggregate = "200.00"</td>
@@ -1867,14 +1964,14 @@
     </table>
     <table class="element2">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="typeOfLoss(' desc=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Loss Description</td>
             <td id="description">Type of loss description</td>
             <td id="xmlSample">desc = "Water"</td>
             <td id="format">AN up to 35</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="typeOfLoss(' code=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Loss Code</td>
             <td id="description">Type of loss code (case sensitive)</td>
             <td id="xmlSample">code = "WATER"</td>
@@ -1895,14 +1992,14 @@
     </table>
     <table class="element3">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="causeOfLoss(' desc=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Cause of loss</td>
             <td id="description"></td>
             <td id="xmlSample">desc = "Broken Pipe"</td>
             <td id="format">AN up to 256</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="causeOfLoss(' otherCause=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Other cause of loss</td>
             <td id="description"></td>
             <td id="xmlSample">otherCause = "High Water Pressure"</td>
@@ -1935,14 +2032,14 @@
     </table>
     <table class="element3">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="Forms(' name=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Form name</td>
             <td id="description"></td>
             <td id="xmlSample">name = "BP0009"</td>
             <td id="format">AN up to 10</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="Forms(' editionDate=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Edition date</td>
             <td id="description"></td>
             <td id="xmlSample">editionDate = "01-1997"</td>
@@ -1981,14 +2078,14 @@
     </table>
     <table class="element0">
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="params(' priceList=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Price list</td>
             <td id="description">XactAnalysis adds this to assignment XML files to send to Xactimate.</td>
             <td id="xmlSample">priceList = "UTOR2S3A"</td>
             <td id="format">AN up to 20</td>
         </tr>
         <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro('=\'\''); this.disabled=true">Add</button></td>
+            <td id="addfield"><button id="buttonClick" onclick="params(' checkpointPL=\'\''); this.disabled=true">Add</button></td>
             <td id="field">Check point price list</td>
             <td id="description">XactAnalysis adds this to assignment XML files to send to Xactimate.</td>
             <td id="xmlSample">checkpointPL = "UTOR2S3A"</td>

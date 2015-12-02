@@ -20,11 +20,12 @@ button {
     display:block;
 }
 .xmlRight {
-    position: fixed;
+    position: absolute;
     left: 950px;
     border-left: double;
     height: 100%;
     width: 40%;
+
 }
 #rotation {
     position: fixed;
@@ -146,4 +147,22 @@ button {
 .element5 #description {
     max-width: 208px;
     min-width: 208px;
+}
+.tab1{
+    margin-left: 20px;
+}
+.tab2{
+    margin-left: 40px;
+}
+.tab3{
+    margin-left: 60px;
+}
+.tab4{
+    margin-left: 80px;
+}
+.tab5{
+    margin-left: 100px;
+}
+.tab6{
+    margin-left: 120px;
 }
