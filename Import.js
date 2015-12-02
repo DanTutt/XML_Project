@@ -86,15 +86,26 @@ function Contacts(contactname){
 function mortgageMain(value){
     mortgageCollect += value;
     document.getElementById("mortgage").innerHTML = "<xmp><MORTGAGE " + mortgageCollect + "></xmp>";
-    document.getElementById("mortgageEnd").innerHTML = "<xmp></CONTACT></xmp>";
+    document.getElementById("mortgageEnd").innerHTML = "<xmp></MORTGAGE></xmp>";
     document.getElementById("mortgagesMain").innerHTML = "<xmp><MORTGAGES></xmp>";
-    document.getElementById("mortgagesMain").innerHTML = "<xmp></MORTGAGE</xmp>";
+    document.getElementById("mortgagesMainEnd").innerHTML = "<xmp></MORTGAGES</xmp>";
+
+    document.getElementById("contact").innerHTML = "<xmp><CONTACT " + XNcontactsCollect + "></xmp>";
+    document.getElementById("contactEnd").innerHTML = "<xmp></CONTACT></xmp>";
+    document.getElementById("contactsMain").innerHTML = "<xmp><CONTACTS></xmp>";
+    document.getElementById("contactsMainEnd").innerHTML = "<xmp></CONTACTS></xmp>";
+
 };
 function addressesMain(value){
     addressMainCollect += value;
     document.getElementById("address").innerHTML = "<xmp><ADDRESS " + addressMainCollect + "/></xmp>";
     document.getElementById("addressesMain").innerHTML = "<xmp><ADDRESSES></xmp>";
     document.getElementById("addressesMainEnd").innerHTML = "<xmp></ADDRESSES</xmp>";
+
+    document.getElementById("contact").innerHTML = "<xmp><CONTACT " + XNcontactsCollect + "></xmp>";
+    document.getElementById("contactEnd").innerHTML = "<xmp></CONTACT></xmp>";
+    document.getElementById("contactsMain").innerHTML = "<xmp><CONTACTS></xmp>";
+    document.getElementById("contactsMainEnd").innerHTML = "<xmp></CONTACTS></xmp>";
 
 
 };
@@ -103,12 +114,22 @@ function contactMethodsPhone(value){
     document.getElementById("phone").innerHTML = "<xmp><PHONE " + contactPhoneCollect + "/></xmp>";
     document.getElementById("contactMethods").innerHTML = "<xmp><CONTACTMETHODS></xmp>";
     document.getElementById("contactMethodsEnd").innerHTML = "<xmp></CONTACTMETHODS</xmp>";
+
+    document.getElementById("contact").innerHTML = "<xmp><CONTACT " + XNcontactsCollect + "></xmp>";
+    document.getElementById("contactEnd").innerHTML = "<xmp></CONTACT></xmp>";
+    document.getElementById("contactsMain").innerHTML = "<xmp><CONTACTS></xmp>";
+    document.getElementById("contactsMainEnd").innerHTML = "<xmp></CONTACTS></xmp>";
 };
 function contactMethodsEmail(value) {
     contactEmailCollect += value;
     document.getElementById("email").innerHTML = "<xmp><EMAIL " + contactEmailCollect + "/></xmp>";
     document.getElementById("contactMethods").innerHTML = "<xmp><CONTACTMETHODS></xmp>";
     document.getElementById("contactMethodsEnd").innerHTML = "<xmp></CONTACTMETHODS</xmp>";
+
+    document.getElementById("contact").innerHTML = "<xmp><CONTACT " + XNcontactsCollect + "></xmp>";
+    document.getElementById("contactEnd").innerHTML = "<xmp></CONTACT></xmp>";
+    document.getElementById("contactsMain").innerHTML = "<xmp><CONTACTS></xmp>";
+    document.getElementById("contactsMainEnd").innerHTML = "<xmp></CONTACTS></xmp>";
 
 };
 function CompanyAddresses(value) {

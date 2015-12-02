@@ -20,7 +20,7 @@ button {
     display:block;
 }
 .xmlRight {
-    position: absolute;
+    position: fixed;
     left: 950px;
     border-left: double;
     height: 100%;
