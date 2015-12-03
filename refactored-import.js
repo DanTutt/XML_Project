@@ -39,7 +39,7 @@ var propertyCollection = " ",
 
     xactdocVal = "<xmp><?xml version='1.0' encoding='UTF-8'?></xmp><xmp><XACTDOC></xmp>",
     xactdocValEnd = "<xmp></XACTDOC>",
-    xactNetInfoVal = "<xmp><XACTNET_INFO carrierId='_Integer_' recipientsXNAddress='_AN up to 31_'" + propertyCollection + "></xmp>",
+    xactNetInfoVal = "<xmp><XACTNET_INFO carrierId='' recipientsXNAddress=''" + propertyCollection + "></xmp>",
     xactNetInfoValEnd = "<xmp></XACTNET_INFO></xmp>",
     controlPointsMain1Val = "<xmp><CONTROL_POINTS " + controlCollect + "></xmp>",
     controlPoints1MainValEnd = "<xmp></CONTROL_POINTS></xmp>",
@@ -53,7 +53,7 @@ var propertyCollection = " ",
     phoneCollectVal = "<xmp><PHONE type='' number='' primary='' " + contactPhoneCollect + "/></xmp>",
     contactMethodsCollectVal = "<xmp><CONTACTMETHODS></xmp>",
     contactMethodsCollectValEnd = "<xmp></CONTACTMETHODS></xmp>",
-    projectNotesCollectVal = "<xmp><NOTES><![CDATA[This is the Description Of Loss, you would want to add any additonal notes for the adjuster]]></xmp>",
+    projectNotesCollectVal = "<xmp><NOTES></xmp><xmp><![CDATA[Put free-form text data here]]></xmp>",
     projectNotesCollectValEnd = "<xmp></NOTES></xmp>",
     projectInfoCollectVal= "<xmp><PROJECT_INFO></xmp>",
     projectInfoCollectValEnd = "<xmp></PROJECT_INFO></xmp>",
@@ -67,10 +67,7 @@ var propertyCollection = " ",
     covLossCollectValEnd = "<xmp></COVERAGE_LOSS></xmp>";
 
 
-function copyAllText(){
-    $("#copyText").val($("form").html($( "xmp" ).remove()));
-    //$("div").children("#copyText").html;
-}
+
 
 function onLoad(){
     $("#xactdoc").html(xactdocVal);
@@ -108,14 +105,15 @@ function onLoad(){
     $("#covLoss").html(covLossCollectVal);
     $("#covLossEnd").html(covLossCollectValEnd);
 
-
-
+    document.getElementById("tol").innerHTML = "<xmp><TOL desc='' code=''" + tolCollect + "></xmp>";
+    document.getElementById("tolEnd").innerHTML = "<xmp></TOL></xmp>";
 
 }
+
 function intro(value){
     propertyCollection += value;
 
-    document.getElementById("xactNetInfo").innerHTML = "<xmp><XACTNET_INFO carrierId='_Integer_' recipientsXNAddress=''" + propertyCollection + "></xmp>";
+    document.getElementById("xactNetInfo").innerHTML = "<xmp><XACTNET_INFO carrierId='' recipientsXNAddress=''" + propertyCollection + "></xmp>";
     document.getElementById("xactNetInfoEnd").innerHTML = "<xmp></XACTNET_INFO></xmp>";
 
 
@@ -129,7 +127,8 @@ function ControlPoints(value){
 };
 function CancellationComment(value){
     cancelComment += value;
-    document.getElementById("cancellationComments").innerHTML = "<xmp><CANCELLATION_COMMENTS></xmp> " + cancelComment + "<xmp></CANCELLATION_COMMENTS></xmp>";
+    document.getElementById("cancellationComments").innerHTML = "<xmp><CANCELLATION_COMMENTS></xmp><xmp><![CDATA[Put free-form text data here]]></xmp>";
+    document.getElementById("cancellationCommentsEnd").innerHTML = "<xmp></CANCELLATION_COMMENTS></xmp>";
 
     document.getElementById("controlPointsMain1").innerHTML = "<xmp><CONTROL_POINTS " + controlCollect + "></xmp>";
     document.getElementById("controlPoints1MainEnd").innerHTML = "<xmp></CONTROL_POINTS></xmp>";
@@ -146,8 +145,9 @@ function ControlPoint1(value){
 };
 function cpNotes(value){
     cpNoteCollect += value;
-    document.getElementById("cpNotes").innerHTML = "<xmp><NOTES></xmp>" + cpNoteCollect + "<xmp></NOTES></xmp>";
-
+    document.getElementById("cpNotes").innerHTML = "<xmp><NOTES></xmp><xmp><![CDATA[Put free-form text data here]]></xmp>";
+    document.getElementById("cpNotesEnd").innerHTML = "<xmp></NOTES></xmp>";
+    document.getElementById("projectNotesEnd").innerHTML = "<xmp></NOTES></xmp>";
     document.getElementById("controlPoint1").innerHTML = "<xmp><CONTROL_POINT " + controlPoint1Collect + "></xmp>";
     document.getElementById("controlPoint1End").innerHTML = "<xmp></CONTROL_POINT></xmp>";
 
@@ -157,7 +157,8 @@ function cpNotes(value){
 };
 function ThirdPartyURL(value){
     thirdPartyURLCollect += value;
-    document.getElementById("thirdPartyURL").innerHTML = "<xmp><THIRD_PARTY_URL></xmp>" + thirdPartyURLCollect + "<xmp></THIRD_PARTY_URL></xmp>";
+    document.getElementById("thirdPartyURL").innerHTML = "<xmp><THIRD_PARTY_URL></xmp><xmp><![CDATA[Put free-form text data here]]></xmp>";
+    document.getElementById("thirdPartyURLEnd").innerHTML = "<xmp></THIRD_PARTY_URL></xmp>";
 };
 function Contacts(value){
     XNcontactsCollect += value;
@@ -266,7 +267,7 @@ function companyMainAddress(value) {
     document.getElementById("companyMainAddresses").innerHTML = "<xmp><ADDRESSES></xmp>";
     document.getElementById("companyMainAddressesEnd").innerHTML = "<xmp></ADDRESSES></xmp>";
 
-    document.getElementById("contactsMain").innerHTML = "<xmp><COMPANY></xmp>";
+    document.getElementById("companyMain").innerHTML = "<xmp><COMPANY></xmp>";
     document.getElementById("companyMainEnd").innerHTML = "<xmp></COMPANY></xmp>";
 
     document.getElementById("compMainEmail").innerHTML = "<xmp><EMAIL " + compMainEmailCollect + "/></xmp>";
@@ -280,7 +281,7 @@ function companyMainAddress(value) {
 };
 function projectInfo(value){
     projectInfoCollect += value;
-    document.getElementById("projectNotes").innerHTML = "<xmp><NOTES><![CDATA[This is the Description Of Loss, you would want to add any additonal notes for the adjuster]]></xmp>";
+    document.getElementById("projectNotes").innerHTML = "<xmp><NOTES></xmp><xmp><![CDATA[Put free-form text data here]]></xmp>";
     document.getElementById("projectNotesEnd").innerHTML = "<xmp></NOTES></xmp>";
     document.getElementById("projectInfo").innerHTML = "<xmp><PROJECT_INFO></xmp>";
     document.getElementById("projectInfoEnd").innerHTML = "<xmp></PROJECT_INFO></xmp>";
@@ -293,7 +294,8 @@ function lossInfo(value){
 };
 function adminInfo(value){
     adminInfoCollect += value;
-    document.getElementById("adminInfo").innerHTML = "<xmp><ADMIN_INFO " + adminInfoCollect + "/></xmp>";
+    document.getElementById("adminInfo").innerHTML = "<xmp><ADMIN_INFO " + adminInfoCollect + "></xmp>";
+    document.getElementById("adminInfoEnd").innerHTML = "<xmp></ADMIN_INFO></xmp>";
     document.getElementById("claimInfo").innerHTML = "<xmp><CLAIM_INFO></xmp>";
     document.getElementById("claimInfoEnd").innerHTML = "<xmp></CLAIM_INFO></xmp>";
 };
@@ -365,10 +367,10 @@ function adm(value){
 };
 function subrogationNote(value){
     subrogationNoteCollect += value;
-    document.getElementById("subrogationNote").innerHTML = "<xmp><SUBROGATION_NOTES></xmp>" + subrogationNoteCollect;
+    document.getElementById("subrogationNote").innerHTML = "<xmp><SUBROGATION_NOTES></xmp><xmp><![CDATA[Put free-form text data here]]></xmp>";
     document.getElementById("subrogationNoteEnd").innerHTML = "<xmp></SUBROGATION_NOTES></xmp>";
 
-    document.getElementById("adm").innerHTML = "<xmp><ADM " + admCollect + "></xmp>";
+    document.getElementById("adm").innerHTML = "<xmp><ADM  dateReceived='' dateOfLoss=''" + admCollect + "></xmp>";
     document.getElementById("admEnd").innerHTML = "<xmp></ADM></xmp>";
 
 };
@@ -377,19 +379,19 @@ function coverageLoss(value){
     document.getElementById("covLoss").innerHTML = "<xmp><COVERAGE_LOSS " + coverageLossCollect  + "></xmp>";
     document.getElementById("covLossEnd").innerHTML = "<xmp></COVERAGE_LOSS></xmp>";
 
-    document.getElementById("adm").innerHTML = "<xmp><ADM " + admCollect + "></xmp>";
+    document.getElementById("adm").innerHTML = "<xmp><ADM  dateReceived='' dateOfLoss=''" + admCollect + "></xmp>";
     document.getElementById("admEnd").innerHTML = "<xmp></ADM></xmp>";
 
 };
 function coverageNote(value){
     coverageNoteCollect += value;
-    document.getElementById("covNotes").innerHTML = "<xmp><coverageNotes></xmp>" + coverageNoteCollect;
-    document.getElementById("covNotesEnd").innerHTML = "<xmp></coverageNotes></xmp>";
+    document.getElementById("covNotes").innerHTML = "<xmp><COVERAGENOTES></xmp><xmp><![CDATA[Put free-form text data here]]></xmp>";
+    document.getElementById("covNotesEnd").innerHTML = "<xmp></COVERAGENOTES></xmp>";
 
     document.getElementById("covLoss").innerHTML = "<xmp><COVERAGE_LOSS " + coverageLossCollect  + "></xmp>";
     document.getElementById("covLossEnd").innerHTML = "<xmp></COVERAGE_LOSS></xmp>";
 
-    document.getElementById("adm").innerHTML = "<xmp><ADM " + admCollect + "></xmp>";
+    document.getElementById("adm").innerHTML = "<xmp><ADM  dateReceived='' dateOfLoss=''" + admCollect + "></xmp>";
     document.getElementById("admEnd").innerHTML = "<xmp></ADM></xmp>";
 
 };
@@ -401,7 +403,7 @@ function coveragesMain(value){
     document.getElementById("covLoss").innerHTML = "<xmp><COVERAGE_LOSS " + coverageLossCollect  + "></xmp>";
     document.getElementById("covLossEnd").innerHTML = "<xmp></COVERAGE_LOSS></xmp>";
 
-    document.getElementById("adm").innerHTML = "<xmp><ADM " + admCollect + "></xmp>";
+    document.getElementById("adm").innerHTML = "<xmp><ADM  dateReceived='' dateOfLoss=''" + admCollect + "></xmp>";
     document.getElementById("admEnd").innerHTML = "<xmp></ADM></xmp>";
 
 };
@@ -416,14 +418,13 @@ function coverage(value){
     document.getElementById("covLoss").innerHTML = "<xmp><COVERAGE_LOSS " + coverageLossCollect  + "></xmp>";
     document.getElementById("covLossEnd").innerHTML = "<xmp></COVERAGE_LOSS></xmp>";
 
-    document.getElementById("adm").innerHTML = "<xmp><ADM " + admCollect + "></xmp>";
+    document.getElementById("adm").innerHTML = "<xmp><ADM  dateReceived='' dateOfLoss=''" + admCollect + "></xmp>";
     document.getElementById("admEnd").innerHTML = "<xmp></ADM></xmp>";
 
 };
 function subLimits(value){
     subLimitsCollect += value;
-    document.getElementById("addSublimit").innerHTML = "<xmp><ADD_SUBLIMIT " + subLimitsCollect + "></xmp>";
-    document.getElementById("addSublimitEnd").innerHTML = "<xmp></ADD_SUBLIMIT></xmp>";
+    document.getElementById("addSublimit").innerHTML = "<xmp><ADD_SUBLIMIT " + subLimitsCollect + "/></xmp>";
 
     document.getElementById("addSublimitsMain").innerHTML = "<xmp><ADD_SUBLIMITS></xmp>";
     document.getElementById("addSublimitsMainEnd").innerHTML = "<xmp></ADD_SUBLIMITS></xmp>";
@@ -437,7 +438,7 @@ function subLimits(value){
     document.getElementById("covLoss").innerHTML = "<xmp><COVERAGE_LOSS " + coverageLossCollect  + "></xmp>";
     document.getElementById("covLossEnd").innerHTML = "<xmp></COVERAGE_LOSS></xmp>";
 
-    document.getElementById("adm").innerHTML = "<xmp><ADM " + admCollect + "></xmp>";
+    document.getElementById("adm").innerHTML = "<xmp><ADM  dateReceived='' dateOfLoss=''" + admCollect + "></xmp>";
     document.getElementById("admEnd").innerHTML = "<xmp></ADM></xmp>";
 
 };
@@ -449,7 +450,7 @@ function typeOfLoss(value){
     document.getElementById("covLoss").innerHTML = "<xmp><COVERAGE_LOSS " + coverageLossCollect  + "></xmp>";
     document.getElementById("covLossEnd").innerHTML = "<xmp></COVERAGE_LOSS></xmp>";
 
-    document.getElementById("adm").innerHTML = "<xmp><ADM " + admCollect + "></xmp>";
+    document.getElementById("adm").innerHTML = "<xmp><ADM  dateReceived='' dateOfLoss=''" + admCollect + "></xmp>";
     document.getElementById("admEnd").innerHTML = "<xmp></ADM></xmp>";
 
 };
@@ -463,7 +464,7 @@ function causeOfLoss(value){
     document.getElementById("covLoss").innerHTML = "<xmp><COVERAGE_LOSS " + coverageLossCollect  + "></xmp>";
     document.getElementById("covLossEnd").innerHTML = "<xmp></COVERAGE_LOSS></xmp>";
 
-    document.getElementById("adm").innerHTML = "<xmp><ADM " + admCollect + "></xmp>";
+    document.getElementById("adm").innerHTML = "<xmp><ADM  dateReceived='' dateOfLoss=''" + admCollect + "></xmp>";
     document.getElementById("admEnd").innerHTML = "<xmp></ADM></xmp>";
 
 };
@@ -477,13 +478,47 @@ function Forms(value){
     document.getElementById("covLoss").innerHTML = "<xmp><COVERAGE_LOSS " + coverageLossCollect  + "></xmp>";
     document.getElementById("covLossEnd").innerHTML = "<xmp></COVERAGE_LOSS></xmp>";
 
-    document.getElementById("adm").innerHTML = "<xmp><ADM " + admCollect + "></xmp>";
+    document.getElementById("adm").innerHTML = "<xmp><ADM  dateReceived='' dateOfLoss=''" + admCollect + "></xmp>";
     document.getElementById("admEnd").innerHTML = "<xmp></ADM></xmp>";
 
 };
 function params(value) {
     paramsCollect += value;
-    document.getElementById("form").innerHTML = "<xmp><PARAMS " + paramsCollect + "/></xmp>";
-};/**
- * Created by DanTutt on 12/2/15.
- */
+    document.getElementById("params").innerHTML = "<xmp><PARAMS " + paramsCollect + "/></xmp>";
+};
+//function selectAll() {
+//    intro();
+//    ControlPoints();
+//    CancellationComment();
+//    ControlPoint1();
+//    cpNotes();
+//    ThirdPartyURL();
+//    Contacts();
+//    mortgageMain();
+//    addressesMain();
+//    contactMethodsPhone();
+//    contactMethodsEmail();
+//    CompanyAddresses();
+//    companyMain();
+//    companyMainAddress();
+//    projectInfo();
+//    lossInfo();
+//    adminInfo();
+//    insuranceClient();
+//    ICAddresses();
+//    ICPhone();
+//    ICEmail();
+//    assignmentReferral();
+//    billingArrangement();
+//    adm();
+//    subrogationNote();
+//    coverageLoss();
+//    coverageNote();
+//    coveragesMain();
+//    coverage();
+//    subLimits();
+//    typeOfLoss();
+//    causeOfLoss();
+//    Forms();
+//    params();
+//}

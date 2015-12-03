@@ -1,6 +1,6 @@
 #main {
     min-width: 1800px;
-    max-width: 1800px;
+    max-width: 1400px;
     position: absolute;
 }
 table, th, td {
@@ -16,21 +16,12 @@ table {
 button {
     height: 20px;
     width: 40px;
-    margin:auto;
     display:block;
 }
-/*button#buttonCopy {*/
-    /*margin: 0%;*/
-    /*width: 200px;*/
-/*}*/
-/*form {*/
-    /*position: absolute;*/
-/*}*/
-/*textarea {*/
-    /*margin: 0px;*/
-    /*height: 282px;*/
-    /*width: 892px;*/
-/*}*/
+button#selectAll {
+    height: 20px;
+    width: 100px;
+}
 .xmlRight {
     position: fixed;
     left: 950px;
@@ -183,3 +174,4 @@ button {
 .tab6{
     margin-left: 120px;
 }
+
