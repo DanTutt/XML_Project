@@ -32,7 +32,7 @@ button {
     /*width: 892px;*/
 /*}*/
 .xmlRight {
-    position: absolute;
+    position: fixed;
     left: 950px;
     border-left: double;
     height: 100%;
