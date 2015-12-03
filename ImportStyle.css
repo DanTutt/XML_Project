@@ -31,14 +31,15 @@ button {
     /*height: 282px;*/
     /*width: 892px;*/
 /*}*/
-/*.xmlRight {*/
-    /*position: absolute;*/
-    /*left: 950px;*/
-    /*border-left: double;*/
-    /*height: 100%;*/
-    /*width: 40%;*/
-/**/
-/*}*/
+.xmlRight {
+    position: absolute;
+    left: 950px;
+    border-left: double;
+    height: 100%;
+    width: 40%;
+    z-index: 99999;
+    overflow: auto;
+}
 #requiredField {
     font-size: small;
 
@@ -49,6 +50,7 @@ button {
     border-left: double;
     height: 100%;
     width: 40%;
+
 }
 #xactNet {
     position: absolute;
