@@ -66,6 +66,18 @@ var propertyCollection = " ",
     covLossCollectVal= "<xmp><COVERAGE_LOSS " + coverageLossCollect  + "></xmp>",
     covLossCollectValEnd = "<xmp></COVERAGE_LOSS></xmp>";
 
+function selectText(containerid) {
+    if (document.selection) {
+        var range = document.body.createTextRange();
+        range.moveToElementText(document.getElementById(containerid));
+        range.select();
+    } else if (window.getSelection) {
+        var range = document.createRange();
+        range.selectNode(document.getElementById(containerid));
+        window.getSelection().addRange(range);
+    }
+    alert("To copy highlighted text press 'enter, Ctrl + C'");
+}
 
 $(window).bind('beforeunload', function(){
     return 'If you leave this page, you will lose all updates to XML';

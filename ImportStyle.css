@@ -3,7 +3,6 @@
     max-width: 1400px;
     position: absolute;
 }
-
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -23,20 +22,25 @@ button#selectAll {
     height: 20px;
     width: 100px;
 }
+#selectAllXML {
+    width: auto;
+    position: fixed;
+    left: 975px;
+}
 .xmlRight {
     position: fixed;
     left: 950px;
     border-left: double;
     height: 100%;
-    width: 50%;
+    width: 100%;
     z-index: 99999;
     overflow: auto;
 }
-.requiredField {
+#requiredField {
     font-size: small;
 
 }
-.rotation {
+#rotation {
     position: absolute;
     left: 950px;
     border-left: double;
@@ -44,7 +48,7 @@ button#selectAll {
     width: 40%;
 
 }
-.xactNet {
+#xactNet {
     position: absolute;
     left: 950px;
     top: 180px;
@@ -52,45 +56,45 @@ button#selectAll {
     height: 100%;
     width: 40%;
 }
-.clipButton {
+#clipButton {
     height: 20px;
     width: 200px;
     float: right;
 }
-.addfield{
+#addfield{
     max-width: 25px;
     min-width: 25px;
 }
-.field {
+#field {
     max-width: 60px;
     min-width: 60px;
 }
-.description {
+#description {
     max-width: 140px;
     min-width: 140px;
 }
-.xmlSample {
+#xmlSample {
     max-width: 180px;
     min-width: 180px;
 }
-.format {
+#format {
     max-width: 100px;
     min-width: 100px;
 }
-.elementDesc0 {
+#elementDesc0 {
     width: 380px;
     background-color: lightgrey;
     padding-top: 3px;
     padding-bottom: 3px;
 }
-.elementDesc1 {
+#elementDesc1 {
     width: 397px;
     background-color: lightgrey;
     max-height: 20px;
     padding-top: 3px;
     padding-bottom: 3px;
 }
-.elementDesc2 {
+#elementDesc2 {
     max-width: 410px;
     min-width: 411px;;
     background-color: lightgrey;
@@ -98,7 +102,7 @@ button#selectAll {
     padding-bottom: 3px;
 
 }
-.elementDesc3 {
+#elementDesc3 {
     max-width: 422px;
     min-width: 423px;
     background-color: lightgrey;
@@ -106,7 +110,7 @@ button#selectAll {
     padding-bottom: 3px;
 
 }
-.elementDesc4 {
+#elementDesc4 {
     max-width: 433px;
     min-width: 434px;
     background-color: lightgrey;
@@ -114,7 +118,7 @@ button#selectAll {
     padding-bottom: 3px;
 
 }
-.elementDesc5 {
+#elementDesc5 {
     max-width: 445px;
     min-width: 445px;
     background-color: lightgrey;
@@ -122,14 +126,14 @@ button#selectAll {
     padding-bottom: 3px;
 
 }
-.elementName {
+#elementName {
     width: 430px;
     background-color: lightgrey;
     padding-top: 3px;
     padding-bottom: 3px;
 
 }
-.elementRequired {
+#elementRequired {
     width: 179px;
     background-color: lightgrey;
 }
