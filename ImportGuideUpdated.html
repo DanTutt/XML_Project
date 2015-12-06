@@ -115,16 +115,16 @@
     <div class="tab1" id="xactdocEnd"></div>
 </div>
 
-<!--<button id="selectAll" onclick="selectAll()">Select All</button>-->
+<button id="selectAll" onclick="selectAll()">Select All</button>
 
-<div id="main">
+<div class="main">
     <table>
-        <tr id="mainBox">
-            <td id="addfield"><strong>Add Field to XML</strong><br><br><div id="requiredField">*Required</div></td>
-            <td id="field"><strong>Field</strong></td>
-            <td id="description"><strong>Description</strong></td>
-            <td id="xmlSample"><strong>XML example</strong></td>
-            <td id="format"><strong>Format</strong>
+        <tr class="mainBox">
+            <td class="addfield"><strong>Add Field to XML</strong><br><br><div class="requiredField">*Required</div></td>
+            <td class="field"><strong>Field</strong></td>
+            <td class="description"><strong>Description</strong></td>
+            <td class="xmlSample"><strong>XML example</strong></td>
+            <td class="format"><strong>Format</strong>
                 <br>
                 AN = Alphanumeric
                 <br><br>
@@ -132,72 +132,72 @@
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc1">XactAnalysis Information Section. One per assignment.</td>
-            <td id="elementName"><xmp><XACTNET_INFO </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc1">XactAnalysis Information Section. One per assignment.</td>
+            <td class="elementName"><xmp><XACTNET_INFO </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="mainBox">
-            <td id="addfield"><div class="buttonClick1" onclick="intro('carrierId=\'\''); this.disabled=true; this.disabled=true">**</div></td>
-            <td id="field">Carrier Identifier</td>
-            <td id="description">The identifier that uniquely identifies the carrier that created the assignment. XactAnalysis provides this value. This defines the dataset the assignment is placed in.</td>
-            <td id="xmlSample">carrierId = "909090"</td>
-            <td id="format">Integer</td>
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="intro('carrierId=\'\''); this.disabled=true; this.disabled=true">**</div></td>
+            <td class="field">Carrier Identifier</td>
+            <td class="description">The identifier that uniquely identifies the carrier that created the assignment. XactAnalysis provides this value. This defines the dataset the assignment is placed in.</td>
+            <td class="xmlSample">carrierId = "909090"</td>
+            <td class="format">Integer</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button class="buttonClick1" onclick="intro(' flooringAnalysisExpected=\'\''); this.disabled=true; this.disabled=true">Add</button></td>
-            <td id="field">Flooring Analysis Expected flag</td>
-            <td id="description">Tells XactAnalysis that a Flooring Analysis report is expected. Causes XactAnalysis to export the assignment to the Analysis company (such as ITEL) is such export has been setup.</td>
-            <td id="xmlSample">flooringAnalysisExpected = “1”</td>
-            <td id="format">0 = false <br><br> 1 = true</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' flooringAnalysisExpected=\'\''); this.disabled=true; this.disabled=true">Add</button></td>
+            <td class="field">Flooring Analysis Expected flag</td>
+            <td class="description">Tells XactAnalysis that a Flooring Analysis report is expected. Causes XactAnalysis to export the assignment to the Analysis company (such as ITEL) is such export has been setup.</td>
+            <td class="xmlSample">flooringAnalysisExpected = “1”</td>
+            <td class="format">0 = false <br><br> 1 = true</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' assignorId=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Assignor id</td>
-            <td id="description">The id of the person making the assignment. This is a customer-supplied value that XactAnalysis can store, but not used by XactAnalysis.</td>
-            <td id="xmlSample">assignorId = "A902B3"</td>
-            <td id="format">AN up to 20</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' assignorId=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Assignor id</td>
+            <td class="description">The id of the person making the assignment. This is a customer-supplied value that XactAnalysis can store, but not used by XactAnalysis.</td>
+            <td class="xmlSample">assignorId = "A902B3"</td>
+            <td class="format">AN up to 20</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' federalTIN=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Contractor TIN</td>
-            <td id="description">Federal Tax ID number.</td>
-            <td id="xmlSample" >federalTIN = "93-9999999"</td>
-            <td id="format">AN up to 30</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' federalTIN=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Contractor TIN</td>
+            <td class="description">Federal Tax ID number.</td>
+            <td class="xmlSample" >federalTIN = "93-9999999"</td>
+            <td class="format">AN up to 30</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' sendersXNAddress=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Sender’s XactAnalysis Address</td>
-            <td id="description">The XactAnalysis address of the entity that manages the assignment. XactAnalysis provides this value to the customer.</td>
-            <td id="xmlSample">sendersXNAddress = "BEST.XACTANALYSIS"</td>
-            <td id="format">AN up to 31</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' sendersXNAddress=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Sender’s XactAnalysis Address</td>
+            <td class="description">The XactAnalysis address of the entity that manages the assignment. XactAnalysis provides this value to the customer.</td>
+            <td class="xmlSample">sendersXNAddress = "BEST.XACTANALYSIS"</td>
+            <td class="format">AN up to 31</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' senderId=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Sender ID</td>
-            <td id="description">The identifier that uniquely identifies the sender. XactAnalysis adds this to the assignment XML.</td>
-            <td id="xmlSample">senderId = "898989"</td>
-            <td id="format">Integer</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' senderId=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Sender ID</td>
+            <td class="description">The identifier that uniquely identifies the sender. XactAnalysis adds this to the assignment XML.</td>
+            <td class="xmlSample">senderId = "898989"</td>
+            <td class="format">Integer</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' profileCode=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Profile Code</td>
-            <td id="description">The profile that the carrier has been assigned. XactAnalysis provides this value.</td>
-            <td id="xmlSample">profileCode = "AB"</td>
-            <td id="format">AN up to 2</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' profileCode=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Profile Code</td>
+            <td class="description">The profile that the carrier has been assigned. XactAnalysis provides this value.</td>
+            <td class="xmlSample">profileCode = "AB"</td>
+            <td class="format">AN up to 2</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="intro(' recipientsXNAddress=\'\''); this.disabled=true">**</div></td>
-            <td id="field">Recipient’s XactAnalysis Address</td>
-            <td id="description">The XactAnalysis address of the person (adjustor/contractor) receiving the assignment in the field. Xactimate users receive a XactAnalysis address when they successfully register. Either the recipient’s XactAnalysis Address or the recipient’s ID is required.</td>
-            <td id="xmlSample">recipientsXNAddress = "JSM.OREM.UT.Z"</td>
-            <td id="format">AN up to 31</td>
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="intro(' recipientsXNAddress=\'\''); this.disabled=true">**</div></td>
+            <td class="field">Recipient’s XactAnalysis Address</td>
+            <td class="description">The XactAnalysis address of the person (adjustor/contractor) receiving the assignment in the field. Xactimate users receive a XactAnalysis address when they successfully register. Either the recipient’s XactAnalysis Address or the recipient’s ID is required.</td>
+            <td class="xmlSample">recipientsXNAddress = "JSM.OREM.UT.Z"</td>
+            <td class="format">AN up to 31</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' recipientsId=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Recipient’s Identifier</td>
-            <td id="description">If a customer does not use the recipientXNAddress, the carrier can use recipientsId – which is unique identifier generated externally (not by XactAnalysis). When using recipientId,
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' recipientsId=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Recipient’s Identifier</td>
+            <td class="description">If a customer does not use the recipientXNAddress, the carrier can use recipientsId – which is unique identifier generated externally (not by XactAnalysis). When using recipientId,
                 <br>
                 <ol>
                     <li>Each recipient must still register to obtain an XactAnalysis address.</li>
@@ -206,63 +206,63 @@
                 <br>
                 XactAnalysis uses the recipientsId to look up the XactAnalysis address.
             </td>
-            <td id="xmlSample">recipientsId = "2398-U8H900"</td>
-            <td id="format">AN up to 30</td>
+            <td class="xmlSample">recipientsId = "2398-U8H900"</td>
+            <td class="format">AN up to 30</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' recipientsXM8UserId=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Recipient’s Xactimate User ID</td>
-            <td id="description">Can be used in conjunction with recipientsXNAddress where the carrier can use recipientsXM8UserId to determine which User@ to send the assignment to. If recipientsXM8UserId is used then recipientsXNAddress must also be used but recipientsId cannot be used.</td>
-            <td id="xmlSample">recipientsXM8UserId = “JSM8”</td>
-            <td id="format">AN up to 8</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' recipientsXM8UserId=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Recipient’s Xactimate User ID</td>
+            <td class="description">Can be used in conjunction with recipientsXNAddress where the carrier can use recipientsXM8UserId to determine which User@ to send the assignment to. If recipientsXM8UserId is used then recipientsXNAddress must also be used but recipientsId cannot be used.</td>
+            <td class="xmlSample">recipientsXM8UserId = “JSM8”</td>
+            <td class="format">AN up to 8</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' thirdPartyId=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Third Party Identifier</td>
-            <td id="description">Contains a number the carrier wants associated with assignment for tracking purposes.</td>
-            <td id="xmlSample">thirdPartyId = "9239"</td>
-            <td id="format">AN up to 20</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' thirdPartyId=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Third Party Identifier</td>
+            <td class="description">Contains a number the carrier wants associated with assignment for tracking purposes.</td>
+            <td class="xmlSample">thirdPartyId = "9239"</td>
+            <td class="format">AN up to 20</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' thirdPartyGeoId=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Third Party Geographic ID</td>
-            <td id="description">Contain a geographic code provided by the carrier, which can then be used in Advanced Search for sorting and filtering.</td>
-            <td id="xmlSample">thirdPartyGeoId = "1234"</td>
-            <td id="format">AN up to 20</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' thirdPartyGeoId=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Third Party Geographic ID</td>
+            <td class="description">Contain a geographic code provided by the carrier, which can then be used in Advanced Search for sorting and filtering.</td>
+            <td class="xmlSample">thirdPartyGeoId = "1234"</td>
+            <td class="format">AN up to 20</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' rotation=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Rotation</td>
-            <td id="description">XactAnalysis automatically assigns a contractor based on the zip code if set to “1”. The default is 0. This is available for new assignments only.</td>
-            <td id="xmlSample">rotation = "0"</td>
-            <td id="format">0 = false <br><br> 1 = true</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' rotation=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Rotation</td>
+            <td class="description">XactAnalysis automatically assigns a contractor based on the zip code if set to “1”. The default is 0. This is available for new assignments only.</td>
+            <td class="xmlSample">rotation = "0"</td>
+            <td class="format">0 = false <br><br> 1 = true</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' qualify=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Qualify</td>
-            <td id="description">XactAnalysis automatically qualifies the contractor if set to “1” if the contractor has not yet been qualified by the carrier. However, XactAnalysis will not qualify a contractor that has been disqualified by the carrier. The default is 0.</td>
-            <td id="xmlSample">qualify = "1"</td>
-            <td id="format">0 = false <br><br> 1 = true</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' qualify=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Qualify</td>
+            <td class="description">XactAnalysis automatically qualifies the contractor if set to “1” if the contractor has not yet been qualified by the carrier. However, XactAnalysis will not qualify a contractor that has been disqualified by the carrier. The default is 0.</td>
+            <td class="xmlSample">qualify = "1"</td>
+            <td class="format">0 = false <br><br> 1 = true</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' rotationTrade=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Job Type (Trade)</td>
-            <td id="description">Usually General or Emergency<br>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' rotationTrade=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Job Type (Trade)</td>
+            <td class="description">Usually General or Emergency<br>
                 More can be defined for the carrier</td>
-            <td id="xmlSample">rotationTrade = "General"</td>
-            <td id="format">AN up to 22</td>
+            <td class="xmlSample">rotationTrade = "General"</td>
+            <td class="format">AN up to 22</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' emergency=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Emergency</td>
-            <td id="description">Flags the assignment as an Emergency assignment.</td>
-            <td id="xmlSample">emergency = "1"</td>
-            <td id="format">0 = false <br><br> 1 = true</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' emergency=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Emergency</td>
+            <td class="description">Flags the assignment as an Emergency assignment.</td>
+            <td class="xmlSample">emergency = "1"</td>
+            <td class="format">0 = false <br><br> 1 = true</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' jobSizeCode=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Job Size</td>
-            <td id="description">Valid Values are:
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' jobSizeCode=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Job Size</td>
+            <td class="description">Valid Values are:
                 <br><br>
                 1= Small job<br>
                 2 = Moderate job<br>
@@ -271,34 +271,34 @@
                 16 = Extra large job<br>
                 32 = Extremely large job
             </td>
-            <td id="xmlSample">jobSizeCode = "2"</td>
-            <td id="format">Integer restricted values</td>
+            <td class="xmlSample">jobSizeCode = "2"</td>
+            <td class="format">Integer restricted values</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' sendersOfficeDescription1=\'\' sendersOfficeDescription2=\'\' sendersOfficeDescription3=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Sender hierarchy</td>
-            <td id="description">XactAnalysis can assign the sender’s hierarchy for assignments based on values specified instead of looking up the hierarchy based on the property zip code. XactAnalysis accepts office level one, two, and three data and uses the data to look up the lowest level office level code. XactAnalysis starts at the lowest level in the hierarchy to find a unique office code. If more than one record is found at the lowest level, XactAnalysis continues to search the hierarchy using the next higher level’s data until a unique record is found or until all levels have been searched.</td>
-            <td id="xmlSample">
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' sendersOfficeDescription1=\'\' sendersOfficeDescription2=\'\' sendersOfficeDescription3=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Sender hierarchy</td>
+            <td class="description">XactAnalysis can assign the sender’s hierarchy for assignments based on values specified instead of looking up the hierarchy based on the property zip code. XactAnalysis accepts office level one, two, and three data and uses the data to look up the lowest level office level code. XactAnalysis starts at the lowest level in the hierarchy to find a unique office code. If more than one record is found at the lowest level, XactAnalysis continues to search the hierarchy using the next higher level’s data until a unique record is found or until all levels have been searched.</td>
+            <td class="xmlSample">
                 sendersOfficeDescription1 = "Western States"<br>
                 sendersOfficeDescription2 = "California"<br>
                 sendersOfficeDescription3 = "San Francisco"<br><br>
                 OR<br><br>
                 sendersOfficeExternalCode3="117"</td>
-            <td id="format">AN up to 40</td>
+            <td class="format">AN up to 40</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' assignmentType=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Assignment type</td>
-            <td id="description">Default is 1 - Structural.</td>
-            <td id="xmlSample">assignmentType = "1"</td>
-            <td id="format">1=Claim<br><br>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' assignmentType=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Assignment type</td>
+            <td class="description">Default is 1 - Structural.</td>
+            <td class="xmlSample">assignmentType = "1"</td>
+            <td class="format">1=Claim<br><br>
                 32=REO<br><br>
                 4096=FEMA Flood</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' cancellation=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Cancellation</td>
-            <td id="description">XactAnalysis automatically cancels the assignment if set to “1”. The carrier should also provide the transactionId – which is usually stored on the confirmation log file.<br><br>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' cancellation=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Cancellation</td>
+            <td class="description">XactAnalysis automatically cancels the assignment if set to “1”. The carrier should also provide the transactionId – which is usually stored on the confirmation log file.<br><br>
                 If the transactionId is not included, then the carrierId, recipientsXNAddress and at least one of thirdPartyId or claimNumber should be included. XactAnalysis tries to find a unique active assignment to cancel based on these fields if also included:
             <br><br>
             <ul>
@@ -306,13 +306,13 @@
                 <li>profileCode</li>
                 <li>federalTIN</li>
             </ul></td>
-            <td id="xmlSample">cancellation = "0"</td>
-            <td id="format">0 = false <br><br> 1 = true</td>
+            <td class="xmlSample">cancellation = "0"</td>
+            <td class="format">0 = false <br><br> 1 = true</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' reassign=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Reassignment</td>
-            <td id="description">Three options exist for reassigning the assignment to a different recipient.<br>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' reassign=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Reassignment</td>
+            <td class="description">Three options exist for reassigning the assignment to a different recipient.<br>
                 <ul>
                     <li>reassign = "1"– Creates a reassignment that does not preserve estimate dates. You normally use this option when reassigning to a different recipient. Any reassigned estimates are treated as pending estimates (not completed).</li>
                     <li>reassignPreserve = "1"– Creates a reassignment that preserves estimate dates. You normally use this option when reassigning to a different branch. Any reassigned estimates are treated as completed estimates (and could be returned to carriers).</li>
@@ -332,23 +332,23 @@
                 You can change datasets during a reassignment by specifying a value in the carrierId field.
                 <br>
             </td>
-            <td id="xmlSample">reassign = "1"
+            <td class="xmlSample">reassign = "1"
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 reassignSenderChange = "1"
             </td>
-            <td id="format">0 = false <br><br> 1 = true</td>
+            <td class="format">0 = false <br><br> 1 = true</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' transactionId=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Transaction ID</td>
-            <td id="description">XactAnalysis’s internal ID for the assignment. This is assigned by XactAnalysis for new assignments. This is also referred to as the MFN (Master File Name)</td>
-            <td id="xmlSample">transactionId = "00000YY"</td>
-            <td id="format">AN up to 7</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' transactionId=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Transaction ID</td>
+            <td class="description">XactAnalysis’s internal ID for the assignment. This is assigned by XactAnalysis for new assignments. This is also referred to as the MFN (Master File Name)</td>
+            <td class="xmlSample">transactionId = "00000YY"</td>
+            <td class="format">AN up to 7</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' transactionType=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Transaction type</td>
-            <td id="description">There are only two types of transactions you can create:
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' transactionType=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Transaction type</td>
+            <td class="description">There are only two types of transactions you can create:
                 <br><br>
                 <ul>
                     <li>Assignments</li>
@@ -360,168 +360,168 @@
                 To create a project you should assign the value "EST,PRJ" to this attribute (see example to the right).
                 <br><br>
                 *This is for XactPRM</td>
-            <td id="xmlSample">transactionType = "EST,PRJ"</td>
-            <td id="format">AN up to 7</td>
+            <td class="xmlSample">transactionType = "EST,PRJ"</td>
+            <td class="format">AN up to 7</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' xaProjectId=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Project’s transaction ID</td>
-            <td id="description">If the assignment is to be associated with an existing project, then provide that project’s transaction ID here.<br><br>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' xaProjectId=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Project’s transaction ID</td>
+            <td class="description">If the assignment is to be associated with an existing project, then provide that project’s transaction ID here.<br><br>
                 Projects provide additional functionality for REO assignments. That functionality is not currently available for Claims assignments.<br><br>
                 *This is for XactPRM</td>
-            <td id="xmlSample">xaProjectId = "00000YX"</td>
-            <td id="format">AN up to 7</td>
+            <td class="xmlSample">xaProjectId = "00000YX"</td>
+            <td class="format">AN up to 7</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' assignmentUpdate=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Assignment update</td>
-            <td id="description">Indicates that this is XML is to update an existing assignment. Normally used when customer is not using transaction ID.</td>
-            <td id="xmlSample">assignmentUpdate = "1"</td>
-            <td id="format">0 = false <br><br> 1 = true</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' assignmentUpdate=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Assignment update</td>
+            <td class="description">Indicates that this is XML is to update an existing assignment. Normally used when customer is not using transaction ID.</td>
+            <td class="xmlSample">assignmentUpdate = "1"</td>
+            <td class="format">0 = false <br><br> 1 = true</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' businessUnit=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Business Unit</td>
-            <td id="description">Business unit</td>
-            <td id="xmlSample">businessUnit = "AR101"</td>
-            <td id="format">AN up to 100</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' businessUnit=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Business Unit</td>
+            <td class="description">Business unit</td>
+            <td class="xmlSample">businessUnit = "AR101"</td>
+            <td class="format">AN up to 100</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' mitigation=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Mitigation</td>
-            <td id="description">If the assignment is a mitigation assignment. Default is 0.</td>
-            <td id="xmlSample">mitigation ="0"</td>
-            <td id="format">0 = false <br><br> 1 = true</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' mitigation=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Mitigation</td>
+            <td class="description">If the assignment is a mitigation assignment. Default is 0.</td>
+            <td class="xmlSample">mitigation ="0"</td>
+            <td class="format">0 = false <br><br> 1 = true</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' carrierAttribute1=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Carrier attribute 1</td>
-            <td id="description">This is a carrier-supplied value that XactAnalysis stores for carrier-specific logic.</td>
-            <td id="xmlSample">carrierAttribute1="Carrier data"</td>
-            <td id="format">AN up to 100</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' carrierAttribute1=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Carrier attribute 1</td>
+            <td class="description">This is a carrier-supplied value that XactAnalysis stores for carrier-specific logic.</td>
+            <td class="xmlSample">carrierAttribute1="Carrier data"</td>
+            <td class="format">AN up to 100</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' carrierAttribute2=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Carrier attribute 2</td>
-            <td id="description">This is a carrier-supplied value that XactAnalysis stores for carrier-specific logic.</td>
-            <td id="xmlSample">carrierAttribute2="Carrier data"</td>
-            <td id="format">AN up to 100</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' carrierAttribute2=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Carrier attribute 2</td>
+            <td class="description">This is a carrier-supplied value that XactAnalysis stores for carrier-specific logic.</td>
+            <td class="xmlSample">carrierAttribute2="Carrier data"</td>
+            <td class="format">AN up to 100</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' carrierAttribute3=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Carrier attribute 3</td>
-            <td id="description">This is a carrier-supplied value that XactAnalysis stores for carrier-specific logic.</td>
-            <td id="xmlSample">carrierAttribute3="Carrier data"</td>
-            <td id="format">AN up to 100</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' carrierAttribute3=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Carrier attribute 3</td>
+            <td class="description">This is a carrier-supplied value that XactAnalysis stores for carrier-specific logic.</td>
+            <td class="xmlSample">carrierAttribute3="Carrier data"</td>
+            <td class="format">AN up to 100</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' senderAttribute1=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Sender attribute 1</td>
-            <td id="description">This is a sender-supplied value that XactAnalysis stores for sender -specific logic.</td>
-            <td id="xmlSample">senderAttribute1="Sender data"</td>
-            <td id="format">AN up to 100</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' senderAttribute1=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Sender attribute 1</td>
+            <td class="description">This is a sender-supplied value that XactAnalysis stores for sender -specific logic.</td>
+            <td class="xmlSample">senderAttribute1="Sender data"</td>
+            <td class="format">AN up to 100</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' senderAttribute2=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Sender attribute 2</td>
-            <td id="description">This is a sender-supplied value that XactAnalysis stores for sender-specific logic.</td>
-            <td id="xmlSample">senderAttribute2="Sender data"</td>
-            <td id="format">AN up to 100</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' senderAttribute2=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Sender attribute 2</td>
+            <td class="description">This is a sender-supplied value that XactAnalysis stores for sender-specific logic.</td>
+            <td class="xmlSample">senderAttribute2="Sender data"</td>
+            <td class="format">AN up to 100</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="intro(' senderAttribute3=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Sender attribute 3</td>
-            <td id="description">This is a sender-supplied value that XactAnalysis stores for sender-specific logic.</td>
-            <td id="xmlSample">senderAttribute3="Sender data"</td>
-            <td id="format">AN up to 100</td>
-        </tr>
-    </table>
-    <table>
-        <tr id="tagBox">
-                <td id="elementDesc1"></td>
-                <td id="elementName"><xmp>> </xmp></td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="intro(' senderAttribute3=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Sender attribute 3</td>
+            <td class="description">This is a sender-supplied value that XactAnalysis stores for sender-specific logic.</td>
+            <td class="xmlSample">senderAttribute3="Sender data"</td>
+            <td class="format">AN up to 100</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-                <td id="elementDesc2">Control Points Section. One per assignment.</td>
-                <td id="elementName"><xmp><CONTROL_POINTS </xmp></td>
+        <tr class="tagBox">
+                <td class="elementDesc1"></td>
+                <td class="elementName"><xmp>> </xmp></td>
+        </tr>
+    </table>
+    <table>
+        <tr class="tagBox">
+                <td class="elementDesc2">Control Points Section. One per assignment.</td>
+                <td class="elementName"><xmp><CONTROL_POINTS </xmp></td>
         </tr>
     </table>
     <table class="element2">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="ControlPoints(' cancellationReason=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Cancellation Reason Category</td>
-            <td id="description">The specific reason category for the cancellation. If the cancellation reason category does not match a value from the list of values found in XactAnalysis, XactAnalysis adds a new cancellation reason category.</td>
-            <td id="xmlSample">cancellationReason="Contractor has too much work"</td>
-            <td id="format">AN up to 50</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="ControlPoints(' cancellationReason=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Cancellation Reason Category</td>
+            <td class="description">The specific reason category for the cancellation. If the cancellation reason category does not match a value from the list of values found in XactAnalysis, XactAnalysis adds a new cancellation reason category.</td>
+            <td class="xmlSample">cancellationReason="Contractor has too much work"</td>
+            <td class="format">AN up to 50</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="ControlPoints(' testAssignment =\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Test Assignment</td>
-            <td id="description">if the assignment is used for testing – useful in a production environment. Default is 0.</td>
-            <td id="xmlSample">testAssignment = "1"</td>
-            <td id="format">0 = false <br><br> 1 = true</td>
-        </tr>
-    </table>
-    <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp>> </xmp></td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="ControlPoints(' testAssignment =\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Test Assignment</td>
+            <td class="description">if the assignment is used for testing – useful in a production environment. Default is 0.</td>
+            <td class="xmlSample">testAssignment = "1"</td>
+            <td class="format">0 = false <br><br> 1 = true</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3">One per assignment.</td>
-            <td id="elementName"><xmp><CANCELLATION_COMMENTS></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp>> </xmp></td>
+        </tr>
+    </table>
+    <table>
+        <tr class="tagBox">
+            <td class="elementDesc3">One per assignment.</td>
+            <td class="elementName"><xmp><CANCELLATION_COMMENTS></xmp></td>
         </tr>
     </table>
     <table class="element3">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="CancellationComment('<![CDATA[Control points notes go here ]]>'); this.disabled=true">Add</button></td>
-            <td id="field">Cancellation Comments</td>
-            <td id="description">Comments describing the cancellation.</td>
-            <td id="xmlSample"><xmp><![CDATA[ ABC Contractor is booked</xmp><xmp> and requested that we cancel this</xmp><xmp> claim. ]]></xmp></td>
-            <td id="format">AN up to 512</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="CancellationComment('<![CDATA[Control points notes go here ]]>'); this.disabled=true">Add</button></td>
+            <td class="field">Cancellation Comments</td>
+            <td class="description">Comments describing the cancellation.</td>
+            <td class="xmlSample"><xmp><![CDATA[ ABC Contractor is booked</xmp><xmp> and requested that we cancel this</xmp><xmp> claim. ]]></xmp></td>
+            <td class="format">AN up to 512</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3"></td>
-            <td id="elementName"><xmp></CANCELLATION_COMMENTS></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3"></td>
+            <td class="elementName"><xmp></CANCELLATION_COMMENTS></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3">Individual control points.<br><br>
+        <tr class="tagBox">
+            <td class="elementDesc3">Individual control points.<br><br>
                 Use these tags to set statuses in conjunction with <br>assignment updates.</td>
-            <td id="elementName"><xmp><CONTROL_POINT </xmp></td>
+            <td class="elementName"><xmp><CONTROL_POINT </xmp></td>
         </tr>
     </table>
     <table class="element3">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="ControlPoint1(' type=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Type</td>
-            <td id="description">Identifies the type of the control point<br><br>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="ControlPoint1(' type=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Type</td>
+            <td class="description">Identifies the type of the control point<br><br>
                 These types are available on new assignments and assignment updates:<br><br>
                 “Note”, “Carrier Desk Adjuster Assigned”, “Carrier Desk Adjuster Removed”, “Sender Desk Adjuster Assigned”, “Sender Desk Adjuster Removed”, “Attention Needed”<br><br>
                 These types are available on assignment updates only (not new assignments):<br><br>
                 “Reviewed”, “Contacted”, “Inspected”, “Not Sold”, “QA Aejected”, “QA Approved”, “Client Approved”, “Client Rejected”, “Job Started”, “Job Completed”, “File Closed”, “File Reopened”, “Rejected” (sender use only)</td>
-            <td id="xmlSample">type = "Reviewed"<br><br>
+            <td class="xmlSample">type = "Reviewed"<br><br>
                 *The values are case sensitive</td>
-            <td id="format">AN up to 28 restricted values</td>
+            <td class="format">AN up to 28 restricted values</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="ControlPoint1(' stamp=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Stamp</td>
-            <td id="description">The date and time of the control point. Indicates if the control point has been met.</td>
-            <td id="xmlSample">stamp="2003-07-09T06:05:42"</td>
-            <td id="format">See Date And Times</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="ControlPoint1(' stamp=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Stamp</td>
+            <td class="description">The date and time of the control point. Indicates if the control point has been met.</td>
+            <td class="xmlSample">stamp="2003-07-09T06:05:42"</td>
+            <td class="format">See Date And Times</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="ControlPoint1(' userId=\'\' userNumber=\'\' user=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">User</td>
-            <td id="description">We have two methods of identifying the XactAnalysis user associated with the control point, choose one of:<br>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="ControlPoint1(' userId=\'\' userNumber=\'\' user=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">User</td>
+            <td class="description">We have two methods of identifying the XactAnalysis user associated with the control point, choose one of:<br>
                 <ul>
                     <li>The user id used to log into XactAnalysis. This is always unique.</li>
                     <li>The user number internally used by XactAnalysis. This is always unique.</li>
@@ -529,107 +529,107 @@
                 The user attribute is a legacy attribute that contains both first and last name. If the user attribute is used, XactAnalysis does not try to look up the XactAnalysis user.
                 <br><br>
                 In the case of desk adjuster assignment, the user info is the desk adjuster.</td>
-            <td id="xmlSample">userId = "xwrusr"<br><br><br><br>userNumber = "2079682963"<br><br><br><br>user="Terry Coleman"</td>
-            <td id="format">AN up to 60<br><br><br><br>AN up to 25<br><br><br><br>AN up to 30</td>
+            <td class="xmlSample">userId = "xwrusr"<br><br><br><br>userNumber = "2079682963"<br><br><br><br>user="Terry Coleman"</td>
+            <td class="format">AN up to 60<br><br><br><br>AN up to 25<br><br><br><br>AN up to 30</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="ControlPoint1(' reservation=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Reviewed with exceptions flag</td>
-            <td id="description">If the control point is the reviewed control point, this attribute indicates whether the record has been reviewed with reservations/exceptions.</td>
-            <td id="xmlSample">reservation="0"</td>
-            <td id="format">0 = false <br><br> 1 = true</td>
-        </tr>
-    </table>
-    <table>
-        <tr id="tagBox">
-            <td id="elementDesc3"></td>
-            <td id="elementName"><xmp>></xmp></td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="ControlPoint1(' reservation=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Reviewed with exceptions flag</td>
+            <td class="description">If the control point is the reviewed control point, this attribute indicates whether the record has been reviewed with reservations/exceptions.</td>
+            <td class="xmlSample">reservation="0"</td>
+            <td class="format">0 = false <br><br> 1 = true</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc4">Notes associated with the control point. Not all control points contain notes. One note per control point.</td>
-            <td id="elementName"><xmp><NOTES></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3"></td>
+            <td class="elementName"><xmp>></xmp></td>
+        </tr>
+    </table>
+    <table>
+        <tr class="tagBox">
+            <td class="elementDesc4">Notes associated with the control point. Not all control points contain notes. One note per control point.</td>
+            <td class="elementName"><xmp><NOTES></xmp></td>
         </tr>
     </table>
     <table class="element4">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="cpNotes('<![CDATA[Control points notes go here ]]>'); this.disabled=true">Add</button></td>
-            <td id="field"></td>
-            <td id="description"></td>
-            <td id="xmlSample"><xmp><![CDATA[Control points notes go here ]]></xmp></td>
-            <td id="format">AN up to 150 for new assignments with desk adjuster assignment<br><br>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="cpNotes('<![CDATA[Control points notes go here ]]>'); this.disabled=true">Add</button></td>
+            <td class="field"></td>
+            <td class="description"></td>
+            <td class="xmlSample"><xmp><![CDATA[Control points notes go here ]]></xmp></td>
+            <td class="format">AN up to 150 for new assignments with desk adjuster assignment<br><br>
                 AN up to 2000 for all other control points</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc4"></td>
-            <td id="elementName"><xmp></NOTES></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc4"></td>
+            <td class="elementName"><xmp></NOTES></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3"></td>
-            <td id="elementName"><xmp></CONTROL_POINT> </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3"></td>
+            <td class="elementName"><xmp></CONTROL_POINT> </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3"></td>
-            <td id="elementName">--Add other CONTROL_POINT tags as needed</td>
+        <tr class="tagBox">
+            <td class="elementDesc3"></td>
+            <td class="elementName">--Add other CONTROL_POINT tags as needed</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp></CONTROL_POINTS></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp></CONTROL_POINTS></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp><THIRD_PARTY_URL></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp><THIRD_PARTY_URL></xmp></td>
         </tr>
     </table>
     <table class="element2">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="ThirdPartyURL('<![CDATA[URL goes here ]]>'); this.disabled=true">Add</button></td>
-            <td id="field">3rd Party URL</td>
-            <td id="description"></td>
-            <td id="xmlSample"><xmp><![CDATA[URL goes here ]]></xmp></td>
-            <td id="format">AN up to 500</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="ThirdPartyURL('<![CDATA[URL goes here ]]>'); this.disabled=true">Add</button></td>
+            <td class="field">3rd Party URL</td>
+            <td class="description"></td>
+            <td class="xmlSample"><xmp><![CDATA[URL goes here ]]></xmp></td>
+            <td class="format">AN up to 500</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp></THIRD_PARTY_URL></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp></THIRD_PARTY_URL></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc1"></td>
-            <td id="elementName"><xmp></XACTNET_INFO></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc1"></td>
+            <td class="elementName"><xmp></XACTNET_INFO></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc1">Contacts. One per assignment.</td>
-            <td id="elementName"><xmp><CONTACTS></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc1">Contacts. One per assignment.</td>
+            <td class="elementName"><xmp><CONTACTS></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc2">Identify one contact. Repeat as needed.</td>
-            <td id="elementName"><xmp><CONTACT </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2">Identify one contact. Repeat as needed.</td>
+            <td class="elementName"><xmp><CONTACT </xmp></td>
         </tr>
     </table>
     <table class="element2">
-        <tr id="mainBox">
-            <td id="addfield"><div id="contacts1" onclick="Contacts(' type=\'\''); this.disabled=true">**</div></td>
-            <td id="field">Identify the type of contact (client, adjuster, etc.)</td>
-            <td id="description">Valid values:
+        <tr class="mainBox">
+            <td class="addfield"><div class="contacts1" onclick="Contacts(' type=\'\''); this.disabled=true">**</div></td>
+            <td class="field">Identify the type of contact (client, adjuster, etc.)</td>
+            <td class="description">Valid values:
                 <br><br>
                 <table>
                     <tr>
@@ -650,95 +650,95 @@
                     </tr>
                 </table>
             </td>
-            <td id="xmlSample">type = "Client"</td>
-            <td id="format">AN up to 20 restricted values</td>
+            <td class="xmlSample">type = "Client"</td>
+            <td class="format">AN up to 20 restricted values</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="Contacts(' name=\'\''); this.disabled=true">**</div></td>
-            <td id="field">Contact’s name</td>
-            <td id="description">The contact’s name.</td>
-            <td id="xmlSample">name = "Smith, Jason"</td>
-            <td id="format">AN up to 160</td>
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="Contacts(' name=\'\''); this.disabled=true">**</div></td>
+            <td class="field">Contact’s name</td>
+            <td class="description">The contact’s name.</td>
+            <td class="xmlSample">name = "Smith, Jason"</td>
+            <td class="format">AN up to 160</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="Contacts(' qcode=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Quick code</td>
-            <td id="description">Ignored when type = “Client”<br><br>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="Contacts(' qcode=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Quick code</td>
+            <td class="description">Ignored when type = “Client”<br><br>
                 The carrier should populate qcode in order to edit and/or view the company information. Duplicate qcode values are permitted.</td>
-            <td id="xmlSample">qcode = "SMITH"</td>
-            <td id="format">AN up to 8</td>
+            <td class="xmlSample">qcode = "SMITH"</td>
+            <td class="format">AN up to 8</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="Contacts(' adjNo=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Adjuster number</td>
-            <td id="description">Adjuster number (valid only when type = “ClaimRep”)</td>
-            <td id="xmlSample">adjNo = "530960333</td>
-            <td id="format">AN up to 9</td>
-        </tr>
-    </table>
-    <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp>> </xmp></td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="Contacts(' adjNo=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Adjuster number</td>
+            <td class="description">Adjuster number (valid only when type = “ClaimRep”)</td>
+            <td class="xmlSample">adjNo = "530960333</td>
+            <td class="format">AN up to 9</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3">List of mortgages and loan numbers One per assignment. Valid only in client contact</td>
-            <td id="elementName"><xmp><MORTGAGES></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp>> </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc4">Specify mortgage and loan number. Repeat up to five times. Valid only in client contact. Xactimate versions 27.1 and older will only use the first mortgagee and loan number.</td>
-            <td id="elementName"><xmp><MORTGAGE</xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3">List of mortgages and loan numbers One per assignment. Valid only in client contact</td>
+            <td class="elementName"><xmp><MORTGAGES></xmp></td>
+        </tr>
+    </table>
+    <table>
+        <tr class="tagBox">
+            <td class="elementDesc4">Specify mortgage and loan number. Repeat up to five times. Valid only in client contact. Xactimate versions 27.1 and older will only use the first mortgagee and loan number.</td>
+            <td class="elementName"><xmp><MORTGAGE</xmp></td>
         </tr>
     </table>
     <table class="element4">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="mortgageMain(' mortgagee=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Mortgage Holder</td>
-            <td id="description">The entity that holds the mortgage on the property (valid only when type = “Client”)</td>
-            <td id="xmlSample">mortgagee = "Acme Mortgage"</td>
-            <td id="format">AN up to 80</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="mortgageMain(' mortgagee=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Mortgage Holder</td>
+            <td class="description">The entity that holds the mortgage on the property (valid only when type = “Client”)</td>
+            <td class="xmlSample">mortgagee = "Acme Mortgage"</td>
+            <td class="format">AN up to 80</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="mortgageMain(' loanNum=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Loan Number</td>
-            <td id="description">Loan number (valid only when type = “Client”)</td>
-            <td id="xmlSample">loanNum = "123456789"</td>
-            <td id="format">AN up to 15</td>
-        </tr>
-    </table>
-    <table>
-        <tr id="tagBox">
-            <td id="elementDesc4"></td>
-            <td id="elementName"><xmp>> </xmp></td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="mortgageMain(' loanNum=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Loan Number</td>
+            <td class="description">Loan number (valid only when type = “Client”)</td>
+            <td class="xmlSample">loanNum = "123456789"</td>
+            <td class="format">AN up to 15</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3">List of mortgages and loan numbers One per assignment. Valid only in client contact</td>
-            <td id="elementName"><xmp></MORTGAGES></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc4"></td>
+            <td class="elementName"><xmp>> </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3">Specify mortgage and loan number. Repeat up to five times. Valid only in client contact. Xactimate versions 27.1 and older will only use the first mortgagee and loan number.</td>
-            <td id="elementName"><xmp><ADDRESSES></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3">List of mortgages and loan numbers One per assignment. Valid only in client contact</td>
+            <td class="elementName"><xmp></MORTGAGES></xmp></td>
+        </tr>
+    </table>
+    <table>
+        <tr class="tagBox">
+            <td class="elementDesc3">Specify mortgage and loan number. Repeat up to five times. Valid only in client contact. Xactimate versions 27.1 and older will only use the first mortgagee and loan number.</td>
+            <td class="elementName"><xmp><ADDRESSES></xmp></td>
         </tr>
     </table>
         <table>
-        <tr id="tagBox">
-            <td id="elementDesc4">Specify mortgage and loan number. Repeat up to five times. Valid only in client contact. Xactimate versions 27.1 and older will only use the first mortgagee and loan number.</td>
-            <td id="elementName"><xmp><ADDRESS </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc4">Specify mortgage and loan number. Repeat up to five times. Valid only in client contact. Xactimate versions 27.1 and older will only use the first mortgagee and loan number.</td>
+            <td class="elementName"><xmp><ADDRESS </xmp></td>
         </tr>
     </table>
     <table class="element4">
-        <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="addressesMain(' type=\'\''); this.disabled=true">**</div></td>
-            <td id="field"</td>
-            <td id="description">Valid values:
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="addressesMain(' type=\'\''); this.disabled=true">**</div></td>
+            <td class="field"</td>
+            <td class="description">Valid values:
                 <br><br>
                 <table>
                     <tr>
@@ -758,64 +758,64 @@
                 <br><br>
                 “Business” required for third party claimant contact type
             </td>
-            <td id="xmlSample">type = "Property"</td>
-            <td id="format">AN up to 20 restricted values (Required)</td>
+            <td class="xmlSample">type = "Property"</td>
+            <td class="format">AN up to 20 restricted values (Required)</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="addressesMain(' country=\'\''); this.disabled=true">**</div></td>
-            <td id="field">Country</td>
-            <td id="description">Valid values are: US, CA (for Canada) (Required)</td>
-            <td id="xmlSample">country = "US"</td>
-            <td id="format">AN up to 2 restricted values (Required)</td>
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="addressesMain(' country=\'\''); this.disabled=true">**</div></td>
+            <td class="field">Country</td>
+            <td class="description">Valid values are: US, CA (for Canada) (Required)</td>
+            <td class="xmlSample">country = "US"</td>
+            <td class="format">AN up to 2 restricted values (Required)</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="addressesMain(' city=\'\''); this.disabled=true">**</div></td>
-            <td id="field">City</td>
-            <td id="description"></td>
-            <td id="xmlSample">city = "Any City"</td>
-            <td id="format">AN up to 60</td>
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="addressesMain(' city=\'\''); this.disabled=true">**</div></td>
+            <td class="field">City</td>
+            <td class="description"></td>
+            <td class="xmlSample">city = "Any City"</td>
+            <td class="format">AN up to 60</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="addressesMain(' street=\'\' street2=\'\' street3=\'\''); this.disabled=true">**</div></td>
-            <td id="field">Street</td>
-            <td id="description"></td>
-            <td id="xmlSample">street = "Any Street"<br><br>
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="addressesMain(' street=\'\' street2=\'\' street3=\'\''); this.disabled=true">**</div></td>
+            <td class="field">Street</td>
+            <td class="description"></td>
+            <td class="xmlSample">street = "Any Street"<br><br>
                 street2 = “Any Street”<br><br>
                 street3 = “Any Street”</td>
-            <td id="format">AN up to 60</td>
+            <td class="format">AN up to 60</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="addressesMain(' state=\'\''); this.disabled=true">**</div></td>
-            <td id="field">State</td>
-            <td id="description">State code abbreviation</td>
-            <td id="xmlSample">state = "UT"</td>
-            <td id="format">AN up to 60 (Required)</td>
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="addressesMain(' state=\'\''); this.disabled=true">**</div></td>
+            <td class="field">State</td>
+            <td class="description">State code abbreviation</td>
+            <td class="xmlSample">state = "UT"</td>
+            <td class="format">AN up to 60 (Required)</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="addressesMain(' postal=\'\''); this.disabled=true">**</div></td>
-            <td id="field">Postal</td>
-            <td id="description">Postal code/zip code</td>
-            <td id="xmlSample">postal = "84003-9882"</td>
-            <td id="format">AN up to 10 (Required)</td>
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="addressesMain(' postal=\'\''); this.disabled=true">**</div></td>
+            <td class="field">Postal</td>
+            <td class="description">Postal code/zip code</td>
+            <td class="xmlSample">postal = "84003-9882"</td>
+            <td class="format">AN up to 10 (Required)</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="addressesMain(' lat=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">GPS latitude coordinate</td>
-            <td id="description">The latitude of the address. Decimal degrees.</td>
-            <td id="xmlSample">lat = "-31.928267"</td>
-            <td id="format">Decimal between -90.0 and 90.0</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="addressesMain(' lat=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">GPS latitude coordinate</td>
+            <td class="description">The latitude of the address. Decimal degrees.</td>
+            <td class="xmlSample">lat = "-31.928267"</td>
+            <td class="format">Decimal between -90.0 and 90.0</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="addressesMain(' lon=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">GPS longitude coordinate</td>
-            <td id="description">The longitude of the address. Decimal degrees.</td>
-            <td id="xmlSample">lon = "115.800667"</td>
-            <td id="format">Decimal between -180.0 and 180.0</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="addressesMain(' lon=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">GPS longitude coordinate</td>
+            <td class="description">The longitude of the address. Decimal degrees.</td>
+            <td class="xmlSample">lon = "115.800667"</td>
+            <td class="format">Decimal between -180.0 and 180.0</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="addressesMain(' accuracy=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">GPS coordinate accuracy</td>
-            <td id="description">Accuracy of the GPS coordinates. Must be one of:<br><br>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="addressesMain(' accuracy=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">GPS coordinate accuracy</td>
+            <td class="description">Accuracy of the GPS coordinates. Must be one of:<br><br>
                 ADDRESS<br>
                 STREET<br>
                 ZIP<br>
@@ -823,45 +823,45 @@
                 STATE<br>
                 COUNTRY<br><br>
                 If GPS coordinates are present and no accuracy is specified, then “ADDRESS” accuracy is assumed.</td>
-            <td id="xmlSample">accuracy = "ADDRESS"</td>
-            <td id="format">AN up to 30</td>
+            <td class="xmlSample">accuracy = "ADDRESS"</td>
+            <td class="format">AN up to 30</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc4"></td>
-            <td id="elementName"><xmp>/> </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc4"></td>
+            <td class="elementName"><xmp>/> </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc4"></td>
-            <td id="elementName"><xmp>-- Add other ADDRESS tags as needed</xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc4"></td>
+            <td class="elementName"><xmp>-- Add other ADDRESS tags as needed</xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3"></td>
-            <td id="elementName"><xmp></ADDRESSES></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3"></td>
+            <td class="elementName"><xmp></ADDRESSES></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3">Methods to reach the contact (phone and email). One per assignment.</td>
-            <td id="elementName"><xmp><CONTACTMETHODS></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3">Methods to reach the contact (phone and email). One per assignment.</td>
+            <td class="elementName"><xmp><CONTACTMETHODS></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc4">Multiple phones per contact allowed.</td>
-            <td id="elementName"><xmp><PHONE </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc4">Multiple phones per contact allowed.</td>
+            <td class="elementName"><xmp><PHONE </xmp></td>
         </tr>
     </table>
     <table class="element4">
-        <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="contactMethodsPhone(' type=\'\''); this.disabled=true">**</div></td>
-            <td id="field">Phone type</td>
-            <td id="description">Valid values:
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="contactMethodsPhone(' type=\'\''); this.disabled=true">**</div></td>
+            <td class="field">Phone type</td>
+            <td class="description">Valid values:
                 <br><br>
                 <table>
                     <tr>
@@ -887,140 +887,140 @@
                 </table>
                 “Business” required for third party claimant phone
             </td>
-            <td id="xmlSample">type = "Home"</td>
-            <td id="format">AN up to 12 restricted values</td>
+            <td class="xmlSample">type = "Home"</td>
+            <td class="format">AN up to 12 restricted values</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="contactMethodsPhone(' number=\'\''); this.disabled=true">**</div></td>
-            <td id="field"></td>
-            <td id="description">Include the "-" separators</td>
-            <td id="xmlSample">number = "801-226-2252"</td>
-            <td id="format">AN 12 restricted values</td>
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="contactMethodsPhone(' number=\'\''); this.disabled=true">**</div></td>
+            <td class="field"></td>
+            <td class="description">Include the "-" separators</td>
+            <td class="xmlSample">number = "801-226-2252"</td>
+            <td class="format">AN 12 restricted values</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="contactMethodsPhone(' extension=\'\''); this.disabled=true">Add</button></td>
-            <td id="field"></td>
-            <td id="description"></td>
-            <td id="xmlSample">extension = "00101"</td>
-            <td id="format">Integer up to 20</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="contactMethodsPhone(' extension=\'\''); this.disabled=true">Add</button></td>
+            <td class="field"></td>
+            <td class="description"></td>
+            <td class="xmlSample">extension = "00101"</td>
+            <td class="format">Integer up to 20</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="contactMethodsPhone(' primary=\'\''); this.disabled=true">**</div></td>
-            <td id="field">Primary phone type</td>
-            <td id="description">When populated with a 1, this value designates the phone type as the primary phone number. If the value is zero or the primary attribute is missing, then the phone type is not considered as the primary phone number.<br><br>
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="contactMethodsPhone(' primary=\'\''); this.disabled=true">**</div></td>
+            <td class="field">Primary phone type</td>
+            <td class="description">When populated with a 1, this value designates the phone type as the primary phone number. If the value is zero or the primary attribute is missing, then the phone type is not considered as the primary phone number.<br><br>
                 If more than one phone type is used, primary needs to be specified for one of the numbers.</td>
-            <td id="xmlSample">primary = “1”</td>
-            <td id="format">Integer value of 0 or 1</td>
+            <td class="xmlSample">primary = “1”</td>
+            <td class="format">Integer value of 0 or 1</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc4"></td>
-            <td id="elementName"><xmp>/> </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc4"></td>
+            <td class="elementName"><xmp>/> </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc4"></td>
-            <td id="elementName"><xmp>-- Add other PHONE tags as needed</xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc4"></td>
+            <td class="elementName"><xmp>-- Add other PHONE tags as needed</xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc4"></td>
-            <td id="elementName"><xmp><EMAIL </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc4"></td>
+            <td class="elementName"><xmp><EMAIL </xmp></td>
         </tr>
     </table>
     <table class="element4">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="contactMethodsEmail(' Address=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Email address</td>
-            <td id="description">Email address</td>
-            <td id="xmlSample">Address = "Jason@yahoo.com"</td>
-            <td id="format">AN up to 512</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="contactMethodsEmail(' Address=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Email address</td>
+            <td class="description">Email address</td>
+            <td class="xmlSample">Address = "Jason@yahoo.com"</td>
+            <td class="format">AN up to 512</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc4"></td>
-            <td id="elementName"><xmp>/></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc4"></td>
+            <td class="elementName"><xmp>/></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3"></td>
-            <td id="elementName"><xmp></CONTACTMETHODS></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3"></td>
+            <td class="elementName"><xmp></CONTACTMETHODS></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3">The company that the contact works for. Ignored when client type = “Client”</td>
-            <td id="elementName"><xmp><COMPANY </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3">The company that the contact works for. Ignored when client type = “Client”</td>
+            <td class="elementName"><xmp><COMPANY </xmp></td>
         </tr>
     </table>
     <table class="element3">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="CompanyAddresses(' name=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Company name</td>
-            <td id="description"></td>
-            <td id="xmlSample">name = "Best Contracting"</td>
-            <td id="format">AN up to 85</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="CompanyAddresses(' name=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Company name</td>
+            <td class="description"></td>
+            <td class="xmlSample">name = "Best Contracting"</td>
+            <td class="format">AN up to 85</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="CompanyAddresses(' qcode=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Quick Code</td>
-            <td id="description">The carrier should populate qcode in order to edit and/or view the company information. Duplicate qcode values are permitted.</td>
-            <td id="xmlSample">qcode = "BEST"</td>
-            <td id="format">AN up to 8</td>
-        </tr>
-    </table>
-    <table>
-        <tr id="tagBox">
-            <td id="elementDesc3"></td>
-            <td id="elementName"><xmp>></xmp></td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="CompanyAddresses(' qcode=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Quick Code</td>
+            <td class="description">The carrier should populate qcode in order to edit and/or view the company information. Duplicate qcode values are permitted.</td>
+            <td class="xmlSample">qcode = "BEST"</td>
+            <td class="format">AN up to 8</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc4"></td>
-            <td id="elementName"><xmp>-- ADDRESSES tag and sub-tags allowed</xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3"></td>
+            <td class="elementName"><xmp>></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc4"></td>
-            <td id="elementName"><xmp>-- CONTACTMETHODS tag and sub-tags allowed</xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc4"></td>
+            <td class="elementName"><xmp>-- ADDRESSES tag and sub-tags allowed</xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3"></td>
-            <td id="elementName"><xmp></COMPANY></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc4"></td>
+            <td class="elementName"><xmp>-- CONTACTMETHODS tag and sub-tags allowed</xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp></CONTACT></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3"></td>
+            <td class="elementName"><xmp></COMPANY></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp>-- Add other CONTACT tags as needed</xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp></CONTACT></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc2">Identify One Company. Repeat as needed.</td>
-            <td id="elementName"><xmp><COMPANY </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp>-- Add other CONTACT tags as needed</xmp></td>
+        </tr>
+    </table>
+    <table>
+        <tr class="tagBox">
+            <td class="elementDesc2">Identify One Company. Repeat as needed.</td>
+            <td class="elementName"><xmp><COMPANY </xmp></td>
         </tr>
     </table>
     <table class="element2">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="companyMain(' type=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Type of company</td>
-            <td id="description">Valid values:
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="companyMain(' type=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Type of company</td>
+            <td class="description">Valid values:
                 <br><br>
                 <table>
                     <tr>
@@ -1037,353 +1037,353 @@
                     </tr>
                 </table>
             </td>
-            <td id="xmlSample">type = "Agency"</td>
-            <td id="format">AN up to 20 restricted values</td>
+            <td class="xmlSample">type = "Agency"</td>
+            <td class="format">AN up to 20 restricted values</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="companyMain(' name=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Company Name</td>
-            <td id="description">The companies name.</td>
-            <td id="xmlSample">name = "ACME Building"</td>
-            <td id="format">AN up to 85</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="companyMain(' name=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Company Name</td>
+            <td class="description">The companies name.</td>
+            <td class="xmlSample">name = "ACME Building"</td>
+            <td class="format">AN up to 85</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="companyMain(' primaryContact=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Primary Contact</td>
-            <td id="description">The company’s primary contact.</td>
-            <td id="xmlSample">primaryContact = "John Doe"</td>
-            <td id="format">AN up to 30</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="companyMain(' primaryContact=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Primary Contact</td>
+            <td class="description">The company’s primary contact.</td>
+            <td class="xmlSample">primaryContact = "John Doe"</td>
+            <td class="format">AN up to 30</td>
         </tr>
-           <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="companyMain(' qcode=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Quick Code</td>
-            <td id="description">The carrier should populate qcode in order to edit and/or view the company information. Duplicate qcode values are permitted.</td>
-            <td id="xmlSample">qcode = "ACME"</td>
-            <td id="format">AN up to 8</td>
-        </tr>
-    </table>
-    <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp>></xmp></td>
+           <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="companyMain(' qcode=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Quick Code</td>
+            <td class="description">The carrier should populate qcode in order to edit and/or view the company information. Duplicate qcode values are permitted.</td>
+            <td class="xmlSample">qcode = "ACME"</td>
+            <td class="format">AN up to 8</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3"></td>
-            <td id="elementName"><xmp><ADDRESSES></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp>></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc4"></td>
-            <td id="elementName"><xmp><ADDRESS </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3"></td>
+            <td class="elementName"><xmp><ADDRESSES></xmp></td>
+        </tr>
+    </table>
+    <table>
+        <tr class="tagBox">
+            <td class="elementDesc4"></td>
+            <td class="elementName"><xmp><ADDRESS </xmp></td>
         </tr>
     </table>
     <table class="element4">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="companyMainAddress(' type=\'\''); this.disabled=true">Add</button></td>
-            <td id="field" onclick="intro(' =\'\''); this.disabled=true">Address Type</td>
-            <td id="description"></td>
-            <td id="xmlSample">type = "Business"</td>
-            <td id="format">AN up to 20</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="companyMainAddress(' type=\'\''); this.disabled=true">Add</button></td>
+            <td class="field" onclick="intro(' =\'\''); this.disabled=true">Address Type</td>
+            <td class="description"></td>
+            <td class="xmlSample">type = "Business"</td>
+            <td class="format">AN up to 20</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="companyMainAddress(' city=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">City</td>
-            <td id="description"></td>
-            <td id="xmlSample">city = "Fremont City"</td>
-            <td id="format">AN up to 60</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="companyMainAddress(' city=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">City</td>
+            <td class="description"></td>
+            <td class="xmlSample">city = "Fremont City"</td>
+            <td class="format">AN up to 60</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="companyMainAddress(' street=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Street</td>
-            <td id="description"></td>
-            <td id="xmlSample">street = "100 Main street "</td>
-            <td id="format">AN up to 60</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="companyMainAddress(' street=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Street</td>
+            <td class="description"></td>
+            <td class="xmlSample">street = "100 Main street "</td>
+            <td class="format">AN up to 60</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="companyMainAddress(' state=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">State</td>
-            <td id="description"></td>
-            <td id="xmlSample">state = "UT"</td>
-            <td id="format">AN up to 2</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="companyMainAddress(' state=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">State</td>
+            <td class="description"></td>
+            <td class="xmlSample">state = "UT"</td>
+            <td class="format">AN up to 2</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="companyMainAddress(' postal=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Postal</td>
-            <td id="description"></td>
-            <td id="xmlSample">postal = "99999-9882"</td>
-            <td id="format">AN up to 10</td>
-        </tr>
-    </table>
-    <table>
-        <tr id="tagBox">
-            <td id="elementDesc4"></td>
-            <td id="elementName"><xmp>/></xmp></td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="companyMainAddress(' postal=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Postal</td>
+            <td class="description"></td>
+            <td class="xmlSample">postal = "99999-9882"</td>
+            <td class="format">AN up to 10</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3"></td>
-            <td id="elementName"><xmp></ADDRESSES></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc4"></td>
+            <td class="elementName"><xmp>/></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3"></td>
-            <td id="elementName"><xmp>-- CONTACTMETHODS tag and sub-tags allowed</xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3"></td>
+            <td class="elementName"><xmp></ADDRESSES></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp></COMPANY></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3"></td>
+            <td class="elementName"><xmp>-- CONTACTMETHODS tag and sub-tags allowed</xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc1"></td>
-            <td id="elementName"><xmp></CONTACTS></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp></COMPANY></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc1">Project Information Section. One per assignment.</td>
-            <td id="elementName"><xmp><PROJECT_INFO </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc1"></td>
+            <td class="elementName"><xmp></CONTACTS></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc1"></td>
-            <td id="elementName"><xmp>> </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc1">Project Information Section. One per assignment.</td>
+            <td class="elementName"><xmp><PROJECT_INFO </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc1"></td>
-            <td id="elementName"><xmp><NOTES></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc1"></td>
+            <td class="elementName"><xmp>> </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="projectInfo('<![CDATA[Put free-form text data here]]>'); this.disabled=true">**</div></td>
-            <td id="field">Notes</td>
-            <td id="description">Free-form text data. You can format the text with carriage returns and asterisks – or any other way according to how you want to view the information within Xactimate.<br><br>
+        <tr class="tagBox">
+            <td class="elementDesc1"></td>
+            <td class="elementName"><xmp><NOTES></xmp></td>
+        </tr>
+    </table>
+    <table>
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="projectInfo('<![CDATA[Put free-form text data here]]>'); this.disabled=true">**</div></td>
+            <td class="field">Notes</td>
+            <td class="description">Free-form text data. You can format the text with carriage returns and asterisks – or any other way according to how you want to view the information within Xactimate.<br><br>
                 Listed under the Description of Loss and/or Instructions within XactAnalysis</td>
-            <td id="xmlSample"><xmp><![CDATA[Put free-form text data here]]></xmp></td>
-            <td id="format">AN up to 4000</td>
+            <td class="xmlSample"><xmp><![CDATA[Put free-form text data here]]></xmp></td>
+            <td class="format">AN up to 4000</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc1"></td>
-            <td id="elementName"><xmp></NOTES></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc1"></td>
+            <td class="elementName"><xmp></NOTES></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc1"></td>
-            <td id="elementName"><xmp></PROJECT_INFO> </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc1"></td>
+            <td class="elementName"><xmp></PROJECT_INFO> </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc1">Claim Manager Section. One per assignment.</td>
-            <td id="elementName"><xmp><CLAIM_INFO> </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc1">Claim Manager Section. One per assignment.</td>
+            <td class="elementName"><xmp><CLAIM_INFO> </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc1">Loss Information Section. One per assignment.</td>
-            <td id="elementName"><xmp><LOSS_INFO </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc1">Loss Information Section. One per assignment.</td>
+            <td class="elementName"><xmp><LOSS_INFO </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="lossInfo(' receivedBy=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Received by</td>
-            <td id="description">This data may not show up in Xactimate (profile dependent)<br><br><br>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="lossInfo(' receivedBy=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Received by</td>
+            <td class="description">This data may not show up in Xactimate (profile dependent)<br><br><br>
                 Value values are:<br><br>
                 Phone, Fax, XactAnalysis, Email</td>
-            <td id="xmlSample">receivedBy = ""</td>
-            <td id="format">AN up to 12 restricted values</td>
+            <td class="xmlSample">receivedBy = ""</td>
+            <td class="format">AN up to 12 restricted values</td>
         </tr>
-           <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="lossInfo(' referredBy=\'\' referredByPhone=\'\' referredByPhoneExt=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Referred by name</td>
-            <td id="description">This data may not show up in Xactimate (profile dependent)<br><br>
+           <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="lossInfo(' referredBy=\'\' referredByPhone=\'\' referredByPhoneExt=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Referred by name</td>
+            <td class="description">This data may not show up in Xactimate (profile dependent)<br><br>
                 Include the "-" separators</td>
-            <td id="xmlSample">referredBy = "William Wright"<br><br><br>
+            <td class="xmlSample">referredBy = "William Wright"<br><br><br>
                 referredByPhone="111-111-1111"<br><br><br>
                 referredByPhoneExt="222"</td>
-            <td id="format">AN up to 60<br><br><br>
+            <td class="format">AN up to 60<br><br><br>
                 AN 12 restricted values<br><br><br>
                 Integer up to 6</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc1"></td>
-            <td id="elementName"><xmp>/> </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc1"></td>
+            <td class="elementName"><xmp>/> </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc1">Claim Manager Administration Information Section. One per assignment.</td>
-            <td id="elementName"><xmp><ADMIN_INFO </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc1">Claim Manager Administration Information Section. One per assignment.</td>
+            <td class="elementName"><xmp><ADMIN_INFO </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' branch=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Branch</td>
-            <td id="description">This data may not show up in Xactimate (profile dependent)</td>
-            <td id="xmlSample">branch = "PROVO-UT"</td>
-            <td id="format">AN up to 20</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="adminInfo(' branch=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Branch</td>
+            <td class="description">This data may not show up in Xactimate (profile dependent)</td>
+            <td class="xmlSample">branch = "PROVO-UT"</td>
+            <td class="format">AN up to 20</td>
         </tr>
-           <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' accessName=\'\' accessPhone=\'\' accessPhoneExt=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Person to contact to access property</td>
-            <td id="description">This data may not show up in Xactimate (profile dependent)<br><br><br>
+           <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="adminInfo(' accessName=\'\' accessPhone=\'\' accessPhoneExt=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Person to contact to access property</td>
+            <td class="description">This data may not show up in Xactimate (profile dependent)<br><br><br>
                 Include the "-" separators</td>
-            <td id="xmlSample">accessName="William Jones"<br><br><br><br>
+            <td class="xmlSample">accessName="William Jones"<br><br><br><br>
                 accessPhone="801-812-3488"<br><br><br>
                 accessPhoneExt="4"</td>
-            <td id="format">AN up to 60<br><br><br><br>
+            <td class="format">AN up to 60<br><br><br><br>
                 AN 12 restricted values<br><br><br>
                 Integer up to 6</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' origin=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Assignment origin</td>
-            <td id="description">This data may not show up in Xactimate (profile dependent)</td>
-            <td id="xmlSample">origin = "2"</td>
-            <td id="format">AN up to 1</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="adminInfo(' origin=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Assignment origin</td>
+            <td class="description">This data may not show up in Xactimate (profile dependent)</td>
+            <td class="xmlSample">origin = "2"</td>
+            <td class="format">AN up to 1</td>
         </tr>
-           <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' type=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Assignment type</td>
-            <td id="description">This data may not show up in Xactimate (profile dependent)</td>
-            <td id="xmlSample">type = "3"</td>
-            <td id="format">AN up to 1</td>
+           <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="adminInfo(' type=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Assignment type</td>
+            <td class="description">This data may not show up in Xactimate (profile dependent)</td>
+            <td class="xmlSample">type = "3"</td>
+            <td class="format">AN up to 1</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' origBranch=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Originating branch number</td>
-            <td id="description">This data may not show up in Xactimate (profile dependent)</td>
-            <td id="xmlSample">origBranch = "200"</td>
-            <td id="format">Integer</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="adminInfo(' origBranch=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Originating branch number</td>
+            <td class="description">This data may not show up in Xactimate (profile dependent)</td>
+            <td class="xmlSample">origBranch = "200"</td>
+            <td class="format">Integer</td>
         </tr>
-           <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' origFileNumber=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Originating file number</td>
-            <td id="description">This data may not show up in Xactimate (profile dependent)</td>
-            <td id="xmlSample">origFileNumber = "300"</td>
-            <td id="format">Integer</td>
+           <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="adminInfo(' origFileNumber=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Originating file number</td>
+            <td class="description">This data may not show up in Xactimate (profile dependent)</td>
+            <td class="xmlSample">origFileNumber = "300"</td>
+            <td class="format">Integer</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' coverage=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Coverage code</td>
-            <td id="description">This data may not show up in Xactimate (profile dependent)</td>
-            <td id="xmlSample">coverage = "284"</td>
-            <td id="format">AN up to 3</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="adminInfo(' coverage=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Coverage code</td>
+            <td class="description">This data may not show up in Xactimate (profile dependent)</td>
+            <td class="xmlSample">coverage = "284"</td>
+            <td class="format">AN up to 3</td>
         </tr>
-           <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' hourlyRate=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Hourly rate</td>
-            <td id="description">This data may not show up in Xactimate (profile dependent)</td>
-            <td id="xmlSample">hourlyRate = "100.00"</td>
-            <td id="format">Decimal</td>
+           <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="adminInfo(' hourlyRate=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Hourly rate</td>
+            <td class="description">This data may not show up in Xactimate (profile dependent)</td>
+            <td class="xmlSample">hourlyRate = "100.00"</td>
+            <td class="format">Decimal</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' telephoneCharge=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Telephone charge?</td>
-            <td id="description">This data may not show up in Xactimate (profile dependent)</td>
-            <td id="xmlSample">telephoneCharge = "1"</td>
-            <td id="format">0 = False<br><br>1 = True</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="adminInfo(' telephoneCharge=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Telephone charge?</td>
+            <td class="description">This data may not show up in Xactimate (profile dependent)</td>
+            <td class="xmlSample">telephoneCharge = "1"</td>
+            <td class="format">0 = False<br><br>1 = True</td>
         </tr>
-           <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' caseCreationHour=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Case creation hour?</td>
-            <td id="description">This data may not show up in Xactimate (profile dependent)</td>
-            <td id="xmlSample">caseCreationHour = "1"</td>
-            <td id="format">0 = False<br><br>1 = True</td>
+           <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="adminInfo(' caseCreationHour=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Case creation hour?</td>
+            <td class="description">This data may not show up in Xactimate (profile dependent)</td>
+            <td class="xmlSample">caseCreationHour = "1"</td>
+            <td class="format">0 = False<br><br>1 = True</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' reason=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Reason for referral</td>
-            <td id="description">This data may not show up in Xactimate (profile dependent)</td>
-            <td id="xmlSample">reason = "1"</td>
-            <td id="format">AN up to 1</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="adminInfo(' reason=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Reason for referral</td>
+            <td class="description">This data may not show up in Xactimate (profile dependent)</td>
+            <td class="xmlSample">reason = "1"</td>
+            <td class="format">AN up to 1</td>
         </tr>
-           <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="adminInfo(' referralDate=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Referral date</td>
-            <td id="description">This data may not show up in Xactimate (profile dependent)</td>
-            <td id="xmlSample">referralDate = "2002-08-01"</td>
-            <td id="format">Date</td>
-        </tr>
-    </table>
-    <table>
-        <tr id="tagBox">
-            <td id="elementDesc1"></td>
-            <td id="elementName"><xmp>> </xmp></td>
+           <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="adminInfo(' referralDate=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Referral date</td>
+            <td class="description">This data may not show up in Xactimate (profile dependent)</td>
+            <td class="xmlSample">referralDate = "2002-08-01"</td>
+            <td class="format">Date</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc2">Insurance Client. One per assignment.</td>
-            <td id="elementName"><xmp><INSURANCE_CLIENT</xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc1"></td>
+            <td class="elementName"><xmp>> </xmp></td>
+        </tr>
+    </table>
+    <table>
+        <tr class="tagBox">
+            <td class="elementDesc2">Insurance Client. One per assignment.</td>
+            <td class="elementName"><xmp><INSURANCE_CLIENT</xmp></td>
         </tr>
     </table>
     <table class="element2">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="insuranceClient(' clientdesc=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Insurance client</td>
-            <td id="description"></td>
-            <td id="xmlSample">clientdesc = "A R Transportation Inc"</td>
-            <td id="format">AN up to 60</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="insuranceClient(' clientdesc=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Insurance client</td>
+            <td class="description"></td>
+            <td class="xmlSample">clientdesc = "A R Transportation Inc"</td>
+            <td class="format">AN up to 60</td>
         </tr>
-           <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="insuranceClient(' primaryContact=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Insurance client contact</td>
-            <td id="description"></td>
-            <td id="xmlSample">primaryContact = "William Sanders"</td>
-            <td id="format">AN up to 60</td>
-        </tr>
-    </table>
-    <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp>> </xmp></td>
+           <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="insuranceClient(' primaryContact=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Insurance client contact</td>
+            <td class="description"></td>
+            <td class="xmlSample">primaryContact = "William Sanders"</td>
+            <td class="format">AN up to 60</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3">Insurance Client Address. One per assignment.</td>
-            <td id="elementName"><xmp><ADDRESSES> </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp>> </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc4"></td>
-            <td id="elementName"><xmp><ADDRESS </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3">Insurance Client Address. One per assignment.</td>
+            <td class="elementName"><xmp><ADDRESSES> </xmp></td>
+        </tr>
+    </table>
+    <table>
+        <tr class="tagBox">
+            <td class="elementDesc4"></td>
+            <td class="elementName"><xmp><ADDRESS </xmp></td>
         </tr>
     </table>
     <table class="element4">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="ICAddresses(' type=\'\' primary=\'\' street=\'\' city=\'\' state=\'\' postal=\'\' country=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Insurance client contact address</td>
-            <td id="description">Primary tag is required</td>
-            <td id="xmlSample">type="Business"...................<br><br>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="ICAddresses(' type=\'\' primary=\'\' street=\'\' city=\'\' state=\'\' postal=\'\' country=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Insurance client contact address</td>
+            <td class="description">Primary tag is required</td>
+            <td class="xmlSample">type="Business"...................<br><br>
                 primary="1".............................<br><br>
                 street="123 Main Street"............<br><br>
                 city="Fremont"..........................<br><br>
                 state="CA"..............................<br><br>
                 postal="94555"..........................<br><br>
                 country=”US”.............................</td>
-            <td id="format"><br><br><br><br>AN up to 60<br><br>
+            <td class="format"><br><br><br><br>AN up to 60<br><br>
                 AN up to 60<br><br>
                 AN up to 2<br><br>
                 AN up to 10<br><br>
@@ -1392,717 +1392,717 @@
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc4"></td>
-            <td id="elementName"><xmp>/> </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc4"></td>
+            <td class="elementName"><xmp>/> </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3"></td>
-            <td id="elementName"><xmp></ADDRESSES></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3"></td>
+            <td class="elementName"><xmp></ADDRESSES></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3">Insurance Client Contact Methods. One per assignment.</td>
-            <td id="elementName"><xmp><CONTACTMETHODS> </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3">Insurance Client Contact Methods. One per assignment.</td>
+            <td class="elementName"><xmp><CONTACTMETHODS> </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc4">One per assignment.</td>
-            <td id="elementName"><xmp><PHONE </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc4">One per assignment.</td>
+            <td class="elementName"><xmp><PHONE </xmp></td>
         </tr>
     </table>
     <table class="element4">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="ICPhone(' type=\'\' primary=\'\' number=\'\' extension=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Insurance client business phone</td>
-            <td id="description">Include the "-" separators</td>
-            <td id="xmlSample">type="Business"<br><br>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="ICPhone(' type=\'\' primary=\'\' number=\'\' extension=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Insurance client business phone</td>
+            <td class="description">Include the "-" separators</td>
+            <td class="xmlSample">type="Business"<br><br>
                 primary="1"<br><br>
                 number="555-555-4444"<br><br>
                 extension="777"</td>
-            <td id="format"><br><br><br><br>AN 12 restricted values
+            <td class="format"><br><br><br><br>AN 12 restricted values
                 Integer up to 20
             </td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc4"></td>
-            <td id="elementName"><xmp>/> </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc4"></td>
+            <td class="elementName"><xmp>/> </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc4">One per assignment.</td>
-            <td id="elementName"><xmp><EMAIL </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc4">One per assignment.</td>
+            <td class="elementName"><xmp><EMAIL </xmp></td>
         </tr>
     </table>
     <table class="element4">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="ICEmail(' Address=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Insurance client email address</td>
-            <td id="description"></td>
-            <td id="xmlSample">Address="john@yahoo.com"</td>
-            <td id="format">AN up to 40</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="ICEmail(' Address=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Insurance client email address</td>
+            <td class="description"></td>
+            <td class="xmlSample">Address="john@yahoo.com"</td>
+            <td class="format">AN up to 40</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc4"></td>
-            <td id="elementName"><xmp>/> </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc4"></td>
+            <td class="elementName"><xmp>/> </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3"></td>
-            <td id="elementName"><xmp></CONTACTMETHODS></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3"></td>
+            <td class="elementName"><xmp></CONTACTMETHODS></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp></INSURANCE_CLIENT> </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp></INSURANCE_CLIENT> </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc1"></td>
-            <td id="elementName"><xmp></ADMIN_INFO></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc1"></td>
+            <td class="elementName"><xmp></ADMIN_INFO></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc1">Assignment Referral Section. This data may not show up in Xactimate (profile dependent)</td>
-            <td id="elementName"><xmp><ASSIGNMENT_REFERRAL></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc1">Assignment Referral Section. This data may not show up in Xactimate (profile dependent)</td>
+            <td class="elementName"><xmp><ASSIGNMENT_REFERRAL></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp><RETURN_PRODUCT_PREFERENCE </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp><RETURN_PRODUCT_PREFERENCE </xmp></td>
         </tr>
     </table>
     <table class="element2">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="assignmentReferral(' xactanalysis=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Return options</td>
-            <td id="description"></td>
-            <td id="xmlSample">xactanalysis="1"<br><br>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="assignmentReferral(' xactanalysis=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Return options</td>
+            <td class="description"></td>
+            <td class="xmlSample">xactanalysis="1"<br><br>
                 email="1"<br><br>
                 fax="1"<br><br>
                 postalMail="1"</td>
-            <td id="format">0 = false<br><br>1 = true</td>
+            <td class="format">0 = false<br><br>1 = true</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="assignmentReferral(' emailAddress=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Email address</td>
-            <td id="description"></td>
-            <td id="xmlSample">emailAddress="return@email.com"</td>
-            <td id="format">AN up to 60</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="assignmentReferral(' emailAddress=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Email address</td>
+            <td class="description"></td>
+            <td class="xmlSample">emailAddress="return@email.com"</td>
+            <td class="format">AN up to 60</td>
         </tr>
-           <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="assignmentReferral(' faxPhone=\'\' faxPhoneExt=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Fax phone number</td>
-            <td id="description"></td>
-            <td id="xmlSample">faxPhone="222-333-4444"<br><br>
+           <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="assignmentReferral(' faxPhone=\'\' faxPhoneExt=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Fax phone number</td>
+            <td class="description"></td>
+            <td class="xmlSample">faxPhone="222-333-4444"<br><br>
                 faxPhoneExt="55555"</td>
-            <td id="format">Include the "-" separators<br><br>
+            <td class="format">Include the "-" separators<br><br>
                 Integer up to 6</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp>/> </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp>/> </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp><BILLING_ARRANGEMENT </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp><BILLING_ARRANGEMENT </xmp></td>
         </tr>
     </table>
     <table class="element2">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="billingArrangement(' clientSpecific=\'\''); this.disabled=true">Add</button></td>
-            <td id="field"></td>
-            <td id="description">Client Specific Billing Arrangement</td>
-            <td id="xmlSample">clientSpecific="1"</td>
-            <td id="format">0 = false<br><br>1 = true</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="billingArrangement(' clientSpecific=\'\''); this.disabled=true">Add</button></td>
+            <td class="field"></td>
+            <td class="description">Client Specific Billing Arrangement</td>
+            <td class="xmlSample">clientSpecific="1"</td>
+            <td class="format">0 = false<br><br>1 = true</td>
         </tr>
-           <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="billingArrangement(' teBillingMethod=\'\''); this.disabled=true">Add</button></td>
-            <td id="field"></td>
-            <td id="description">T&E Billing Method with Fixed Standard Administration Fees</td>
-            <td id="xmlSample">teBillingMethod="0"</td>
-            <td id="format">0 = false<br><br>1 = true</td>
+           <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="billingArrangement(' teBillingMethod=\'\''); this.disabled=true">Add</button></td>
+            <td class="field"></td>
+            <td class="description">T&E Billing Method with Fixed Standard Administration Fees</td>
+            <td class="xmlSample">teBillingMethod="0"</td>
+            <td class="format">0 = false<br><br>1 = true</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="billingArrangement(' feeScheduledAssignment=\'\''); this.disabled=true">Add</button></td>
-            <td id="field"></td>
-            <td id="description">Fee Scheduled Assignment</td>
-            <td id="xmlSample">feeScheduledAssignment="0"</td>
-            <td id="format">0 = false<br><br>1 = true</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="billingArrangement(' feeScheduledAssignment=\'\''); this.disabled=true">Add</button></td>
+            <td class="field"></td>
+            <td class="description">Fee Scheduled Assignment</td>
+            <td class="xmlSample">feeScheduledAssignment="0"</td>
+            <td class="format">0 = false<br><br>1 = true</td>
         </tr>
-           <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="billingArrangement(' limitedAssignment=\'\''); this.disabled=true">Add</button></td>
-            <td id="field"></td>
-            <td id="description">Limited Assignment Menu of Services</td>
-            <td id="xmlSample">limitedAssignment="0"</td>
-            <td id="format">0 = false<br><br>1 = true</td>
-        </tr>
-    </table>
-    <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp>/> </xmp></td>
+           <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="billingArrangement(' limitedAssignment=\'\''); this.disabled=true">Add</button></td>
+            <td class="field"></td>
+            <td class="description">Limited Assignment Menu of Services</td>
+            <td class="xmlSample">limitedAssignment="0"</td>
+            <td class="format">0 = false<br><br>1 = true</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc1"></td>
-            <td id="elementName"><xmp></ASSIGNMENT_REFERRAL></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp>/> </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc0"></td>
-            <td id="elementName"><xmp></CLAIM_INFO> </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc1"></td>
+            <td class="elementName"><xmp></ASSIGNMENT_REFERRAL></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc0">Administrative Information Section. One per assignment.</td>
-            <td id="elementName"><xmp><ADM </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc0"></td>
+            <td class="elementName"><xmp></CLAIM_INFO> </xmp></td>
+        </tr>
+    </table>
+    <table>
+        <tr class="tagBox">
+            <td class="elementDesc0">Administrative Information Section. One per assignment.</td>
+            <td class="elementName"><xmp><ADM </xmp></td>
         </tr>
     </table>
     <table class="element0">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="adm(' branchNumber=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Branch number</td>
-            <td id="description">This data may not show up in Xactimate (profile dependent)</td>
-            <td id="xmlSample">branchNumber = "117"</td>
-            <td id="format">Integer</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="adm(' branchNumber=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Branch number</td>
+            <td class="description">This data may not show up in Xactimate (profile dependent)</td>
+            <td class="xmlSample">branchNumber = "117"</td>
+            <td class="format">Integer</td>
         </tr>
-           <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="adm(' clientNumber=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Client number</td>
-            <td id="description">This data may not show up in Xactimate (profile dependent)</td>
-            <td id="xmlSample">clientNumber = "9679"</td>
-            <td id="format">Integer</td>
+           <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="adm(' clientNumber=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Client number</td>
+            <td class="description">This data may not show up in Xactimate (profile dependent)</td>
+            <td class="xmlSample">clientNumber = "9679"</td>
+            <td class="format">Integer</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="adm(' fileNumber=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Adjuster file number</td>
-            <td id="description"></td>
-            <td id="xmlSample">fileNumber = "123KDJF"</td>
-            <td id="format">AN up to 36</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="adm(' fileNumber=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Adjuster file number</td>
+            <td class="description"></td>
+            <td class="xmlSample">fileNumber = "123KDJF"</td>
+            <td class="format">AN up to 36</td>
         </tr>
-           <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="adm(' dateReceived=\'\''); this.disabled=true">**</div></td>
-            <td id="field">Date Received</td>
-            <td id="description">Date the insured reported the claim to the carrier.</td>
-            <td id="xmlSample">dateReceived = "2001-10-22"</td>
-            <td id="format">See Date And Times</td>
+           <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="adm(' dateReceived=\'\''); this.disabled=true">**</div></td>
+            <td class="field">Date Received</td>
+            <td class="description">Date the insured reported the claim to the carrier.</td>
+            <td class="xmlSample">dateReceived = "2001-10-22"</td>
+            <td class="format">See Date And Times</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="adm(' dateOfLoss=\'\''); this.disabled=true">**</div></td>
-            <td id="field">Date of Loss</td>
-            <td id="description">Date the loss occurred</td>
-            <td id="xmlSample">dateOfLoss = "2001-10-21"</td>
-            <td id="format">See Date And Times</td>
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="adm(' dateOfLoss=\'\''); this.disabled=true">**</div></td>
+            <td class="field">Date of Loss</td>
+            <td class="description">Date the loss occurred</td>
+            <td class="xmlSample">dateOfLoss = "2001-10-21"</td>
+            <td class="format">See Date And Times</td>
         </tr>
-           <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="adm(' dateAssigned=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Date Assigned</td>
-            <td id="description"></td>
-            <td id="xmlSample">dateAssigned = "2001-10-23"</td>
-            <td id="format">See Date And Times</td>
+           <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="adm(' dateAssigned=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Date Assigned</td>
+            <td class="description"></td>
+            <td class="xmlSample">dateAssigned = "2001-10-23"</td>
+            <td class="format">See Date And Times</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="adm(' dateContacted=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Date Contacted</td>
-            <td id="description"></td>
-            <td id="xmlSample">dateContacted = "2001-10-24"</td>
-            <td id="format">See Date And Times</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="adm(' dateContacted=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Date Contacted</td>
+            <td class="description"></td>
+            <td class="xmlSample">dateContacted = "2001-10-24"</td>
+            <td class="format">See Date And Times</td>
         </tr>
-           <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="adm(' dateInspected=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Date Inspected</td>
-            <td id="description"></td>
-            <td id="xmlSample">dateInspected = "2001-10-24"</td>
-            <td id="format">See Date And Times</td>
+           <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="adm(' dateInspected=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Date Inspected</td>
+            <td class="description"></td>
+            <td class="xmlSample">dateInspected = "2001-10-24"</td>
+            <td class="format">See Date And Times</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="adm(' agentCode=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Agent Code</td>
-            <td id="description"></td>
-            <td id="xmlSample">agentCode = "B89SS"</td>
-            <td id="format">AN up to 8</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="adm(' agentCode=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Agent Code</td>
+            <td class="description"></td>
+            <td class="xmlSample">agentCode = "B89SS"</td>
+            <td class="format">AN up to 8</td>
         </tr>
-           <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="adm(' agentName=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Agent Name</td>
-            <td id="description">Agent full name – first and last name together.</td>
-            <td id="xmlSample">agentName = "Mark Jackson"</td>
-            <td id="format">AN up to 85</td>
+           <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="adm(' agentName=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Agent Name</td>
+            <td class="description">Agent full name – first and last name together.</td>
+            <td class="xmlSample">agentName = "Mark Jackson"</td>
+            <td class="format">AN up to 85</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="adm(' subrogationFlag=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Subrogation</td>
-            <td id="description">Indicates that subrogation exists</td>
-            <td id="xmlSample">subrogationFlag = "1"</td>
-            <td id="format">0 = false<br><br>1 = true</td>
-        </tr>
-    </table>
-    <table>
-        <tr id="tagBox">
-            <td id="elementDesc0"></td>
-            <td id="elementName"><xmp>> </xmp></td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="adm(' subrogationFlag=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Subrogation</td>
+            <td class="description">Indicates that subrogation exists</td>
+            <td class="xmlSample">subrogationFlag = "1"</td>
+            <td class="format">0 = false<br><br>1 = true</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc1">One per assignment.</td>
-            <td id="elementName"><xmp><SUBROGATION_NOTES> </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc0"></td>
+            <td class="elementName"><xmp>> </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="subrogationNote('<![CDATA[Subrogation notes go here]]>'); this.disabled=true">Add</button></td>
-            <td id="field">Subrogation Notes</td>
-            <td id="description">Explanation of the subrogation</td>
-            <td id="xmlSample"><xmp><![CDATA[Subrogation notes go here]]></xmp></td>
-            <td id="format">AN up to 4000</td>
+        <tr class="tagBox">
+            <td class="elementDesc1">One per assignment.</td>
+            <td class="elementName"><xmp><SUBROGATION_NOTES> </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc1"></td>
-            <td id="elementName"><xmp></SUBROGATION_NOTES></xmp></td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="subrogationNote('<![CDATA[Subrogation notes go here]]>'); this.disabled=true">Add</button></td>
+            <td class="field">Subrogation Notes</td>
+            <td class="description">Explanation of the subrogation</td>
+            <td class="xmlSample"><xmp><![CDATA[Subrogation notes go here]]></xmp></td>
+            <td class="format">AN up to 4000</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc1">Coverage Information</td>
-            <td id="elementName"><xmp><COVERAGE_LOSS </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc1"></td>
+            <td class="elementName"><xmp></SUBROGATION_NOTES></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="coverageLoss(' policyNumber=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Policy Number</td>
-            <td id="description"></td>
-            <td id="xmlSample">policyNumber = "A123123"</td>
-            <td id="format">AN up to 20</td>
+        <tr class="tagBox">
+            <td class="elementDesc1">Coverage Information</td>
+            <td class="elementName"><xmp><COVERAGE_LOSS </xmp></td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="coverageLoss(' claimNumber=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Claim Number</td>
-            <td id="description"></td>
-            <td id="xmlSample">claimNumber = "1234567891234"</td>
-            <td id="format">AN up to 30</td>
+    </table>
+    <table>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="coverageLoss(' policyNumber=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Policy Number</td>
+            <td class="description"></td>
+            <td class="xmlSample">policyNumber = "A123123"</td>
+            <td class="format">AN up to 20</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="coverageLoss(' catastrophe=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Cat/Storm Code</td>
-            <td id="description">Catastrophe code</td>
-            <td id="xmlSample">catastrophe = "Y12U"</td>
-            <td id="format">AN up to 15</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="coverageLoss(' claimNumber=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Claim Number</td>
+            <td class="description"></td>
+            <td class="xmlSample">claimNumber = "1234567891234"</td>
+            <td class="format">AN up to 30</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="coverageLoss(' policyStart=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Policy Effective Date</td>
-            <td id="description">Date policy is effective for the year.</td>
-            <td id="xmlSample">policyStart = "2002-01-01"</td>
-            <td id="format">YYYY-MM-DD</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="coverageLoss(' catastrophe=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Cat/Storm Code</td>
+            <td class="description">Catastrophe code</td>
+            <td class="xmlSample">catastrophe = "Y12U"</td>
+            <td class="format">AN up to 15</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="coverageLoss(' policyEnd=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Policy Expiration Date</td>
-            <td id="description">Date policy expires for the year.</td>
-            <td id="xmlSample">policyEnd = "2002-12-31"</td>
-            <td id="format">YYYY-MM-DD</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="coverageLoss(' policyStart=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Policy Effective Date</td>
+            <td class="description">Date policy is effective for the year.</td>
+            <td class="xmlSample">policyStart = "2002-01-01"</td>
+            <td class="format">YYYY-MM-DD</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="coverageLoss(' dateInitCov=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Initial Coverage Date</td>
-            <td id="description">The date the coverage began – if the carrier wants to provide only the year, the carrier places zeros in the month and day fields.<br><br>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="coverageLoss(' policyEnd=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Policy Expiration Date</td>
+            <td class="description">Date policy expires for the year.</td>
+            <td class="xmlSample">policyEnd = "2002-12-31"</td>
+            <td class="format">YYYY-MM-DD</td>
+        </tr>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="coverageLoss(' dateInitCov=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Initial Coverage Date</td>
+            <td class="description">The date the coverage began – if the carrier wants to provide only the year, the carrier places zeros in the month and day fields.<br><br>
                 Displayed in XactAnalysis as Inception Date</td>
-            <td id="xmlSample">dateInitCov = "1995-00-00"</td>
-            <td id="format">YYYY-MM-DD</td>
+            <td class="xmlSample">dateInitCov = "1995-00-00"</td>
+            <td class="format">YYYY-MM-DD</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="coverageLoss(' isCommercial=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Policy Type</td>
-            <td id="description">Indicates if the policy is commercial.</td>
-            <td id="xmlSample">isCommercial = "1"</td>
-            <td id="format">0 = false<br><br>1 = true</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="coverageLoss(' isCommercial=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Policy Type</td>
+            <td class="description">Indicates if the policy is commercial.</td>
+            <td class="xmlSample">isCommercial = "1"</td>
+            <td class="format">0 = false<br><br>1 = true</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="coverageLoss(' policyType=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Policy Type (Flood)</td>
-            <td id="description">Indicates different Policy Types<br><br>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="coverageLoss(' policyType=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Policy Type (Flood)</td>
+            <td class="description">Indicates different Policy Types<br><br>
                 The policyType attribute is replacing the isCommercial attribute.<br><br>
                 Use values 2-4 FEMA Flood is used as the Assignment Type</td>
-            <td id="xmlSample">policyType= "2"</td>
-            <td id="format">0 = Homeowner<br><br>
+            <td class="xmlSample">policyType= "2"</td>
+            <td class="format">0 = Homeowner<br><br>
                 1 = Commercial<br><br>
                 2 = Dwelling (Flood)<br><br>
                 3 = General Property (Flood)<br><br>
                 4 = RCBAP (Flood)</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="coverageLoss(' overallDeductible=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Apply Deductible</td>
-            <td id="description">If the overallDeductible attribute is included, then the deductible applies across all coverages, even if the atrribute is blank or empty.</td>
-            <td id="xmlSample">overallDeductible = "300"</td>
-            <td id="format">Decimal</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="coverageLoss(' overallDeductible=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Apply Deductible</td>
+            <td class="description">If the overallDeductible attribute is included, then the deductible applies across all coverages, even if the atrribute is blank or empty.</td>
+            <td class="xmlSample">overallDeductible = "300"</td>
+            <td class="format">Decimal</td>
         </tr>
     </table>
     <table>
-            <tr id="tagBox">
-                <td id="elementDesc1"></td>
-                <td id="elementName"><xmp>></xmp></td>
+            <tr class="tagBox">
+                <td class="elementDesc1"></td>
+                <td class="elementName"><xmp>></xmp></td>
             </tr>
     </table>
     <table>
-            <tr id="tagBox">
-                <td id="elementDesc2"></td>
-                <td id="elementName"><xmp><COVERAGENOTES></xmp></td>
+            <tr class="tagBox">
+                <td class="elementDesc2"></td>
+                <td class="elementName"><xmp><COVERAGENOTES></xmp></td>
             </tr>
     </table>
     <table class="element2">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="coverageNote('<![CDATA[Put free-form text data here]]>'); this.disabled=true">Add</button></td>
-            <td id="field">Coverage Description</td>
-            <td id="description">Description of coverage (profile dependent)<br><br>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="coverageNote('<![CDATA[Put free-form text data here]]>'); this.disabled=true">Add</button></td>
+            <td class="field">Coverage Description</td>
+            <td class="description">Description of coverage (profile dependent)<br><br>
                 Not displayed in XactAnalysis</td>
-            <td id="xmlSample"><xmp><![CDATA[Put free-form text data here]]></xmp></td>
-            <td id="format">AN up to 1000</td>
+            <td class="xmlSample"><xmp><![CDATA[Put free-form text data here]]></xmp></td>
+            <td class="format">AN up to 1000</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp></COVERAGENOTES></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp></COVERAGENOTES></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc2">Coverages</td>
-            <td id="elementName"><xmp><COVERAGES</xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2">Coverages</td>
+            <td class="elementName"><xmp><COVERAGES</xmp></td>
         </tr>
     </table>
     <table class="element2">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="coveragesMain(' lossOfUse=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Loss of use amount</td>
-            <td id="description"></td>
-            <td id="xmlSample">lossOfUse = "60.00"</td>
-            <td id="format">Decimal</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="coveragesMain(' lossOfUse=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Loss of use amount</td>
+            <td class="description"></td>
+            <td class="xmlSample">lossOfUse = "60.00"</td>
+            <td class="format">Decimal</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="coveragesMain(' doNotApplyLimits=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Apply Limit</td>
-            <td id="description"></td>
-            <td id="xmlSample">doNotApplyLimits = “1”</td>
-            <td id="format">0 = false<br><br>1 = true</td>
-        </tr>
-    </table>
-    <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp>></xmp></td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="coveragesMain(' doNotApplyLimits=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Apply Limit</td>
+            <td class="description"></td>
+            <td class="xmlSample">doNotApplyLimits = “1”</td>
+            <td class="format">0 = false<br><br>1 = true</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3">Individual Coverage</td>
-            <td id="elementName"><xmp><COVERAGE</xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp>></xmp></td>
+        </tr>
+    </table>
+    <table>
+        <tr class="tagBox">
+            <td class="elementDesc3">Individual Coverage</td>
+            <td class="elementName"><xmp><COVERAGE</xmp></td>
         </tr>
     </table>
     <table class="element3">
-        <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="coverage(' id=\'\''); this.disabled=true">**</div></td>
-            <td id="field">ID</td>
-            <td id="description">Unique ID starting with "COV" followed by a number such as "COV1" or "COV2" or "COV3"...</td>
-            <td id="xmlSample">id = "COV1"</td>
-            <td id="format">COV1 (Required)<br><br>
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="coverage(' class=\'\''); this.disabled=true">**</div></td>
+            <td class="field">ID</td>
+            <td class="description">Unique ID starting with "COV" followed by a number such as "COV1" or "COV2" or "COV3"...</td>
+            <td class="xmlSample">id = "COV1"</td>
+            <td class="format">COV1 (Required)<br><br>
                 COV2<br><br>
                 COV3…</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="coverage(' covType=\'\''); this.disabled=true">**</div></td>
-            <td id="field">Type</td>
-            <td id="description">Base coverage type</td>
-            <td id="xmlSample">covType = "0"</td>
-            <td id="format">0 = Structural<br><br>
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="coverage(' covType=\'\''); this.disabled=true">**</div></td>
+            <td class="field">Type</td>
+            <td class="description">Base coverage type</td>
+            <td class="xmlSample">covType = "0"</td>
+            <td class="format">0 = Structural<br><br>
                 1 = Other Structures<br><br>
                 2 = Contents</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="coverage(' covName=\'\''); this.disabled=true">**</div></td>
-            <td id="field">Name</td>
-            <td id="description">Coverage name</td>
-            <td id="xmlSample">covName = "Dwelling"</td>
-            <td id="format">AN up to 100</td>
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="coverage(' covName=\'\''); this.disabled=true">**</div></td>
+            <td class="field">Name</td>
+            <td class="description">Coverage name</td>
+            <td class="xmlSample">covName = "Dwelling"</td>
+            <td class="format">AN up to 100</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="coverage(' deductible=\'\''); this.disabled=true">**</div></td>
-            <td id="field">Deductible</td>
-            <td id="description"></td>
-            <td id="xmlSample">deductible = "500"</td>
-            <td id="format">Decimal</td>
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="coverage(' deductible=\'\''); this.disabled=true">**</div></td>
+            <td class="field">Deductible</td>
+            <td class="description"></td>
+            <td class="xmlSample">deductible = "500"</td>
+            <td class="format">Decimal</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="coverage(' policyLimit=\'\''); this.disabled=true">**</div></td>
-            <td id="field">Policy Limit</td>
-            <td id="description"></td>
-            <td id="xmlSample">policyLimit = "100"</td>
-            <td id="format">Decimal</td>
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="coverage(' policyLimit=\'\''); this.disabled=true">**</div></td>
+            <td class="field">Policy Limit</td>
+            <td class="description"></td>
+            <td class="xmlSample">policyLimit = "100"</td>
+            <td class="format">Decimal</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="coverage(' reserveAmt=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Reserve</td>
-            <td id="description"></td>
-            <td id="xmlSample">reserveAmt = "1000.00"</td>
-            <td id="format">Decimal</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="coverage(' reserveAmt=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Reserve</td>
+            <td class="description"></td>
+            <td class="xmlSample">reserveAmt = "1000.00"</td>
+            <td class="format">Decimal</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="coverage(' coIns=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Coinsurance</td>
-            <td id="description">Percent</td>
-            <td id="xmlSample">coIns = "12"</td>
-            <td id="format">Integer (0 – 100)</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="coverage(' coIns=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Coinsurance</td>
+            <td class="description">Percent</td>
+            <td class="xmlSample">coIns = "12"</td>
+            <td class="format">Integer (0 – 100)</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="coverage(' applyTo=\'\''); this.disabled=true">**</div></td>
-            <td id="field">Apply RCV/ACV</td>
-            <td id="description">How to apply RCV/ACV</td>
-            <td id="xmlSample">applyTo = "1"</td>
-            <td id="format">0 = RCV<br><br>
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="coverage(' applyTo=\'\''); this.disabled=true">**</div></td>
+            <td class="field">Apply RCV/ACV</td>
+            <td class="description">How to apply RCV/ACV</td>
+            <td class="xmlSample">applyTo = "1"</td>
+            <td class="format">0 = RCV<br><br>
                 1 = ACV<br><br>
                 2 = Both (let Xactimate determine</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3"></td>
-            <td id="elementName"><xmp>></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3"></td>
+            <td class="elementName"><xmp>></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc4">Contents sublimits (applies only to contents coverages)</td>
-            <td id="elementName"><xmp><ADD_SUBLIMITS></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc4">Contents sublimits (applies only to contents coverages)</td>
+            <td class="elementName"><xmp><ADD_SUBLIMITS></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc5"></td>
-            <td id="elementName"><xmp><ADD_SUBLIMIT</xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc5"></td>
+            <td class="elementName"><xmp><ADD_SUBLIMIT</xmp></td>
         </tr>
     </table>
     <table class="element5">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="subLimits(' sublimitid=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Sublimit ID</td>
-            <td id="description">Unique ID for each sublimit within each coverage. Does not need to be unique across all coverages.<br><br>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="subLimits(' sublimitclass=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Sublimit ID</td>
+            <td class="description">Unique ID for each sublimit within each coverage. Does not need to be unique across all coverages.<br><br>
                 Displayed only in Xactimate.</td>
-            <td id="xmlSample">sublimitid = "1"</td>
-            <td id="format">Integer (Required)</td>
+            <td class="xmlSample">sublimitid = "1"</td>
+            <td class="format">Integer (Required)</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="subLimits(' feature=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Feature</td>
-            <td id="description">Sublimit feature or name</td>
-            <td id="xmlSample">feature = "Class1"</td>
-            <td id="format">AN up to 40 (Required)</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="subLimits(' feature=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Feature</td>
+            <td class="description">Sublimit feature or name</td>
+            <td class="xmlSample">feature = "Class1"</td>
+            <td class="format">AN up to 40 (Required)</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="subLimits(' single=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Single</td>
-            <td id="description">Single item limit amount</td>
-            <td id="xmlSample">single ="100.00"</td>
-            <td id="format">Decimal</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="subLimits(' single=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Single</td>
+            <td class="description">Single item limit amount</td>
+            <td class="xmlSample">single ="100.00"</td>
+            <td class="format">Decimal</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="subLimits(' aggregate=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Aggregate</td>
-            <td id="description">Aggregate item amount</td>
-            <td id="xmlSample">aggregate = "200.00"</td>
-            <td id="format">Decimal</td>
-        </tr>
-    </table>
-    <table>
-        <tr id="tagBox">
-            <td id="elementDesc5"></td>
-            <td id="elementName"><xmp>/></xmp></td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="subLimits(' aggregate=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Aggregate</td>
+            <td class="description">Aggregate item amount</td>
+            <td class="xmlSample">aggregate = "200.00"</td>
+            <td class="format">Decimal</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc4"></td>
-            <td id="elementName"><xmp></ADD_SUBLIMITS></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc5"></td>
+            <td class="elementName"><xmp>/></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3"></td>
-            <td id="elementName"><xmp><</COVERAGE></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc4"></td>
+            <td class="elementName"><xmp></ADD_SUBLIMITS></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp></COVERAGES></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3"></td>
+            <td class="elementName"><xmp><</COVERAGE></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp><TOL</xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp></COVERAGES></xmp></td>
+        </tr>
+    </table>
+    <table>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp><TOL</xmp></td>
         </tr>
     </table>
     <table class="element2">
-        <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="typeOfLoss(' desc=\'\''); this.disabled=true">**</div></td>
-            <td id="field">Loss Description</td>
-            <td id="description">Type of loss description</td>
-            <td id="xmlSample">desc = "Water"</td>
-            <td id="format">AN up to 35</td>
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="typeOfLoss(' desc=\'\''); this.disabled=true">**</div></td>
+            <td class="field">Loss Description</td>
+            <td class="description">Type of loss description</td>
+            <td class="xmlSample">desc = "Water"</td>
+            <td class="format">AN up to 35</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><div id="buttonClick" onclick="typeOfLoss(' code=\'\''); this.disabled=true">**</div></td>
-            <td id="field">Loss Code</td>
-            <td id="description">Type of loss code (case sensitive)</td>
-            <td id="xmlSample">code = "WATER"</td>
-            <td id="format">AN up to 10</td>
-        </tr>
-    </table>
-    <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp>></xmp></td>
+        <tr class="mainBox">
+            <td class="addfield"><div class="buttonClick" onclick="typeOfLoss(' code=\'\''); this.disabled=true">**</div></td>
+            <td class="field">Loss Code</td>
+            <td class="description">Type of loss code (case sensitive)</td>
+            <td class="xmlSample">code = "WATER"</td>
+            <td class="format">AN up to 10</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3"></td>
-            <td id="elementName"><xmp><COL</xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp>></xmp></td>
+        </tr>
+    </table>
+    <table>
+        <tr class="tagBox">
+            <td class="elementDesc3"></td>
+            <td class="elementName"><xmp><COL</xmp></td>
         </tr>
     </table>
     <table class="element3">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="causeOfLoss(' desc=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Cause of loss</td>
-            <td id="description"></td>
-            <td id="xmlSample">desc = "Broken Pipe"</td>
-            <td id="format">AN up to 256</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="causeOfLoss(' desc=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Cause of loss</td>
+            <td class="description"></td>
+            <td class="xmlSample">desc = "Broken Pipe"</td>
+            <td class="format">AN up to 256</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="causeOfLoss(' otherCause=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Other cause of loss</td>
-            <td id="description"></td>
-            <td id="xmlSample">otherCause = "High Water Pressure"</td>
-            <td id="format">AN up to 256</td>
-        </tr>
-    </table>
-    <table>
-        <tr id="tagBox">
-            <td id="elementDesc3"></td>
-            <td id="elementName"><xmp>/></xmp></td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="causeOfLoss(' otherCause=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Other cause of loss</td>
+            <td class="description"></td>
+            <td class="xmlSample">otherCause = "High Water Pressure"</td>
+            <td class="format">AN up to 256</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp></TOL></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3"></td>
+            <td class="elementName"><xmp>/></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp><FORMS> </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp></TOL></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc3"></td>
-            <td id="elementName"><xmp><FORM </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp><FORMS> </xmp></td>
+        </tr>
+    </table>
+    <table>
+        <tr class="tagBox">
+            <td class="elementDesc3"></td>
+            <td class="elementName"><xmp><FORM </xmp></td>
         </tr>
     </table>
     <table class="element3">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="Forms(' name=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Form name</td>
-            <td id="description"></td>
-            <td id="xmlSample">name = "BP0009"</td>
-            <td id="format">AN up to 10</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="Forms(' name=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Form name</td>
+            <td class="description"></td>
+            <td class="xmlSample">name = "BP0009"</td>
+            <td class="format">AN up to 10</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="Forms(' editionDate=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Edition date</td>
-            <td id="description"></td>
-            <td id="xmlSample">editionDate = "01-1997"</td>
-            <td id="format">MM-YYYY</td>
-        </tr>
-    </table>
-    <table>
-        <tr id="tagBox">
-            <td id="elementDesc3"></td>
-            <td id="elementName"><xmp>/></xmp></td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="Forms(' editionDate=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Edition date</td>
+            <td class="description"></td>
+            <td class="xmlSample">editionDate = "01-1997"</td>
+            <td class="format">MM-YYYY</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc2"></td>
-            <td id="elementName"><xmp></FORMS></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc3"></td>
+            <td class="elementName"><xmp>/></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc1"></td>
-            <td id="elementName"><xmp></COVERAGE_LOSS> </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp></FORMS></xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc0"></td>
-            <td id="elementName"><xmp></ADM> </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc1"></td>
+            <td class="elementName"><xmp></COVERAGE_LOSS> </xmp></td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc0">Assignment Parameters. One per assignment.</td>
-            <td id="elementName"><xmp><PARAMS </xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc0"></td>
+            <td class="elementName"><xmp></ADM> </xmp></td>
+        </tr>
+    </table>
+    <table>
+        <tr class="tagBox">
+            <td class="elementDesc0">Assignment Parameters. One per assignment.</td>
+            <td class="elementName"><xmp><PARAMS </xmp></td>
         </tr>
     </table>
     <table class="element0">
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="params(' priceList=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Price list</td>
-            <td id="description">XactAnalysis adds this to assignment XML files to send to Xactimate.</td>
-            <td id="xmlSample">priceList = "UTOR2S3A"</td>
-            <td id="format">AN up to 20</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="params(' priceList=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Price list</td>
+            <td class="description">XactAnalysis adds this to assignment XML files to send to Xactimate.</td>
+            <td class="xmlSample">priceList = "UTOR2S3A"</td>
+            <td class="format">AN up to 20</td>
         </tr>
-        <tr id="mainBox">
-            <td id="addfield"><button id="buttonClick" onclick="params(' checkpointPL=\'\''); this.disabled=true">Add</button></td>
-            <td id="field">Check point price list</td>
-            <td id="description">XactAnalysis adds this to assignment XML files to send to Xactimate.</td>
-            <td id="xmlSample">checkpointPL = "UTOR2S3A"</td>
-            <td id="format">AN up to 20</td>
+        <tr class="mainBox">
+            <td class="addfield"><button class="buttonClick" onclick="params(' checkpointPL=\'\''); this.disabled=true">Add</button></td>
+            <td class="field">Check point price list</td>
+            <td class="description">XactAnalysis adds this to assignment XML files to send to Xactimate.</td>
+            <td class="xmlSample">checkpointPL = "UTOR2S3A"</td>
+            <td class="format">AN up to 20</td>
         </tr>
     </table>
     <table>
-        <tr id="tagBox">
-            <td id="elementDesc0"></td>
-            <td id="elementName"><xmp>/></xmp></td>
+        <tr class="tagBox">
+            <td class="elementDesc0"></td>
+            <td class="elementName"><xmp>/></xmp></td>
         </tr>
     </table>
 </div>

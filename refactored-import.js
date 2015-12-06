@@ -67,7 +67,9 @@ var propertyCollection = " ",
     covLossCollectValEnd = "<xmp></COVERAGE_LOSS></xmp>";
 
 
-
+$(window).bind('beforeunload', function(){
+    return 'If you leave this page, you will lose all updates to XML';
+});
 
 function onLoad(){
     $("#xactdoc").html(xactdocVal);
@@ -486,39 +488,6 @@ function params(value) {
     paramsCollect += value;
     document.getElementById("params").innerHTML = "<xmp><PARAMS " + paramsCollect + "/></xmp>";
 };
-//function selectAll() {
-//    intro();
-//    ControlPoints();
-//    CancellationComment();
-//    ControlPoint1();
-//    cpNotes();
-//    ThirdPartyURL();
-//    Contacts();
-//    mortgageMain();
-//    addressesMain();
-//    contactMethodsPhone();
-//    contactMethodsEmail();
-//    CompanyAddresses();
-//    companyMain();
-//    companyMainAddress();
-//    projectInfo();
-//    lossInfo();
-//    adminInfo();
-//    insuranceClient();
-//    ICAddresses();
-//    ICPhone();
-//    ICEmail();
-//    assignmentReferral();
-//    billingArrangement();
-//    adm();
-//    subrogationNote();
-//    coverageLoss();
-//    coverageNote();
-//    coveragesMain();
-//    coverage();
-//    subLimits();
-//    typeOfLoss();
-//    causeOfLoss();
-//    Forms();
-//    params();
-//}
+function selectAll() {
+    $('.buttonClick').click();
+};
