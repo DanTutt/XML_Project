@@ -1,3 +1,5 @@
+//send requests for updates to Dan Tuttle
+
 var propertyCollection = " ",
     controlCollect = "",
     cancelComment = "",
@@ -66,6 +68,12 @@ var propertyCollection = " ",
     covLossCollectVal= "<xmp><COVERAGE_LOSS " + coverageLossCollect  + "></xmp>",
     covLossCollectValEnd = "<xmp></COVERAGE_LOSS></xmp>";
 
+//Used to select all of the xml attributes.
+function selectAll() {
+    $('.buttonClick').click();
+};
+
+//Used to hightlight the xml once the user is ready to paste it.
 function selectText(containerid) {
     if (document.selection) {
         var range = document.body.createTextRange();
@@ -79,10 +87,12 @@ function selectText(containerid) {
     alert("To copy highlighted text press 'enter, Ctrl + C'");
 }
 
+//Before a user can leave the page, this function will cause an alert to display. This alert will tell the user that all updates to the xml will be lost if the user chooses to proceed.
 $(window).bind('beforeunload', function(){
     return 'If you leave this page, you will lose all updates to XML';
 });
 
+//This will populate an xml with all required fields as soon as the page is loaded. This function is called on the body of the html.
 function onLoad(){
     $("#xactdoc").html(xactdocVal);
     $("#xactdocEnd").html(xactdocValEnd);
@@ -119,8 +129,8 @@ function onLoad(){
     $("#covLoss").html(covLossCollectVal);
     $("#covLossEnd").html(covLossCollectValEnd);
 
-    document.getElementById("tol").innerHTML = "<xmp><TOL desc='' code=''" + tolCollect + "></xmp>";
-    document.getElementById("tolEnd").innerHTML = "<xmp></TOL></xmp>";
+    $("#tol").html("<xmp><TOL desc='' code=''" + tolCollect + "></xmp>");
+    $("#tolEnd").html("<xmp></TOL></xmp>");
 
 }
 
@@ -500,6 +510,4 @@ function params(value) {
     paramsCollect += value;
     document.getElementById("params").innerHTML = "<xmp><PARAMS " + paramsCollect + "/></xmp>";
 };
-function selectAll() {
-    $('.buttonClick').click();
-};
+
