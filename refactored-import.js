@@ -71,6 +71,7 @@ var propertyCollection = " ",
 //Used to select all of the xml attributes.
 function selectAll() {
     $('.buttonClick').click();
+    alert("If you have already added attributes they will be duplicated. Only use 'Select All' if you have not already added attributes individually.")
 };
 
 //Used to hightlight the xml once the user is ready to paste it.
@@ -84,7 +85,7 @@ function selectText(containerid) {
         range.selectNode(document.getElementById(containerid));
         window.getSelection().addRange(range);
     }
-    alert("To copy highlighted text press 'enter, Ctrl + C'");
+    alert("To copy highlighted text use 'Ctrl + C'");
 }
 
 //Before a user can leave the page, this function will cause an alert to display. This alert will tell the user that all updates to the xml will be lost if the user chooses to proceed.

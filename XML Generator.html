@@ -7,6 +7,197 @@
     <link rel="stylesheet" type="text/css" href="ImportStyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="refactored-import.js"></script>
+    <style>
+        .main {
+            min-width: 1800px;
+            max-width: 1400px;
+            position: absolute;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+        }
+        table {
+            width: 50%;
+        }
+        button {
+            height: 20px;
+            width: 40px;
+            display:block;
+        }
+        button#selectAll {
+            height: 20px;
+            width: 75px;
+        }
+        #genTitle {
+            font-size: x-large;
+            font-weight: bold;
+        }
+        #selectAllXML {
+            width: auto;
+            position: fixed;
+            left: 975px;
+        }
+        .xmlRight {
+            position: fixed;
+            left: 950px;
+            border-left: double;
+            height: 100%;
+            width: 100%;
+            z-index: 99999;
+            overflow: auto;
+        }
+        .requiredField {
+            font-size: small;
+            text-align: left;
+        }
+        .requiredAttribute {
+            text-align: center;
+        }
+        #xactNet {
+            position: absolute;
+            left: 950px;
+            top: 180px;
+            border-left: double;
+            height: 100%;
+            width: 40%;
+        }
+        .addfield{
+            max-width: 25px;
+            min-width: 25px;
+        }
+        .field {
+            max-width: 60px;
+            min-width: 60px;
+        }
+        .description {
+            max-width: 140px;
+            min-width: 140px;
+        }
+        .xmlSample {
+            max-width: 180px;
+            min-width: 180px;
+        }
+        .format {
+            max-width: 100px;
+            min-width: 100px;
+        }
+        .elementDesc0 {
+            width: 380px;
+            background-color: lightgrey;
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+        .elementDesc1 {
+            width: 397px;
+            background-color: lightgrey;
+            max-height: 20px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+        .elementDesc2 {
+            max-width: 410px;
+            min-width: 411px;;
+            background-color: lightgrey;
+            padding-top: 3px;
+            padding-bottom: 3px;
+
+        }
+        .elementDesc3 {
+            max-width: 422px;
+            min-width: 423px;
+            background-color: lightgrey;
+            padding-top: 3px;
+            padding-bottom: 3px;
+
+        }
+        .elementDesc4 {
+            max-width: 433px;
+            min-width: 434px;
+            background-color: lightgrey;
+            padding-top: 3px;
+            padding-bottom: 3px;
+
+        }
+        .elementDesc5 {
+            max-width: 445px;
+            min-width: 445px;
+            background-color: lightgrey;
+            padding-top: 3px;
+            padding-bottom: 3px;
+
+        }
+        .elementName {
+            width: 430px;
+            background-color: lightgrey;
+            padding-top: 3px;
+            padding-bottom: 3px;
+
+        }
+        .elementRequired {
+            width: 179px;
+            background-color: lightgrey;
+        }
+        .element0 .description {
+            max-width: 128px;
+            min-width: 128px;
+        }
+        .element1 .description {
+            max-width: 153px;
+            min-width: 153px;
+        }
+        .element2 .description {
+            max-width: 153px;
+            min-width: 153px;
+        }
+        .element3 .description {
+            max-width: 171px;
+            min-width: 171px;
+        }
+        .element4 .description {
+            max-width: 188px;
+            min-width: 188px;
+        }
+        .element5 .description {
+            max-width: 208px;
+            min-width: 208px;
+        }
+        .tab1{
+            margin-left: 20px;
+        }
+        .tab2{
+            margin-left: 40px;
+        }
+        .tab3{
+            margin-left: 60px;
+        }
+        .tab4{
+            margin-left: 80px;
+        }
+        .tab5{
+            margin-left: 100px;
+        }
+        .tab6{
+            margin-left: 120px;
+        }
+
+
+    </style>
+
+</head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xactware XML Builder</title>
+
+    <link rel="stylesheet" type="text/css" href="ImportStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="refactored-import.js"></script>
 
 
 </head>
@@ -17,109 +208,109 @@
 <div class="xmlRight" id="textToCopy">
     <button id="selectAllXML" onclick="selectText('copyAll')">Select and Copy</button>
     <br>
-<!--The copyAll div is used to separate the copyAll button from the xml. -->
-<div id="copyAll">
-    <div class="tab1" id="xactdoc"></div>
-    <div class="tab1" id="xactNetInfo" ></div>
+    <!--The copyAll div is used to separate the copyAll button from the xml. -->
+    <div id="copyAll">
+        <div class="tab1" id="xactdoc"></div>
+        <div class="tab1" id="xactNetInfo" ></div>
         <div class="tab2" id="controlPointsMain1"></div>
-            <div class="tab3" id="cancellationComments"></div>
-            <div class="tab3" id="cancellationCommentsEnd"></div>
-            <div class="tab3" id="controlPoint1"></div>
-                <div class="tab4" tabindex="4" id="cpNotes"></div>
-                <div class="tab4" tabindex="4" id="cpNotesEnd"></div>
-            <div class="tab3" id="controlPoint1End"></div>
+        <div class="tab3" id="cancellationComments"></div>
+        <div class="tab3" id="cancellationCommentsEnd"></div>
+        <div class="tab3" id="controlPoint1"></div>
+        <div class="tab4" tabindex="4" id="cpNotes"></div>
+        <div class="tab4" tabindex="4" id="cpNotesEnd"></div>
+        <div class="tab3" id="controlPoint1End"></div>
         <div class="tab2" id="controlPoints1MainEnd"></div>
         <div class="tab2" id="thirdPartyURL"></div>
         <div class="tab2" id="thirdPartyURLEnd"></div>
-    <div class="tab1" id="xactNetInfoEnd"></div>
+        <div class="tab1" id="xactNetInfoEnd"></div>
 
-    <div class="tab1" id="contactsMain"></div>
+        <div class="tab1" id="contactsMain"></div>
         <div class="tab2" id="contact"></div>
-            <div class="tab3" id="mortgagesMain"></div>
-                <div class="tab4" id="mortgage"></div>
-                <div class="tab4" id="mortgageEnd"></div>
-            <div class="tab3" id="mortgagesMainEnd"></div>
-            <div class="tab3" id="addressesMain"></div>
-                <div class="tab4" id="address"></div>
-                <div class="tab4" id="addressEnd"></div>
-            <div class="tab3" id="addressesMainEnd"></div>
-            <div class="tab3" id="contactMethods"></div>
-                <div class="tab4" id="phone"></div>
-                <div class="tab4" id="phoneEnd"></div>
-                <div class="tab4" id="email"></div>
-                <div class="tab4" id="emailEnd"></div>
-            <div class="tab3" id="contactMethodsEnd"></div>
-            <div class="tab3" id="company"></div>
-                <div class="tab4" id="companyAddresses"></div>
-                    <div class="tab5" id="companyAddress"></div>
-                    <div class="tab5" id="companyAddressEnd"></div>
-                    <div class="tab5" id="compContactMethods"></div>
-                        <div class="tab6" id="compPhone"></div>
-                        <div class="tab6" id="compEmail"></div>
-                    <div class="tab5" id="compContactMethodsEnd"></div>
-                <div class="tab4" id="companyAddressesEnd"></div>
-            <div class="tab3" id="companyEnd"></div>
+        <div class="tab3" id="mortgagesMain"></div>
+        <div class="tab4" id="mortgage"></div>
+        <div class="tab4" id="mortgageEnd"></div>
+        <div class="tab3" id="mortgagesMainEnd"></div>
+        <div class="tab3" id="addressesMain"></div>
+        <div class="tab4" id="address"></div>
+        <div class="tab4" id="addressEnd"></div>
+        <div class="tab3" id="addressesMainEnd"></div>
+        <div class="tab3" id="contactMethods"></div>
+        <div class="tab4" id="phone"></div>
+        <div class="tab4" id="phoneEnd"></div>
+        <div class="tab4" id="email"></div>
+        <div class="tab4" id="emailEnd"></div>
+        <div class="tab3" id="contactMethodsEnd"></div>
+        <div class="tab3" id="company"></div>
+        <div class="tab4" id="companyAddresses"></div>
+        <div class="tab5" id="companyAddress"></div>
+        <div class="tab5" id="companyAddressEnd"></div>
+        <div class="tab5" id="compContactMethods"></div>
+        <div class="tab6" id="compPhone"></div>
+        <div class="tab6" id="compEmail"></div>
+        <div class="tab5" id="compContactMethodsEnd"></div>
+        <div class="tab4" id="companyAddressesEnd"></div>
+        <div class="tab3" id="companyEnd"></div>
         <div class="tab2" id="contactEnd"></div>
         <div class="tab2" id="companyMain"></div>
-            <div class="tab3" id="companyMainAddresses"></div>
-                <div class="tab4" id="companyMainAddress"></div>
-                <div class="tab4" id="companyMainAddressEnd"></div>
-            <div class="tab3" id="companyMainAddressesEnd"></div>
-            <div class="tab3" id="compMainContactMethods"></div>
-                <div class="tab4" id="compMainPhone"></div>
-                <div class="tab4" id="compMainEmail"></div>
-            <div class="tab3" id="compMainContactMethodsEnd"></div>
+        <div class="tab3" id="companyMainAddresses"></div>
+        <div class="tab4" id="companyMainAddress"></div>
+        <div class="tab4" id="companyMainAddressEnd"></div>
+        <div class="tab3" id="companyMainAddressesEnd"></div>
+        <div class="tab3" id="compMainContactMethods"></div>
+        <div class="tab4" id="compMainPhone"></div>
+        <div class="tab4" id="compMainEmail"></div>
+        <div class="tab3" id="compMainContactMethodsEnd"></div>
         <div class="tab2" id="companyMainEnd"></div>
-    <div class="tab1" id="contactsMainEnd"></div>
-    <div class="tab1" id="projectInfo"></div>
+        <div class="tab1" id="contactsMainEnd"></div>
+        <div class="tab1" id="projectInfo"></div>
         <div class="tab2" id="projectNotes"></div>
         <div class="tab2" id="projectNotesEnd"></div>
-    <div class="tab1" id="projectInfoEnd"></div>
-    <div class="tab1" id="claimInfo"></div>
+        <div class="tab1" id="projectInfoEnd"></div>
+        <div class="tab1" id="claimInfo"></div>
         <div class="tab2" id="lossInfo"></div>
         <div class="tab2" id="adminInfo"></div>
-            <div class="tab3" id="insuranceClient"></div>
-                <div class="tab4" id="ICAddressesMain"></div>
-                    <div class="tab5" id="ICAddress"></div>
-                <div class="tab4" id="ICAddressesMainEnd"></div>
-                <div class="tab4" id="ICcontactMethods"></div>
-                    <div class="tab5" id="ICphone"></div>
-                    <div class="tab5" id="ICemail"></div>
-                <div class="tab4" id="ICcontactMethodsEnd"></div>
-            <div class="tab3" id="insuranceClientEnd"></div>
+        <div class="tab3" id="insuranceClient"></div>
+        <div class="tab4" id="ICAddressesMain"></div>
+        <div class="tab5" id="ICAddress"></div>
+        <div class="tab4" id="ICAddressesMainEnd"></div>
+        <div class="tab4" id="ICcontactMethods"></div>
+        <div class="tab5" id="ICphone"></div>
+        <div class="tab5" id="ICemail"></div>
+        <div class="tab4" id="ICcontactMethodsEnd"></div>
+        <div class="tab3" id="insuranceClientEnd"></div>
         <div class="tab2" id="adminInfoEnd"></div>
         <div class="tab2" id="assignmentReferral"></div>
-            <div class="tab3" id="retProdPref"></div>
-            <div class="tab3" id="billingArrang"></div>
+        <div class="tab3" id="retProdPref"></div>
+        <div class="tab3" id="billingArrang"></div>
         <div class="tab2" id="assignmentReferralEnd"></div>
-    <div class="tab1" id="claimInfoEnd"></div>
+        <div class="tab1" id="claimInfoEnd"></div>
 
-    <div class="tab1" id="adm"></div>
+        <div class="tab1" id="adm"></div>
         <div class="tab2" id="subrogationNote"></div>
         <div class="tab2" id="subrogationNoteEnd"></div>
         <div class="tab2" id="covLoss"></div>
-            <div class="tab3" id="covNotes"></div>
-            <div class="tab3" id="covNotesEnd"></div>
-            <div class="tab3" id="coveragesMain"></div>
-                <div class="tab4" id="coverage"></div>
-                    <div class="tab5" id="addSublimitsMain"></div>
-                        <div class="tab6" id="addSublimit"></div>
-                    <div class="tab5" id="addSublimitsMainEnd"></div>
-                <div class="tab4" id="coverageEnd"></div>
-            <div class="tab3" id="coveragesMainEnd"></div>
-            <div class="tab3" id="tol"></div>
-                <div class="tab4" id="col"></div>
-            <div class="tab3" id="tolEnd"></div>
-            <div class="tab3" id="formsMain"></div>
-                <div class="tab4" id="form"></div>
-            <div class="tab3" id="formsMainEnd"></div>
+        <div class="tab3" id="covNotes"></div>
+        <div class="tab3" id="covNotesEnd"></div>
+        <div class="tab3" id="coveragesMain"></div>
+        <div class="tab4" id="coverage"></div>
+        <div class="tab5" id="addSublimitsMain"></div>
+        <div class="tab6" id="addSublimit"></div>
+        <div class="tab5" id="addSublimitsMainEnd"></div>
+        <div class="tab4" id="coverageEnd"></div>
+        <div class="tab3" id="coveragesMainEnd"></div>
+        <div class="tab3" id="tol"></div>
+        <div class="tab4" id="col"></div>
+        <div class="tab3" id="tolEnd"></div>
+        <div class="tab3" id="formsMain"></div>
+        <div class="tab4" id="form"></div>
+        <div class="tab3" id="formsMainEnd"></div>
         <div class="tab2" id="covLossEnd"></div>
-    <div class="tab1" id="admEnd"></div>
+        <div class="tab1" id="admEnd"></div>
 
-    <div class="tab1" id="params"></div>
+        <div class="tab1" id="params"></div>
 
-    <div class="tab1" id="xactdocEnd"></div>
-</div>
+        <div class="tab1" id="xactdocEnd"></div>
+    </div>
 </div>
 <div id="generatorDesc">
     <div id="genTitle">XactAnalysis XML Generator</div>
@@ -318,12 +509,12 @@
             <td class="field">Cancellation</td>
             <td class="description">XactAnalysis automatically cancels the assignment if set to “1”. The carrier should also provide the transactionId – which is usually stored on the confirmation log file.<br><br>
                 If the transactionId is not included, then the carrierId, recipientsXNAddress and at least one of thirdPartyId or claimNumber should be included. XactAnalysis tries to find a unique active assignment to cancel based on these fields if also included:
-            <br><br>
-            <ul>
-                <li>recipientsId</li>
-                <li>profileCode</li>
-                <li>federalTIN</li>
-            </ul></td>
+                <br><br>
+                <ul>
+                    <li>recipientsId</li>
+                    <li>profileCode</li>
+                    <li>federalTIN</li>
+                </ul></td>
             <td class="xmlSample">cancellation = "0"</td>
             <td class="format">0 = false <br><br> 1 = true</td>
         </tr>
@@ -456,14 +647,14 @@
     </table>
     <table>
         <tr class="tagBox">
-                <td class="elementDesc1"></td>
-                <td class="elementName"><xmp>> </xmp></td>
+            <td class="elementDesc1"></td>
+            <td class="elementName"><xmp>> </xmp></td>
         </tr>
     </table>
     <table>
         <tr class="tagBox">
-                <td class="elementDesc2">Control Points Section. One per assignment.</td>
-                <td class="elementName"><xmp><CONTROL_POINTS </xmp></td>
+            <td class="elementDesc2">Control Points Section. One per assignment.</td>
+            <td class="elementName"><xmp><CONTROL_POINTS </xmp></td>
         </tr>
     </table>
     <table class="element2">
@@ -746,7 +937,7 @@
             <td class="elementName"><xmp><ADDRESSES></xmp></td>
         </tr>
     </table>
-        <table>
+    <table>
         <tr class="tagBox">
             <td class="elementDesc4">Specify mortgage and loan number. Repeat up to five times. Valid only in client contact. Xactimate versions 27.1 and older will only use the first mortgagee and loan number.</td>
             <td class="elementName"><xmp><ADDRESS </xmp></td>
@@ -1072,7 +1263,7 @@
             <td class="xmlSample">primaryContact = "John Doe"</td>
             <td class="format">AN up to 30</td>
         </tr>
-           <tr class="mainBox">
+        <tr class="mainBox">
             <td class="addfield"><button class="buttonClick" onclick="companyMain(' qcode=\'\''); this.disabled=true">Add</button></td>
             <td class="field">Quick Code</td>
             <td class="description">The carrier should populate qcode in order to edit and/or view the company information. Duplicate qcode values are permitted.</td>
@@ -1227,7 +1418,7 @@
             <td class="xmlSample">receivedBy = ""</td>
             <td class="format">AN up to 12 restricted values</td>
         </tr>
-           <tr class="mainBox">
+        <tr class="mainBox">
             <td class="addfield"><button class="buttonClick" onclick="lossInfo(' referredBy=\'\' referredByPhone=\'\' referredByPhoneExt=\'\''); this.disabled=true">Add</button></td>
             <td class="field">Referred by name</td>
             <td class="description">This data may not show up in Xactimate (profile dependent)<br><br>
@@ -1260,7 +1451,7 @@
             <td class="xmlSample">branch = "PROVO-UT"</td>
             <td class="format">AN up to 20</td>
         </tr>
-           <tr class="mainBox">
+        <tr class="mainBox">
             <td class="addfield"><button class="buttonClick" onclick="adminInfo(' accessName=\'\' accessPhone=\'\' accessPhoneExt=\'\''); this.disabled=true">Add</button></td>
             <td class="field">Person to contact to access property</td>
             <td class="description">This data may not show up in Xactimate (profile dependent)<br><br><br>
@@ -1279,7 +1470,7 @@
             <td class="xmlSample">origin = "2"</td>
             <td class="format">AN up to 1</td>
         </tr>
-           <tr class="mainBox">
+        <tr class="mainBox">
             <td class="addfield"><button class="buttonClick" onclick="adminInfo(' type=\'\''); this.disabled=true">Add</button></td>
             <td class="field">Assignment type</td>
             <td class="description">This data may not show up in Xactimate (profile dependent)</td>
@@ -1293,7 +1484,7 @@
             <td class="xmlSample">origBranch = "200"</td>
             <td class="format">Integer</td>
         </tr>
-           <tr class="mainBox">
+        <tr class="mainBox">
             <td class="addfield"><button class="buttonClick" onclick="adminInfo(' origFileNumber=\'\''); this.disabled=true">Add</button></td>
             <td class="field">Originating file number</td>
             <td class="description">This data may not show up in Xactimate (profile dependent)</td>
@@ -1307,7 +1498,7 @@
             <td class="xmlSample">coverage = "284"</td>
             <td class="format">AN up to 3</td>
         </tr>
-           <tr class="mainBox">
+        <tr class="mainBox">
             <td class="addfield"><button class="buttonClick" onclick="adminInfo(' hourlyRate=\'\''); this.disabled=true">Add</button></td>
             <td class="field">Hourly rate</td>
             <td class="description">This data may not show up in Xactimate (profile dependent)</td>
@@ -1321,7 +1512,7 @@
             <td class="xmlSample">telephoneCharge = "1"</td>
             <td class="format">0 = False<br><br>1 = True</td>
         </tr>
-           <tr class="mainBox">
+        <tr class="mainBox">
             <td class="addfield"><button class="buttonClick" onclick="adminInfo(' caseCreationHour=\'\''); this.disabled=true">Add</button></td>
             <td class="field">Case creation hour?</td>
             <td class="description">This data may not show up in Xactimate (profile dependent)</td>
@@ -1335,7 +1526,7 @@
             <td class="xmlSample">reason = "1"</td>
             <td class="format">AN up to 1</td>
         </tr>
-           <tr class="mainBox">
+        <tr class="mainBox">
             <td class="addfield"><button class="buttonClick" onclick="adminInfo(' referralDate=\'\''); this.disabled=true">Add</button></td>
             <td class="field">Referral date</td>
             <td class="description">This data may not show up in Xactimate (profile dependent)</td>
@@ -1363,7 +1554,7 @@
             <td class="xmlSample">clientdesc = "A R Transportation Inc"</td>
             <td class="format">AN up to 60</td>
         </tr>
-           <tr class="mainBox">
+        <tr class="mainBox">
             <td class="addfield"><button class="buttonClick" onclick="insuranceClient(' primaryContact=\'\''); this.disabled=true">Add</button></td>
             <td class="field">Insurance client contact</td>
             <td class="description"></td>
@@ -1522,7 +1713,7 @@
             <td class="xmlSample">emailAddress="return@email.com"</td>
             <td class="format">AN up to 60</td>
         </tr>
-           <tr class="mainBox">
+        <tr class="mainBox">
             <td class="addfield"><button class="buttonClick" onclick="assignmentReferral(' faxPhone=\'\' faxPhoneExt=\'\''); this.disabled=true">Add</button></td>
             <td class="field">Fax phone number</td>
             <td class="description"></td>
@@ -1552,7 +1743,7 @@
             <td class="xmlSample">clientSpecific="1"</td>
             <td class="format">0 = false<br><br>1 = true</td>
         </tr>
-           <tr class="mainBox">
+        <tr class="mainBox">
             <td class="addfield"><button class="buttonClick" onclick="billingArrangement(' teBillingMethod=\'\''); this.disabled=true">Add</button></td>
             <td class="field"></td>
             <td class="description">T&E Billing Method with Fixed Standard Administration Fees</td>
@@ -1566,7 +1757,7 @@
             <td class="xmlSample">feeScheduledAssignment="0"</td>
             <td class="format">0 = false<br><br>1 = true</td>
         </tr>
-           <tr class="mainBox">
+        <tr class="mainBox">
             <td class="addfield"><button class="buttonClick" onclick="billingArrangement(' limitedAssignment=\'\''); this.disabled=true">Add</button></td>
             <td class="field"></td>
             <td class="description">Limited Assignment Menu of Services</td>
@@ -1606,7 +1797,7 @@
             <td class="xmlSample">branchNumber = "117"</td>
             <td class="format">Integer</td>
         </tr>
-           <tr class="mainBox">
+        <tr class="mainBox">
             <td class="addfield"><button class="buttonClick" onclick="adm(' clientNumber=\'\''); this.disabled=true">Add</button></td>
             <td class="field">Client number</td>
             <td class="description">This data may not show up in Xactimate (profile dependent)</td>
@@ -1620,7 +1811,7 @@
             <td class="xmlSample">fileNumber = "123KDJF"</td>
             <td class="format">AN up to 36</td>
         </tr>
-           <tr class="mainBox">
+        <tr class="mainBox">
             <td class="addfield"><div class="requiredAttribute"  onclick="adm(' dateReceived=\'\''); this.disabled=true">*</div></td>
             <td class="field">Date Received</td>
             <td class="description">Date the insured reported the claim to the carrier.</td>
@@ -1634,7 +1825,7 @@
             <td class="xmlSample">dateOfLoss = "2001-10-21"</td>
             <td class="format">See Date And Times</td>
         </tr>
-           <tr class="mainBox">
+        <tr class="mainBox">
             <td class="addfield"><button class="buttonClick" onclick="adm(' dateAssigned=\'\''); this.disabled=true">Add</button></td>
             <td class="field">Date Assigned</td>
             <td class="description"></td>
@@ -1648,7 +1839,7 @@
             <td class="xmlSample">dateContacted = "2001-10-24"</td>
             <td class="format">See Date And Times</td>
         </tr>
-           <tr class="mainBox">
+        <tr class="mainBox">
             <td class="addfield"><button class="buttonClick" onclick="adm(' dateInspected=\'\''); this.disabled=true">Add</button></td>
             <td class="field">Date Inspected</td>
             <td class="description"></td>
@@ -1662,7 +1853,7 @@
             <td class="xmlSample">agentCode = "B89SS"</td>
             <td class="format">AN up to 8</td>
         </tr>
-           <tr class="mainBox">
+        <tr class="mainBox">
             <td class="addfield"><button class="buttonClick" onclick="adm(' agentName=\'\''); this.disabled=true">Add</button></td>
             <td class="field">Agent Name</td>
             <td class="description">Agent full name – first and last name together.</td>
@@ -1783,16 +1974,16 @@
         </tr>
     </table>
     <table>
-            <tr class="tagBox">
-                <td class="elementDesc1"></td>
-                <td class="elementName"><xmp>></xmp></td>
-            </tr>
+        <tr class="tagBox">
+            <td class="elementDesc1"></td>
+            <td class="elementName"><xmp>></xmp></td>
+        </tr>
     </table>
     <table>
-            <tr class="tagBox">
-                <td class="elementDesc2"></td>
-                <td class="elementName"><xmp><COVERAGENOTES></xmp></td>
-            </tr>
+        <tr class="tagBox">
+            <td class="elementDesc2"></td>
+            <td class="elementName"><xmp><COVERAGENOTES></xmp></td>
+        </tr>
     </table>
     <table class="element2">
         <tr class="mainBox">
@@ -2125,4 +2316,524 @@
     </table>
 </div>
 </body>
+</html>
+
+<script>
+
+    //send requests for updates to Dan Tuttle
+
+    var propertyCollection = " ",
+            controlCollect = "",
+            cancelComment = "",
+            controlPoint1Collect = "",
+            cpNoteCollect= "",
+            thirdPartyURLCollect = "",
+            XNcontactsCollect = "",
+            mortgageCollect = "",
+            addressMainCollect = "",
+            contactPhoneCollect = "",
+            contactEmailCollect = "",
+            compAddressCollect = "",
+            compPhoneCollect = "",
+            compEmailCollect = "",
+            compMainCollect = "",
+            compMainAddressCollect = "",
+            compMainPhoneCollect = "",
+            compMainEmailCollect = "",
+            projectInfoCollect = "",
+            lossInfoCollect = "",
+            adminInfoCollect = "",
+            insuranceClientCollect = "",
+            ICAddressCollect = "",
+            ICPhoneCollect = "",
+            ICEmailCollect= "",
+            assignmentReferralCollect= "",
+            billingArrangementCollect= "",
+            admCollect= "",
+            subrogationNoteCollect= "",
+            coverageLossCollect= "",
+            coverageNoteCollect= "",
+            coveragesMainCollect= "",
+            coverageCollect= "",
+            subLimitsCollect= "",
+            tolCollect= "",
+            colCollect= "",
+            formsCollect= "",
+            paramsCollect= "",
+
+            xactdocVal = "<xmp><?xml version='1.0' encoding='UTF-8'?></xmp><xmp><XACTDOC></xmp>",
+            xactdocValEnd = "<xmp></XACTDOC>",
+            xactNetInfoVal = "<xmp><XACTNET_INFO carrierId='' recipientsXNAddress=''" + propertyCollection + "></xmp>",
+            xactNetInfoValEnd = "<xmp></XACTNET_INFO></xmp>",
+            controlPointsMain1Val = "<xmp><CONTROL_POINTS " + controlCollect + "></xmp>",
+            controlPoints1MainValEnd = "<xmp></CONTROL_POINTS></xmp>",
+            contactCollectVal = "<xmp><CONTACT type='' name=''" + XNcontactsCollect + "></xmp>",
+            contactCollectValEnd = "<xmp></CONTACT></xmp>",
+            contactsMainCollectVal = "<xmp><CONTACTS></xmp>",
+            contactsMainCollectValEnd = "<xmp></CONTACTS></xmp>",
+            addressCollectVal = "<xmp><ADDRESS type='' country='' city='' street='' state='' postal='' " + addressMainCollect + "/></xmp>",
+            addressesMainCollectVal = "<xmp><ADDRESSES></xmp>",
+            addressesMainCollectValEnd = "<xmp></ADDRESSES></xmp>",
+            phoneCollectVal = "<xmp><PHONE type='' number='' primary='' " + contactPhoneCollect + "/></xmp>",
+            contactMethodsCollectVal = "<xmp><CONTACTMETHODS></xmp>",
+            contactMethodsCollectValEnd = "<xmp></CONTACTMETHODS></xmp>",
+            projectNotesCollectVal = "<xmp><NOTES></xmp><xmp><![CDATA[Put free-form text data here]]></xmp>",
+            projectNotesCollectValEnd = "<xmp></NOTES></xmp>",
+            projectInfoCollectVal= "<xmp><PROJECT_INFO></xmp>",
+            projectInfoCollectValEnd = "<xmp></PROJECT_INFO></xmp>",
+            admCollectVal= "<xmp><ADM  dateReceived='' dateOfLoss=''" + admCollect + "></xmp>",
+            admCollectValEnd = "<xmp></ADM></xmp>",
+            coverageCollectVal= "<xmp><COVERAGE  id='' covType='' covName='' deductible='' policyLimit='' applyTo=''" + coverageCollect + "></xmp>",
+            coverageCollectValEnd = "<xmp></COVERAGE></xmp>",
+            coveragesMainCollectVal= "<xmp><COVERAGES " + coveragesMainCollect + "></xmp>",
+            coveragesMainCollectValEnd = "<xmp></COVERAGES></xmp>",
+            covLossCollectVal= "<xmp><COVERAGE_LOSS " + coverageLossCollect  + "></xmp>",
+            covLossCollectValEnd = "<xmp></COVERAGE_LOSS></xmp>";
+
+    //Used to select all of the xml attributes.
+    function selectAll() {
+        $('.buttonClick').click();
+        alert("If you have already added attributes they will be duplicated. Only use 'Select All' if you have not already added attributes individually.")
+    };
+
+    //Used to hightlight the xml once the user is ready to paste it.
+    function selectText(containerid) {
+        if (document.selection) {
+            var range = document.body.createTextRange();
+            range.moveToElementText(document.getElementById(containerid));
+            range.select();
+        } else if (window.getSelection) {
+            var range = document.createRange();
+            range.selectNode(document.getElementById(containerid));
+            window.getSelection().addRange(range);
+        }
+        alert("To copy highlighted text use 'Ctrl + C'");
+    }
+
+    //Before a user can leave the page, this function will cause an alert to display. This alert will tell the user that all updates to the xml will be lost if the user chooses to proceed.
+    $(window).bind('beforeunload', function(){
+        return 'If you leave this page, you will lose all updates to XML';
+    });
+
+    //This will populate an xml with all required fields as soon as the page is loaded. This function is called on the body of the html.
+    function onLoad(){
+        $("#xactdoc").html(xactdocVal);
+        $("#xactdocEnd").html(xactdocValEnd);
+        $("#xactNetInfo").html(xactNetInfoVal);
+        $("#xactNetInfoEnd").html(xactNetInfoValEnd);
+
+        $("#contact").html(contactCollectVal);
+        $("#contactEnd").html(contactCollectValEnd);
+        $("#contactsMain").html(contactsMainCollectVal);
+        $("#contactsMainEnd").html(contactsMainCollectValEnd);
+
+        $("#address").html(addressCollectVal);
+        $("#addressesMain").html(addressesMainCollectVal);
+        $("#addressesMainEnd").html(addressesMainCollectValEnd);
+
+        $("#phone").html(phoneCollectVal);
+        $("#contactMethods").html(contactMethodsCollectVal);
+        $("#contactMethodsEnd").html(contactMethodsCollectValEnd);
+
+        $("#projectNotes").html(projectNotesCollectVal);
+        $("#projectNotesEnd").html(projectNotesCollectValEnd);
+        $("#projectInfo").html(projectInfoCollectVal);
+        $("#projectInfoEnd").html(projectInfoCollectValEnd);
+
+        $("#adm").html(admCollectVal);
+        $("#admEnd").html(admCollectValEnd);
+
+        $("#coverage").html(coverageCollectVal);
+        $("#coverageEnd").html(coverageCollectValEnd);
+
+        $("#coveragesMain").html(coveragesMainCollectVal);
+        $("#coveragesMainEnd").html(coveragesMainCollectValEnd);
+
+        $("#covLoss").html(covLossCollectVal);
+        $("#covLossEnd").html(covLossCollectValEnd);
+
+        $("#tol").html("<xmp><TOL desc='' code=''" + tolCollect + "></xmp>");
+        $("#tolEnd").html("<xmp></TOL></xmp>");
+
+    }
+
+    function intro(value){
+        propertyCollection += value;
+
+        document.getElementById("xactNetInfo").innerHTML = "<xmp><XACTNET_INFO carrierId='' recipientsXNAddress=''" + propertyCollection + "></xmp>";
+        document.getElementById("xactNetInfoEnd").innerHTML = "<xmp></XACTNET_INFO></xmp>";
+
+
+    };
+    function ControlPoints(value){
+        controlCollect += value;
+
+        document.getElementById("controlPointsMain1").innerHTML = "<xmp><CONTROL_POINTS " + controlCollect + "></xmp>";
+        document.getElementById("controlPoints1MainEnd").innerHTML = "<xmp></CONTROL_POINTS></xmp>";
+
+    };
+    function CancellationComment(value){
+        cancelComment += value;
+        document.getElementById("cancellationComments").innerHTML = "<xmp><CANCELLATION_COMMENTS></xmp><xmp><![CDATA[Put free-form text data here]]></xmp>";
+        document.getElementById("cancellationCommentsEnd").innerHTML = "<xmp></CANCELLATION_COMMENTS></xmp>";
+
+        document.getElementById("controlPointsMain1").innerHTML = "<xmp><CONTROL_POINTS " + controlCollect + "></xmp>";
+        document.getElementById("controlPoints1MainEnd").innerHTML = "<xmp></CONTROL_POINTS></xmp>";
+
+    };
+    function ControlPoint1(value){
+        controlPoint1Collect += value;
+        document.getElementById("controlPoint1").innerHTML = "<xmp><CONTROL_POINT " + controlPoint1Collect + "></xmp>";
+        document.getElementById("controlPoint1End").innerHTML = "<xmp></CONTROL_POINT></xmp>";
+
+        document.getElementById("controlPointsMain1").innerHTML = "<xmp><CONTROL_POINTS " + controlCollect + "></xmp>";
+        document.getElementById("controlPoints1MainEnd").innerHTML = "<xmp></CONTROL_POINTS></xmp>";
+
+    };
+    function cpNotes(value){
+        cpNoteCollect += value;
+        document.getElementById("cpNotes").innerHTML = "<xmp><NOTES></xmp><xmp><![CDATA[Put free-form text data here]]></xmp>";
+        document.getElementById("cpNotesEnd").innerHTML = "<xmp></NOTES></xmp>";
+        document.getElementById("projectNotesEnd").innerHTML = "<xmp></NOTES></xmp>";
+        document.getElementById("controlPoint1").innerHTML = "<xmp><CONTROL_POINT " + controlPoint1Collect + "></xmp>";
+        document.getElementById("controlPoint1End").innerHTML = "<xmp></CONTROL_POINT></xmp>";
+
+        document.getElementById("controlPointsMain1").innerHTML = "<xmp><CONTROL_POINTS " + controlCollect + "></xmp>";
+        document.getElementById("controlPoints1MainEnd").innerHTML = "<xmp></CONTROL_POINTS></xmp>";
+
+    };
+    function ThirdPartyURL(value){
+        thirdPartyURLCollect += value;
+        document.getElementById("thirdPartyURL").innerHTML = "<xmp><THIRD_PARTY_URL></xmp><xmp><![CDATA[Put free-form text data here]]></xmp>";
+        document.getElementById("thirdPartyURLEnd").innerHTML = "<xmp></THIRD_PARTY_URL></xmp>";
+    };
+    function Contacts(value){
+        XNcontactsCollect += value;
+
+        document.getElementById("contact").innerHTML = "<xmp><CONTACT type='' name=''" + XNcontactsCollect + "></xmp>";
+        document.getElementById("contactEnd").innerHTML = "<xmp></CONTACT></xmp>";
+        document.getElementById("contactsMain").innerHTML = "<xmp><CONTACTS></xmp>";
+        document.getElementById("contactsMainEnd").innerHTML = "<xmp></CONTACTS></xmp>";
+    };
+    function mortgageMain(value){
+        mortgageCollect += value;
+        document.getElementById("mortgage").innerHTML = "<xmp><MORTGAGE " + mortgageCollect + "></xmp>";
+        document.getElementById("mortgageEnd").innerHTML = "<xmp></MORTGAGE></xmp>";
+        document.getElementById("mortgagesMain").innerHTML = "<xmp><MORTGAGES></xmp>";
+        document.getElementById("mortgagesMainEnd").innerHTML = "<xmp></MORTGAGES></xmp>";
+
+        document.getElementById("contact").innerHTML = "<xmp><CONTACT " + XNcontactsCollect + "></xmp>";
+        document.getElementById("contactEnd").innerHTML = "<xmp></CONTACT></xmp>";
+        document.getElementById("contactsMain").innerHTML = "<xmp><CONTACTS></xmp>";
+        document.getElementById("contactsMainEnd").innerHTML = "<xmp></CONTACTS></xmp>";
+
+    };
+    function addressesMain(value){
+        addressMainCollect += value;
+        document.getElementById("address").innerHTML = "<xmp><ADDRESS type='' country='' city='' street='' state='' postal='' " + addressMainCollect + "/></xmp>";
+        document.getElementById("addressesMain").innerHTML = "<xmp><ADDRESSES></xmp>";
+        document.getElementById("addressesMainEnd").innerHTML = "<xmp></ADDRESSES></xmp>";
+
+        document.getElementById("contact").innerHTML = "<xmp><CONTACT " + XNcontactsCollect + "></xmp>";
+        document.getElementById("contactEnd").innerHTML = "<xmp></CONTACT></xmp>";
+        document.getElementById("contactsMain").innerHTML = "<xmp><CONTACTS></xmp>";
+        document.getElementById("contactsMainEnd").innerHTML = "<xmp></CONTACTS></xmp>";
+
+
+    };
+    function contactMethodsPhone(value){
+        contactPhoneCollect += value;
+        document.getElementById("phone").innerHTML = "<xmp><PHONE type='' number='' primary='' " + contactPhoneCollect + "/></xmp>";
+        document.getElementById("contactMethods").innerHTML = "<xmp><CONTACTMETHODS></xmp>";
+        document.getElementById("contactMethodsEnd").innerHTML = "<xmp></CONTACTMETHODS></xmp>";
+
+        document.getElementById("contact").innerHTML = "<xmp><CONTACT " + XNcontactsCollect + "></xmp>";
+        document.getElementById("contactEnd").innerHTML = "<xmp></CONTACT></xmp>";
+        document.getElementById("contactsMain").innerHTML = "<xmp><CONTACTS></xmp>";
+        document.getElementById("contactsMainEnd").innerHTML = "<xmp></CONTACTS></xmp>";
+    };
+    function contactMethodsEmail(value) {
+        contactEmailCollect += value;
+        document.getElementById("email").innerHTML = "<xmp><EMAIL " + contactEmailCollect + "/></xmp>";
+        document.getElementById("contactMethods").innerHTML = "<xmp><CONTACTMETHODS></xmp>";
+        document.getElementById("contactMethodsEnd").innerHTML = "<xmp></CONTACTMETHODS></xmp>";
+
+        document.getElementById("contact").innerHTML = "<xmp><CONTACT " + XNcontactsCollect + "></xmp>";
+        document.getElementById("contactEnd").innerHTML = "<xmp></CONTACT></xmp>";
+        document.getElementById("contactsMain").innerHTML = "<xmp><CONTACTS></xmp>";
+        document.getElementById("contactsMainEnd").innerHTML = "<xmp></CONTACTS></xmp>";
+
+    };
+    function CompanyAddresses(value) {
+        compAddressCollect += value;
+        document.getElementById("companyAddress").innerHTML = "<xmp><ADDRESS " + addressMainCollect + "/></xmp>";
+        document.getElementById("companyAddresses").innerHTML = "<xmp><ADDRESSES></xmp>";
+        document.getElementById("companyAddressesEnd").innerHTML = "<xmp></ADDRESSES></xmp>";
+        document.getElementById("company").innerHTML = "<xmp><COMPANY " + compAddressCollect + "></xmp>";
+        document.getElementById("companyEnd").innerHTML = "<xmp></COMPANY></xmp>";
+
+        document.getElementById("compEmail").innerHTML = "<xmp><EMAIL " + compEmailCollect + "/></xmp>";
+        document.getElementById("compContactMethods").innerHTML = "<xmp><CONTACTMETHODS></xmp>";
+        document.getElementById("compContactMethodsEnd").innerHTML = "<xmp></CONTACTMETHODS></xmp>"
+
+        document.getElementById("compPhone").innerHTML = "<xmp><PHONE " + compPhoneCollect + "/></xmp>";
+        document.getElementById("compContactMethods").innerHTML = "<xmp><CONTACTMETHODS></xmp>";
+        document.getElementById("compContactMethodsEnd").innerHTML = "<xmp></CONTACTMETHODS></xmp>";
+
+        document.getElementById("contact").innerHTML = "<xmp><CONTACT " + XNcontactsCollect + "></xmp>";
+        document.getElementById("contactEnd").innerHTML = "<xmp></CONTACT></xmp>";
+        document.getElementById("contactsMain").innerHTML = "<xmp><CONTACTS></xmp>";
+        document.getElementById("contactsMainEnd").innerHTML = "<xmp></CONTACTS></xmp>";
+
+    };
+    //function contactMethodsPhone(value){
+    //    compPhoneCollect += value;
+    //    document.getElementById("compPhone").innerHTML = "<xmp><PHONE " + compPhoneCollect + "></PHONE></xmp>";
+    //    document.getElementById("compContactMethods").innerHTML = "<xmp><CONTACTMETHODS></xmp>";
+    //    document.getElementById("compContactMethodsEnd").innerHTML = "<xmp></CONTACTMETHODS></xmp>";
+    //};
+    //function contactMethodsEmail(value) {
+    //    compEmailCollect += value;
+    //    document.getElementById("compEmail").innerHTML = "<xmp><EMAIL " + compEmailCollect + "></EMAIL></xmp>";
+    //    document.getElementById("compContactMethods").innerHTML = "<xmp><CONTACTMETHODS></xmp>";
+    //    document.getElementById("compContactMethodsEnd").innerHTML = "<xmp></CONTACTMETHODS></xmp>";
+    //
+    //};
+    function companyMain(value) {
+        compMainCollect += value;
+        document.getElementById("companyMain").innerHTML = "<xmp><COMPANY " + compMainCollect + "></xmp>";
+        document.getElementById("companyMainEnd").innerHTML = "<xmp></COMPANY></xmp>";
+
+        document.getElementById("contactsMain").innerHTML = "<xmp><CONTACTS></xmp>";
+        document.getElementById("contactsMainEnd").innerHTML = "<xmp></CONTACTS></xmp>";
+    };
+    function companyMainAddress(value) {
+        compMainAddressCollect += value;
+        document.getElementById("companyMainAddress").innerHTML = "<xmp><ADDRESS " + compMainAddressCollect + "/></xmp>";
+
+        document.getElementById("companyMainAddresses").innerHTML = "<xmp><ADDRESSES></xmp>";
+        document.getElementById("companyMainAddressesEnd").innerHTML = "<xmp></ADDRESSES></xmp>";
+
+        document.getElementById("companyMain").innerHTML = "<xmp><COMPANY></xmp>";
+        document.getElementById("companyMainEnd").innerHTML = "<xmp></COMPANY></xmp>";
+
+        document.getElementById("compMainEmail").innerHTML = "<xmp><EMAIL " + compMainEmailCollect + "/></xmp>";
+        document.getElementById("compMainContactMethods").innerHTML = "<xmp><CONTACTMETHODS></xmp>";
+        document.getElementById("compMainContactMethodsEnd").innerHTML = "<xmp></CONTACTMETHODS></xmp>"
+
+        document.getElementById("compMainPhone").innerHTML = "<xmp><PHONE " + compMainPhoneCollect + "/></xmp>";
+        document.getElementById("compMainContactMethods").innerHTML = "<xmp><CONTACTMETHODS></xmp>";
+        document.getElementById("compMainContactMethodsEnd").innerHTML = "<xmp></CONTACTMETHODS></xmp>";
+
+    };
+    function projectInfo(value){
+        projectInfoCollect += value;
+        document.getElementById("projectNotes").innerHTML = "<xmp><NOTES></xmp><xmp><![CDATA[Put free-form text data here]]></xmp>";
+        document.getElementById("projectNotesEnd").innerHTML = "<xmp></NOTES></xmp>";
+        document.getElementById("projectInfo").innerHTML = "<xmp><PROJECT_INFO></xmp>";
+        document.getElementById("projectInfoEnd").innerHTML = "<xmp></PROJECT_INFO></xmp>";
+    };
+    function lossInfo(value){
+        lossInfoCollect += value;
+        document.getElementById("lossInfo").innerHTML = "<xmp><LOSS_INFO " + lossInfoCollect + "/></xmp>";
+        document.getElementById("claimInfo").innerHTML = "<xmp><CLAIM_INFO></xmp>";
+        document.getElementById("claimInfoEnd").innerHTML = "<xmp></CLAIM_INFO></xmp>";
+    };
+    function adminInfo(value){
+        adminInfoCollect += value;
+        document.getElementById("adminInfo").innerHTML = "<xmp><ADMIN_INFO " + adminInfoCollect + "></xmp>";
+        document.getElementById("adminInfoEnd").innerHTML = "<xmp></ADMIN_INFO></xmp>";
+        document.getElementById("claimInfo").innerHTML = "<xmp><CLAIM_INFO></xmp>";
+        document.getElementById("claimInfoEnd").innerHTML = "<xmp></CLAIM_INFO></xmp>";
+    };
+    //for some reason Insurance Client is pulling in undefined
+    function insuranceClient(value){
+        insuranceClientCollect += value;
+        document.getElementById("insuranceClient").innerHTML = "<xmp><INSURANCE_CLIENT " + insuranceClientCollect + "></xmp>";
+        document.getElementById("insuranceClientEnd").innerHTML = "<xmp></INSURANCE_CLIENT></xmp>";
+        document.getElementById("claimInfo").innerHTML = "<xmp><CLAIM_INFO></xmp>";
+        document.getElementById("claimInfoEnd").innerHTML = "<xmp></CLAIM_INFO></xmp>";
+    };
+    function ICAddresses(value){
+        ICAddressCollect += value;
+        document.getElementById("ICAddress").innerHTML = "<xmp><ADDRESS " + ICAddressCollect + "/></xmp>";
+
+        document.getElementById("ICAddressesMain").innerHTML = "<xmp><ADDRESSES></xmp>";
+        document.getElementById("ICAddressesMainEnd").innerHTML = "<xmp></ADDRESSES></xmp>";
+
+
+        document.getElementById("claimInfo").innerHTML = "<xmp><CLAIM_INFO></xmp>";
+        document.getElementById("claimInfoEnd").innerHTML = "<xmp></CLAIM_INFO></xmp>";
+    };
+    function ICPhone(value){
+        ICPhoneCollect += value;
+        document.getElementById("ICphone").innerHTML = "<xmp><PHONE " + ICPhoneCollect + "/></xmp>";
+        document.getElementById("ICcontactMethods").innerHTML = "<xmp><CONTACTMETHODS></xmp>";
+        document.getElementById("ICcontactMethodsEnd").innerHTML = "<xmp></CONTACTMETHODS></xmp>";
+
+        document.getElementById("insuranceClient").innerHTML = "<xmp><INSURANCE_CLIENT " + insuranceClientCollect + "></xmp>";
+        document.getElementById("insuranceClientEnd").innerHTML = "<xmp></INSURANCE_CLIENT></xmp>";
+        document.getElementById("claimInfo").innerHTML = "<xmp><CLAIM_INFO></xmp>";
+        document.getElementById("claimInfoEnd").innerHTML = "<xmp></CLAIM_INFO></xmp>";
+    };
+    function ICEmail(value) {
+        ICEmailCollect += value;
+        document.getElementById("ICemail").innerHTML = "<xmp><EMAIL " + ICEmailCollect + "/></xmp>";
+        document.getElementById("ICcontactMethods").innerHTML = "<xmp><CONTACTMETHODS></xmp>";
+        document.getElementById("ICcontactMethodsEnd").innerHTML = "<xmp></CONTACTMETHODS></xmp>";
+
+        document.getElementById("insuranceClient").innerHTML = "<xmp><INSURANCE_CLIENT " + insuranceClientCollect + "></xmp>";
+        document.getElementById("insuranceClientEnd").innerHTML = "<xmp></INSURANCE_CLIENT></xmp>";
+        document.getElementById("claimInfo").innerHTML = "<xmp><CLAIM_INFO></xmp>";
+        document.getElementById("claimInfoEnd").innerHTML = "<xmp></CLAIM_INFO></xmp>";
+    };
+    function assignmentReferral(value){
+        assignmentReferralCollect += value;
+        document.getElementById("retProdPref").innerHTML = "<xmp><RETURN_PRODUCT_PREFERENCE " + assignmentReferralCollect + "/></xmp>";
+        document.getElementById("assignmentReferral").innerHTML = "<xmp><ASSIGNMENT_REFERRAL></xmp>";
+        document.getElementById("assignmentReferralEnd").innerHTML = "<xmp></ASSIGNMENT_REFERRAL></xmp>";
+
+        document.getElementById("claimInfo").innerHTML = "<xmp><CLAIM_INFO></xmp>";
+        document.getElementById("claimInfoEnd").innerHTML = "<xmp></CLAIM_INFO></xmp>";
+
+    };
+    function billingArrangement(value){
+        billingArrangementCollect += value;
+        document.getElementById("billingArrang").innerHTML = "<xmp><BILLING_ARRANGEMENT " + billingArrangementCollect + "/></xmp>";
+        document.getElementById("assignmentReferral").innerHTML = "<xmp><ASSIGNMENT_REFERRAL></xmp>";
+        document.getElementById("assignmentReferralEnd").innerHTML = "<xmp></ASSIGNMENT_REFERRAL></xmp>";
+
+        document.getElementById("claimInfo").innerHTML = "<xmp><CLAIM_INFO></xmp>";
+        document.getElementById("claimInfoEnd").innerHTML = "<xmp></CLAIM_INFO></xmp>";
+
+    };
+    function adm(value){
+        admCollect += value;
+        document.getElementById("adm").innerHTML = "<xmp><ADM  dateReceived='' dateOfLoss=''" + admCollect + "></xmp>";
+        document.getElementById("admEnd").innerHTML = "<xmp></ADM></xmp>";
+    };
+    function subrogationNote(value){
+        subrogationNoteCollect += value;
+        document.getElementById("subrogationNote").innerHTML = "<xmp><SUBROGATION_NOTES></xmp><xmp><![CDATA[Put free-form text data here]]></xmp>";
+        document.getElementById("subrogationNoteEnd").innerHTML = "<xmp></SUBROGATION_NOTES></xmp>";
+
+        document.getElementById("adm").innerHTML = "<xmp><ADM  dateReceived='' dateOfLoss=''" + admCollect + "></xmp>";
+        document.getElementById("admEnd").innerHTML = "<xmp></ADM></xmp>";
+
+    };
+    function coverageLoss(value){
+        coverageLossCollect += value;
+        document.getElementById("covLoss").innerHTML = "<xmp><COVERAGE_LOSS " + coverageLossCollect  + "></xmp>";
+        document.getElementById("covLossEnd").innerHTML = "<xmp></COVERAGE_LOSS></xmp>";
+
+        document.getElementById("adm").innerHTML = "<xmp><ADM  dateReceived='' dateOfLoss=''" + admCollect + "></xmp>";
+        document.getElementById("admEnd").innerHTML = "<xmp></ADM></xmp>";
+
+    };
+    function coverageNote(value){
+        coverageNoteCollect += value;
+        document.getElementById("covNotes").innerHTML = "<xmp><COVERAGENOTES></xmp><xmp><![CDATA[Put free-form text data here]]></xmp>";
+        document.getElementById("covNotesEnd").innerHTML = "<xmp></COVERAGENOTES></xmp>";
+
+        document.getElementById("covLoss").innerHTML = "<xmp><COVERAGE_LOSS " + coverageLossCollect  + "></xmp>";
+        document.getElementById("covLossEnd").innerHTML = "<xmp></COVERAGE_LOSS></xmp>";
+
+        document.getElementById("adm").innerHTML = "<xmp><ADM  dateReceived='' dateOfLoss=''" + admCollect + "></xmp>";
+        document.getElementById("admEnd").innerHTML = "<xmp></ADM></xmp>";
+
+    };
+    function coveragesMain(value){
+        coveragesMainCollect += value;
+        document.getElementById("coveragesMain").innerHTML = "<xmp><COVERAGES " + coveragesMainCollect + "></xmp>";
+        document.getElementById("coveragesMainEnd").innerHTML = "<xmp></COVERAGES></xmp>";
+
+        document.getElementById("covLoss").innerHTML = "<xmp><COVERAGE_LOSS " + coverageLossCollect  + "></xmp>";
+        document.getElementById("covLossEnd").innerHTML = "<xmp></COVERAGE_LOSS></xmp>";
+
+        document.getElementById("adm").innerHTML = "<xmp><ADM  dateReceived='' dateOfLoss=''" + admCollect + "></xmp>";
+        document.getElementById("admEnd").innerHTML = "<xmp></ADM></xmp>";
+
+    };
+    function coverage(value){
+        coverageCollect += value;
+        document.getElementById("coverage").innerHTML = "<xmp><COVERAGE  id='' covType='' covName='' deductible='' policyLimit='' applyTo=''" + coverageCollect + "></xmp>";
+        document.getElementById("coverageEnd").innerHTML = "<xmp></COVERAGE></xmp>";
+
+        document.getElementById("coveragesMain").innerHTML = "<xmp><COVERAGES " + coveragesMainCollect + "></xmp>";
+        document.getElementById("coveragesMainEnd").innerHTML = "<xmp></COVERAGES></xmp>";
+
+        document.getElementById("covLoss").innerHTML = "<xmp><COVERAGE_LOSS " + coverageLossCollect  + "></xmp>";
+        document.getElementById("covLossEnd").innerHTML = "<xmp></COVERAGE_LOSS></xmp>";
+
+        document.getElementById("adm").innerHTML = "<xmp><ADM  dateReceived='' dateOfLoss=''" + admCollect + "></xmp>";
+        document.getElementById("admEnd").innerHTML = "<xmp></ADM></xmp>";
+
+    };
+    function subLimits(value){
+        subLimitsCollect += value;
+        document.getElementById("addSublimit").innerHTML = "<xmp><ADD_SUBLIMIT " + subLimitsCollect + "/></xmp>";
+
+        document.getElementById("addSublimitsMain").innerHTML = "<xmp><ADD_SUBLIMITS></xmp>";
+        document.getElementById("addSublimitsMainEnd").innerHTML = "<xmp></ADD_SUBLIMITS></xmp>";
+
+        document.getElementById("coverage").innerHTML = "<xmp><COVERAGE " + coverageCollect + "></xmp>";
+        document.getElementById("coverageEnd").innerHTML = "<xmp></COVERAGE></xmp>";
+
+        document.getElementById("coveragesMain").innerHTML = "<xmp><COVERAGES " + coveragesMainCollect + "></xmp>";
+        document.getElementById("coveragesMainEnd").innerHTML = "<xmp></COVERAGES></xmp>";
+
+        document.getElementById("covLoss").innerHTML = "<xmp><COVERAGE_LOSS " + coverageLossCollect  + "></xmp>";
+        document.getElementById("covLossEnd").innerHTML = "<xmp></COVERAGE_LOSS></xmp>";
+
+        document.getElementById("adm").innerHTML = "<xmp><ADM  dateReceived='' dateOfLoss=''" + admCollect + "></xmp>";
+        document.getElementById("admEnd").innerHTML = "<xmp></ADM></xmp>";
+
+    };
+    function typeOfLoss(value){
+        tolCollect += value;
+        document.getElementById("tol").innerHTML = "<xmp><TOL desc='' code=''" + tolCollect + "></xmp>";
+        document.getElementById("tolEnd").innerHTML = "<xmp></TOL></xmp>";
+
+        document.getElementById("covLoss").innerHTML = "<xmp><COVERAGE_LOSS " + coverageLossCollect  + "></xmp>";
+        document.getElementById("covLossEnd").innerHTML = "<xmp></COVERAGE_LOSS></xmp>";
+
+        document.getElementById("adm").innerHTML = "<xmp><ADM  dateReceived='' dateOfLoss=''" + admCollect + "></xmp>";
+        document.getElementById("admEnd").innerHTML = "<xmp></ADM></xmp>";
+
+    };
+    function causeOfLoss(value){
+        colCollect += value;
+        document.getElementById("col").innerHTML = "<xmp><COL" + colCollect + "/></xmp>";
+
+        document.getElementById("tol").innerHTML = "<xmp><TOL" + tolCollect + "></xmp>";
+        document.getElementById("tolEnd").innerHTML = "<xmp></TOL></xmp>";
+
+        document.getElementById("covLoss").innerHTML = "<xmp><COVERAGE_LOSS " + coverageLossCollect  + "></xmp>";
+        document.getElementById("covLossEnd").innerHTML = "<xmp></COVERAGE_LOSS></xmp>";
+
+        document.getElementById("adm").innerHTML = "<xmp><ADM  dateReceived='' dateOfLoss=''" + admCollect + "></xmp>";
+        document.getElementById("admEnd").innerHTML = "<xmp></ADM></xmp>";
+
+    };
+    function Forms(value){
+        formsCollect += value;
+        document.getElementById("form").innerHTML = "<xmp><FORM " + formsCollect + "/></xmp>";
+
+        document.getElementById("formsMain").innerHTML = "<xmp><FORMS></xmp>";
+        document.getElementById("formsMainEnd").innerHTML = "<xmp></FORMS></xmp>";
+
+        document.getElementById("covLoss").innerHTML = "<xmp><COVERAGE_LOSS " + coverageLossCollect  + "></xmp>";
+        document.getElementById("covLossEnd").innerHTML = "<xmp></COVERAGE_LOSS></xmp>";
+
+        document.getElementById("adm").innerHTML = "<xmp><ADM  dateReceived='' dateOfLoss=''" + admCollect + "></xmp>";
+        document.getElementById("admEnd").innerHTML = "<xmp></ADM></xmp>";
+
+    };
+    function params(value) {
+        paramsCollect += value;
+        document.getElementById("params").innerHTML = "<xmp><PARAMS " + paramsCollect + "/></xmp>";
+    };
+
+
+</script>
 </html>

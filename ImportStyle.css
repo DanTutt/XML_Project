@@ -42,7 +42,10 @@ button#selectAll {
 }
 .requiredField {
     font-size: small;
-
+    text-align: left;
+}
+.requiredAttribute {
+    text-align: center;
 }
 #xactNet {
     position: absolute;
